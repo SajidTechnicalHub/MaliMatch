@@ -1,0 +1,171 @@
+<style type="text/css">
+	.about-container-height{
+		height: 150vh;
+	}
+	.about-header{
+		margin-top: 100px;
+		margin-left: 50px;
+		margin-bottom: 50px;
+		
+	}
+	.about-header h1{
+		font-weight: bolder;
+		font-size: 50px;
+	}
+	.about-margin{
+		/*margin-top: 100px;*/
+		margin-left: 50px;
+		margin-bottom: 50px;
+		
+	}
+	.block {
+       width: 350px;
+       height: 350px;
+       border-radius: 10px ;
+       padding: 25px;
+       color: #595959; 
+       margin-bottom: 20px;
+       /*border: 2px solid grey;*/ 
+
+     }
+    .block-img{
+      width:120px;
+      height:130px;
+      margin-bottom: 10px;
+      /*padding: 20px;*/
+      display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+     }
+   .box-shadow-medium {
+     -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075); }
+   @media(max-width: 1180px){
+        .block{
+          margin: auto;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+      @media(max-width: 1205px){
+        .block{
+          padding: 20px;
+
+        }
+      }
+     .your-time{
+        /*justify-content: center;
+        align-items: center;*/
+        text-align: center;
+
+      }
+      .signup-btn{
+        width: 70%;
+        height: 45px;
+        background-color: #00BFFF;
+        color: white;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+     .signup-btn:hover{
+        width: 70%;
+        height: 45px;
+        background-color: white;
+        color: #00BFFF;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #00BFFF;
+        /*outline-color: #00BFFF;*/
+      } 
+</style>
+ <%= render 'shared/navbar' %>
+
+<div class="container about-container-height">
+	<div class="row  ">
+		<div class="col-lg-8 about-header ">
+			<h1>About Mali Match</h1>
+			
+		</div>
+	</div>
+
+	<div class="row about-margin">
+		<h1>Our Story</h1>
+		<p>Mali Match started in 2017 with one vision. One goal. A smooth, streamlined way for practicing brothers and sisters in the modern world to find one another for the sole purpose of marriage. It's no secret, practicing people don't want to go on dates and intermingle with the opposite gender only to not be able to take it to the next stage.</p>
+		<p>So we're here to make it simpler.</p>
+	</div>
+
+	<div class="row about-margin">
+		<h1>Our Story</h1>
+		<p>We are an Islamic company with Islamic values. People who care about their deen and care about their relationship with their Lord trust us to provide a secure, high quality and totally halal service.</p>
+		<p>SDue to this trust, we care very much about every detail.</p>
+	</div>
+
+	<!-- Block -->
+
+	<div class="row" style="/*width:90%;*/ margin: auto; ">
+	  <div class="col-lg-4 ">
+	    <div class="block box-shadow-medium  ">
+	      <%= link_to image_tag("privacy.png", class:'block-img'), root_path %>
+	       <center><h3>Privacy</h3>
+	      <p>We are committed to privacy and will never sell your data</p></center>
+	    </div>
+	  </div>
+	  <div class="col-lg-4">
+	    <div class="block box-shadow-medium  ">
+	      <%= link_to image_tag("success.png", class:'block-img'), root_path %>
+	      <center><h3>Success is in the Details</h3>
+	      <p>We have a very detailed profile form which shows every user what type of person they're going to be matching with</p></center>
+	    </div>
+	  </div>
+	  <div class="col-lg-4">
+	    <div class="block box-shadow-medium ">
+	      <%= link_to image_tag("anonymous.png", class:'block-img'), root_path %>
+	      <center><h3>Anonymity</h3>
+	      <p>Your name and contact details are never shared without your permission. We don't even have usernames so people won't be able to find you from anywhere else (like social media accounts)</p></center>
+	    </div>
+	  </div>
+	  <!-- Block -->
+
+	  <div class="row " style="/*width:90%;*/ margin: auto; ">
+	    <div class="col-lg-4 ">
+	      <div class="block box-shadow-medium  ">
+	        <%= link_to image_tag("halal.png", class:'block-img'), root_path %>
+	        <center><h3>100% Halal</h3>
+	        <p>We will never allow anything on our service which contradicts the sharia. No marriages without walis, no mingling in online chats, no pictures and no intimate details</p></center>
+	      </div>
+	    </div>
+	    <div class="col-lg-4">
+	      <div class="block box-shadow-medium  ">
+	        <%= link_to image_tag("pictures.png", class:'block-img'), root_path %>
+	        <center><h3>No Pictures</h3>
+	        <p>We have no pictures on our service. We encourage our matches to meet each other in person to establish true attraction</p></center>
+	      </div>
+	    </div>
+	    <div class="col-lg-4 ">
+	      <div class="block box-shadow-medium ">
+	        <%= link_to image_tag("support.png", class:'block-img'), root_path %>
+	        <center><h3>Support</h3>
+	        <p>We have a support team who are committed to customer service and satisfaction. Your satisfaction is our satisfaction</p></center>
+	      </div>
+	    </div>
+
+	    <div class="row col-12 justify-content-center p-2 my-5 ">
+	      <div class="your-time">
+	        <h1 class="">Start your search</h1>
+	        <p>Join us now, to find the right one in the right way and become a part of the story.</p>
+	        <!-- <button class="btn signup-btn my-5">Sign UP</button> -->
+	        <%= button_to "Sign Up", price_index_path, class:"btn signup-btn my-5" %>
+	      </div>
+	    </div>
+
+</div>
+

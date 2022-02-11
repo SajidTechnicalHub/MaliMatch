@@ -1,0 +1,159 @@
+
+
+<style type="text/css">
+	
+	.container-height{
+		height: 170vh;
+	}
+	.find-margin{
+		margin-left: 50px;
+		margin-top: 70px;
+	}
+	.list-style{
+		color: orange;
+		font-size: 20px;
+		margin-right: 10px;
+		line-height: 40px;
+	}
+	ul li {
+		line-height: 40px;
+	}
+	.signup-btn{
+        width: 100%;
+        height: 45px;
+        background-color: #00BFFF;
+        color: white;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+     .signup-btn:hover{
+        width: 100%;
+        height: 45px;
+        background-color: white;
+        color: #00BFFF;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #00BFFF;
+        /*outline-color: #00BFFF;*/
+      } 
+      
+	.block {
+       width: 330px;
+       height: 550px;
+       border-radius: 10px ;
+       padding: 40px;
+       color: #595959; 
+       margin-bottom: 100px;
+       margin-top: 70px;
+       
+
+     }
+     .block1 {
+       width: 400px;
+       height: 350px;
+       border-radius: 10px ;
+       padding: 40px;
+       color: #595959; 
+       margin-bottom: 100px;
+       margin-top: 70px;
+       
+     }
+     
+     .block1-img{
+      width:240px;
+      height:170px;
+      margin-bottom: 10px;
+      display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+     }
+    
+     .box-shadow-medium {
+         -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+         box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075); }
+      @media(max-width: 1180px){
+        .block{
+          margin: auto;
+          width: 100%;
+          margin-bottom: 30px;
+          margin-top: 70px;
+        }
+        
+      }
+      @media(max-width: 993px){
+      	.signup-btn{
+	        margin-top: 30px;
+     	 }
+      }
+       @media(max-width: 1180px){
+        .block1{
+          margin: auto;
+          width: 100%;
+          margin-bottom: 30px;
+          margin-top: 70px;
+        }
+      }
+</style>
+ <%= render 'shared/navbar' %>
+<div class="container container-height">
+	<div class="row  ">
+		<div class="col-lg-8 find-margin">
+			<h1>One place to find the one for you.</h1>
+			<p>Simple, predictable pricing.</p>
+		</div>
+	</div>
+
+	<div class="row justify-content-center align-items-center" style="/*width:90%;*/ margin: auto; ">
+        <div class="col-lg-4 ">
+          <div class="block box-shadow-medium  ">
+            <h4><span style="color:orange">1 Month</span></h4>
+            <h3>$50</h3>
+            <p>/1 Month</p>
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check list-style"></i>Access to our entire database</li>
+              <li><i class="fa-li fa fa-check list-style"></i>See who likes your profile</li>
+              <li><i class="fa-li fa fa-check list-style"></i>Advanced search filters</li>
+              <li><i class="fa-li fa fa-check list-style"></i>Complete privacy</li>
+              <li><i class="fa-li fa fa-check list-style"></i>Take back requests</li>
+              <li><i class="fa-li fa fa-check list-style"></i>3 Requests Per Month</li>
+            </ul>
+            <!-- <button class="btn signup-btn mt-5">Subscribe</button> -->
+            <%= button_to 'Order Now', checkout_create_path, remote: true, class:'btn signup-btn mt-5' %>
+          </div>
+        </div>
+     </div>
+
+     <div class="row justify-content-center align-items-center" style="/*width:90%;*/ margin: auto; ">
+        <div class="col-lg-4 ">
+          <div class="block1   ">
+            <%= link_to image_tag("compatibility.jpg", class:'block1-img'), root_path %>
+           <center> <h3>Compatibility</h3>
+            <p>Our profile form is very extensive which helps you to find out everything you need to know about a potential to avoid those awkward questions!</p></center>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="block1   ">
+            <%= link_to image_tag("religious.png", class:'block1-img'), root_path %>
+            <center><h3>Religious Levels</h3>
+            <p>You won't have to hope someone is on the same journey in their deen as you, it's all visible in the profile</p></center>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="block1  ">
+            <%= link_to image_tag("stress.png", class:'block1-img'), root_path %>
+            <center><h3>No Stress</h3>
+            <p>The process of finding a spouse the right way can be daunting, but our idea is to make this process as seamless and stress-free as possible</p></center>
+          </div>
+        </div>
+
+     
+</div>

@@ -1,0 +1,27 @@
+<style type="text/css">
+	.margin-set{
+			/*position: fixed;*/
+		  
+	}
+	footer{
+		
+	}
+	@media(max-width: 990px){
+        .margin-set{
+          
+          text-align: center;
+
+        }
+      }
+</style>
+
+<footer class="container-fluid bg-dark">
+	<div class="row justify-content-center align-items-center p-2 margin-set">
+		<div class="col-lg-10">
+			<%= link_to image_tag("logo.png", style:"width:100px; height:60px;"), root_path %>
+		</div>
+		<div class="col-lg-2">
+			<p style="color: white; margin-top: 15px;">© 2022 Wali Match</p>
+		</div>
+	</div>
+</footer>
