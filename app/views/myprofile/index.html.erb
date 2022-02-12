@@ -1,0 +1,316 @@
+<style type="text/css">
+    * {box-sizing: border-box;}
+
+    /* Full-width input fields */
+      .input {
+      width: 100%;
+      padding: 12px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    .input:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    hr {
+      border: 2px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* Set a style for all buttons */
+    .signup-btn{
+          width: 100%;
+          height: 45px;
+          background-color: #00BFFF;
+          color: white;
+          justify-content: center;
+          align-content: center;
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+          border-radius: 5px;
+          font-size: 18px;
+          font-weight: bold;
+          border: none;
+        }
+       .signup-btn:hover{
+          width: 100%;
+          height: 45px;
+          background-color: white;
+          color: #00BFFF;
+          justify-content: center;
+          align-content: center;
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+          border-radius: 5px;
+          font-size: 18px;
+          font-weight: bold;
+          border: 2px solid #00BFFF;
+          /*outline-color: #00BFFF;*/
+        } 
+
+   
+  </style>
+  <style>
+  body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+
+  
+  
+       .block {
+         width: 100%;
+         height: fit-content;
+         border-radius: 10px ;
+         /*padding: 40px;*/
+         color: #595959; 
+         justify-content: center;
+         align-content: center;
+         -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+     padding: 10px;
+
+       }
+  
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  /*background-color: #f1f1f1;*/
+  position: fixed;
+  min-height: 100vh;
+  /*overflow: auto;*/
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   /*margin-top: 100px; */
+
+
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #00BFFF;;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: #00BFFF;
+}
+
+.content {
+  margin-left: 184px;
+  padding: 1px 16px;
+  height: fit-content;
+
+}
+
+@media screen and (max-width: 1500px) {
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  .content {margin-left: 10;}
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  div.content {
+    margin-left: 10;
+   width: 50%;
+  }
+}
+
+
+.block1-img{
+      width:100px;
+      height:80px;
+      /*margin-bottom: 10px;*/
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+     }
+     
+
+
+     .header{
+      width: 1100px;
+       height: 100px;
+       
+       color: #595959; 
+       
+       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+     }
+</style>
+
+
+
+
+
+<div class="sidebar">
+  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path %>
+ <!--  <a class="active" href="#home">Register</a>
+  <a class="active" href="#news">Login</a> -->
+   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
+  <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
+  <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
+   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
+</div>
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row header"></div>
+  </div>
+  <div class="container">
+    
+        <%#= render 'shared/myprofile'%>
+        <div class="row justify-content-center align-content-center  block">
+              <div class="col-lg-10">
+                <h1>Edit Profile</h1>
+                <p>This form will be completely visible excluding your first name, surname and date of birth.</p>
+                <% if notice %>
+                  <p class="alert alert-success"><%= notice %></p>
+                <% end %>
+                <% if alert %>
+                  <p class="alert alert-danger"><%= alert %></p>
+                <% end %>
+                 <%= form_for :profile, url: myprofile_index_path, local: true do |f| %>
+                  
+                  <div class="field">
+                    <%= f.label :First_name %><br />
+                    <%= f.text_field :fname, autofocus: true,placeholder:"Enter First Name", autocomplete: "name", class:'input' %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :Surname %><br />
+                    <%= f.text_field :surname, autofocus: true,placeholder:"Enter Surname", autocomplete: "phone", class:'input' %>
+                  </div>
+                  <div class="field">
+                    <%= f.label :Date_of_birth %><br />
+                    <%= f.date_field :date, autofocus: true, autocomplete: "date", class:'input' %>
+                  </div>
+                  <!-- <input type="date" id="birthday" name="birthday" -->
+                  <div class="field">
+                  <%= f.label :Marital_status%><br />
+                  <%= f.select :status, ['Naver Married', 'Devorced', 'Widowed', 'Annulled'],{ prompt:'Select your Status' }, { class: 'input' }%>
+
+                </div>
+                <div class="field">
+                    <%= f.label :Do_you_have_children%><br /><br />
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <%= f.radio_button :children, 'NO' %> NO
+                      </div>
+                      <div class="col-lg-2">
+                        <%= f.radio_button :children, 'YES' %> YES
+                      </div><br /><br />
+                    </div>
+                   
+                </div>
+                
+
+                <div class="field">
+                  <h5>Ethnic Origin</h5>
+                    <%= f.label :Are_you_multi_ethnic%><br /><br />
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <%= f.radio_button :ethnic, 'NO' %> NO
+                      </div>
+                      <div class="col-lg-2">
+                        <%= f.radio_button :ethnic, 'YES' %> YES
+                      </div><br /><br />
+                    </div>
+                   
+                </div>
+                <div class="field">
+                 
+                  <%= f.select :ethnicity, ['Australian', 'Afghan', 'Albanian'],{ prompt:'Select Nationality' }, { class: 'input' }%>
+
+                </div>
+                <div class="field">
+                 <h5>Nationality / Citizenship</h5>
+                 <p>Your nationality is your relationship with a particular state or country. You'll be able to easily discover this if you think of your passport or other form of identification.</p>
+                  <%= f.select :nationality, ['Austra', 'Afghanistan', 'Albanian'],{ prompt:'Select Nationality' }, { class: 'input' }%>
+
+                </div>
+                <div class="field">
+                 <%= f.label :Height %><br />
+                  <%= f.select :height, ['4 feet 9 inches', '4 feet 10 inches', '4 feet 11 inches', '5 feet 1 inches', ],{ prompt:'Select Your Height' }, { class: 'input' }%>
+
+                </div>
+                <div class="field">
+                 <%= f.label :Weight %><br />
+                  <%= f.select :weight, ['31 - 35kg', '36 - 40kg',],{ prompt:'Select Your Weight Range' }, { class: 'input' }%>
+
+                </div>
+                <div class="field">
+                 <%= f.label :Build %><br />
+                  <%= f.select :build, ['Slim', 'Average', 'Slim'],{ prompt:'Select Your Build' }, { class: 'input' }%>
+
+                </div>
+                <div class="field">
+                 <%= f.label :facial %><br />
+                  <%= f.select :facial, ['Standout', 'Very Attractive', 'Attractive', 'Fairly Attractive','Above Average'],{ prompt:'Select Your Best Describe Facial Apperance' }, { class: 'input' }%>
+
+                </div>
+              
+                <div class="field">
+                  <h5>Ethnic Origin</h5>
+                    <%= f.label :Are_you_a_revent?%><br /><br />
+                    <div class="row">
+                      <div class="col-lg-2">
+                        <%= f.radio_button :revent, 'NO' %> NO
+                      </div>
+                      <div class="col-lg-2">
+                        <%= f.radio_button :revent, 'YES' %> YES
+                      </div><br /><br />
+                    </div>
+                     <div class="field">
+                    <%= f.label :When_did_you_start_practicing? %><br />
+                    <%= f.date_field :practice, autofocus: true, autocomplete: "date", class:'input' %>
+                  </div>
+                  <div class="field">
+                   <%= f.label :Pattern_of_salah %><br />
+                    <%= f.select :pattern, ['Always-1 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
+                  
+                  </div>
+                  <div class="actions">
+                    <%= f.submit "Sign up", class:'signup-btn ' %>
+                  </div>
+                <% end %>
+
+                
+
+              </div>
+            </div>
+
+      </div>
+    </div>
+ 

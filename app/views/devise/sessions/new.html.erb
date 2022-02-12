@@ -1,26 +1,223 @@
-<h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<style type="text/css">
+  * {box-sizing: border-box;}
+
+  /* Full-width input fields */
+    .input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .input:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 2px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for all buttons */
+  .signup-btn{
+        width: 100%;
+        height: 45px;
+        background-color: #00BFFF;
+        color: white;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+      }
+     .signup-btn:hover{
+        width: 100%;
+        height: 45px;
+        background-color: white;
+        color: #00BFFF;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #00BFFF;
+        /*outline-color: #00BFFF;*/
+      } 
+
+ 
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+    /*height: 100vh;*/
+  }
+
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 1000px) {
+      .signup-btn {
+      width: 100%;
+    }
+  }
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  /*background-color: #f1f1f1;*/
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   /*margin-top: 100px; */
+
+
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #00BFFF;;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: #00BFFF;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1500px) {
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  div.content {margin-left: 10;}
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  div.content {
+    margin-left: 10;
+   width: 50%;
+  }
+}
+
+
+.header{
+  width: 100%;
+  height: 100px;
+  /*-webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);*/
+}
+.block1-img{
+      width:100px;
+      height:80px;
+      /*margin-bottom: 10px;*/
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+     }
+     .block {
+       width: 1030px;
+       height: fit-content;
+       margin-top: 70px;
+       border-radius: 10px ;
+       /*padding: 40px;*/
+       color: #595959; 
+       justify-content: center;
+       align-content: center;
+       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+
+     }
+</style>
+
+
+
+
+
+  <div class="sidebar">
+    <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
+   <!--  <a class="active" href="#home">Register</a>
+    <a class="active" href="#news">Login</a> -->
+    <%= link_to "Register", new_user_registration_path,  class:'nav-link active'  %>
+    <%= link_to "Login",  new_user_session_path,  class:'nav-link active'  %>
   </div>
+<div class="content">
+  <div class="container">
+    <div class="row justify-content-center align-items-center block">
+      <div class="col-lg-6 ">
+          <h1 >Sign In</h1>
+          <p>This page is for people who have already registered on this new website. If you have not yet registered. If this is your first time on our new website, we will not have any of your details yet.</p>
+          <hr>
+          <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+          <% end %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email, class:'font-weight-bold'%><br />
+            <%= f.email_field :email, autofocus: true, placeholder:"Enter Email", autocomplete: "email", class:'input' %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password",placeholder:"Enter Password", class:'input' %>
+          </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me, style:'margin-bottom:15px' %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+          
+          <div class="actions mt-2 ">
+            <%= f.submit "Sign In", class:'signup-btn ' %>
+          </div>
+        <% end %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class:'nav-link text-center mt-2'  %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
+

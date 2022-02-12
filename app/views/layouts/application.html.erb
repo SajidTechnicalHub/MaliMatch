@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Walimatch</title>
+    <title>Malimatch</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,17 +9,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://js.stripe.com/v3/"></script> 
+     <link
+    href="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Montserrat:400,700,400italic,700italic"
+    rel="stylesheet" type="text/css">
+    <%= stylesheet_link_tag 'custom_fonts' %>
   </head>
 
   <body>
   
 
-   <% if notice %>
-     <p class="alert alert-success"><%= notice %></p>
-   <% end %>
-   <% if alert %>
-     <p class="alert alert-danger"><%= alert %></p>
-   <% end %>
+   
    
     <%= yield %>
     

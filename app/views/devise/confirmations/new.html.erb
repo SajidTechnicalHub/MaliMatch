@@ -11,6 +11,16 @@
   <div class="actions">
     <%= f.submit "Resend confirmation instructions" %>
   </div>
+   <section class="container">
+            <div class="auth-form login-form">
+                <h1>Login</h1>
+                <p>This page is for people who have already registered on this new website. If you have not yet registered, <a href="/register">click here</a> to register your details. If this is your first time on our new website, we will not have any of your details yet.</p>
+                <form>
+                    <input type="email" name="unprocessedEmail" id="email" placeholder="Email" required="" value="abdiaziz.warsame9@gmail.com">
+                    <input type="password" name="password" id="password" placeholder="Password" required="" value="Kingwiz123">
+                    <input type="submit" value="Login"><a href="/forgot-password">Forgot password?</a></form>
+            </div>
+        </section>
 <% end %>
 
 <%= render "devise/shared/links" %>

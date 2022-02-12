@@ -1,0 +1,202 @@
+<style type="text/css">
+  <style type="text/css">
+  * {box-sizing: border-box;}
+
+  /* Full-width input fields */
+    .input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .input:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 2px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for all buttons */
+  .signup-btn{
+        width: 100%;
+        height: 45px;
+        background-color: #00BFFF;
+        color: white;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+      }
+     .signup-btn:hover{
+        width: 100%;
+        height: 45px;
+        background-color: white;
+        color: #00BFFF;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #00BFFF;
+        /*outline-color: #00BFFF;*/
+      } 
+
+ 
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+   /* height: 100vh;*/
+  }
+
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 1000px) {
+      .signup-btn {
+      width: 100%;
+    }
+  }
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  /*background-color: #f1f1f1;*/
+  position: fixed;
+  min-height: 100vh;
+  /*overflow: auto;*/
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   /*margin-top: 100px; */
+
+
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #00BFFF;;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: #00BFFF;
+}
+
+.content {
+  margin-left: 184px;
+  padding: 1px 16px;
+  height: fit-content;
+
+}
+
+@media screen and (max-width: 1500px) {
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  .content {margin-left: 10;}
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  div.content {
+    margin-left: 10;
+   width: 50%;
+  }
+}
+
+
+.block1-img{
+      width:100px;
+      height:80px;
+      /*margin-bottom: 10px;*/
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+     }
+     .block {
+       width: 1030px;
+       height: 1100px;
+       border-radius: 10px ;
+       /*padding: 40px;*/
+       color: #595959; 
+       justify-content: center;
+       align-content: center;
+       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+
+     }
+
+     .header{
+      width: 100%;
+       height: 100px;
+       
+       color: #595959; 
+       
+       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+     }
+</style>
+
+
+
+
+
+<div class="sidebar">
+  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path %>
+ <!--  <a class="active" href="#home">Register</a>
+  <a class="active" href="#news">Login</a> -->
+   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
+  <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
+  <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
+   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
+</div>
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row header"></div>
+  </div>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-12">
+        <%= render 'shared/dashboard'%>
+      </div>
+    </div>
+  </div>
+</div>
+
