@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_14_235523) do
+ActiveRecord::Schema.define(version: 2022_02_15_121452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_235523) do
   create_table "profiles", force: :cascade do |t|
     t.string "fname"
     t.string "surname"
-    t.text "date"
+    t.text "dob"
     t.string "status"
     t.boolean "children"
     t.boolean "ethnic"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2022_02_14_235523) do
     t.datetime "updated_at", null: false
     t.string "height"
     t.boolean "revent"
-    t.text "pratice"
+    t.text "practice"
     t.string "pattern"
     t.text "summary"
-    t.text "educatiion"
+    t.text "education"
     t.string "sect"
     t.text "scholar"
     t.text "dressing"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2022_02_14_235523) do
     t.string "country"
     t.string "region"
     t.string "facial"
+    t.integer "age"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

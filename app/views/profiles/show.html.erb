@@ -216,7 +216,7 @@ body {
       </div>
       <div class="col-md-10">
         <div class="row">
-        	<h5>27 years old • West Midlands, United Kingdom</h5>
+        	<h5><%= @profile.age %> years old • <%= @profile.region %>, <%= @profile.country %></h5>
         </div>
         <div class="row">
         	<div class="col-md-2">
@@ -235,28 +235,31 @@ body {
     <div class="row mt-5">
     	<div class="col-lg-6">
     		<h4>My self summary</h4>
-    		<p>I'm a humble, God fearing, shy, and down to earth with a good sense of humour. I'm shy & quiet to start off with, but with time I open up gradually I'm not those type of girls where they like to be in involved in everything I like to keep myself to myself.</p>
+    		<p><%= @profile.summary %></p>
 
     		<h4>My work / education</h4>
-    		<p>University</p>
+    		<p><%= @profile.education %></p>
 
     		<h4>My Islam</h4>
-    		<p>Group / Sect / Methodology</p>
+    		<h5>Group / Sect / Methodology</h5>
 
-    		<p>Suni</p>
+    		<p><%= @profile.sect %></p>
 
     		<h4>Scholars taken from / Speakers listened to?</h4>
-    		<p>N/a</p>
+    		<p><%= @profile.scholar %></p>
 
     		<h4>How do I dress?</h4>
-    		<p>I dress modestly alhamdulillah.</p>
+    		<p><%= @profile.dressing%></p>
 
     		<h4>My Islam (with detail)</h4>
     		<p>I would say I have always been practising since a young age, I pray 5 times alhamdulillah and I find watching Islamic videos really comforting for me.</p>
 
+        <h4>Prayers</h4>
+        <p><%= @profile.pattern%></p>
+
     		<h4>More about me</h4>
     		<p>My hobbies, family, lifestyle, interests and skills</p>
-    		<p>I'm interested in helping people out, as it makes you feel better knowing you helped someone in need, I like to cook, keep the house tidy and I love to travel.</p>
+    		<p><%= @profile.hobby%></p>
     	</div>
     	<div class="col-lg-6">
     		<h4>Details</h4>
@@ -265,48 +268,58 @@ body {
     				<tbody>
     					<tr>
     						<td>Marital status</td>
-    						<td>Never Married</td>
+    						<td><%= @profile.status%></td>
     					</tr>
               <tr>
                 <td>Children</td>
-                <td>No</td>
+                <!-- <td><%#= @profile.children%></td> -->
+                <% if @profile.children == true%>
+                    <td>Yes</td>
+                <%else%>
+                  <td>No</td>
+                <%end%>
               </tr>
               <tr>
                 <td>Ethnicity</td>
-                <td>Sierra leonean</td>
+                <td><%= @profile.ethnicity%></td>
               </tr>
               <tr>
                 <td>Nationality</td>
-                <td>American</td>
+                <td><%= @profile.nationality%></td>
               </tr>
               <tr>
                 <td>Height</td>
-                <td>5 feet 4 inches</td>
+                <td><%= @profile.height%></td>
               </tr>
               <tr>
                 <td>Weight</td>
-                <td>41 - 45kg</td>
+                <td><%= @profile.weight%></td>
               </tr>
               <tr>
                 <td>Build</td>
-                <td>Slim</td>
+                <td><%= @profile.build%></td>
               </tr>
               <tr>
                 <td>Appearance</td>
-                <td>Attractive</td>
+                <td><%= @profile.facial%></td>
               </tr>
               <tr>
                 <td>Revert</td>
-                <td>No</td>
+                <!-- <td><%#= @profile.revert%></td> -->
+                <% if @profile.revert == true%>
+                    <td>Yes</td>
+                <%else%>
+                  <td>No</td>
+                <%end%>
               </tr>
                <tr>
                 <td>Practicing since</td>
-                <td>8 years ago</td>
+                <td><%= @profile.age%></td>
               </tr>
-               <tr>
+               <!-- <tr>
                 <td>Prayers</td>
-                <td>Always 5x Daily</td>
-              </tr>
+                <td><%#= @profile.pattern%></td>
+              </tr> -->
     				</tbody>
     			</table>
     		</div>
@@ -316,19 +329,39 @@ body {
             <tbody>
               <tr>
                 <td>Reverts</td>
-                <td>Yes</td>
+               <!--  <td><%#= @profile.revert%></td> -->
+                <% if @profile.revert == true%>
+                    <td>Yes</td>
+                <%else%>
+                  <td>No</td>
+                <%end%>
               </tr>
               <tr>
                 <td>Divorcees</td>
-                <td>No</td>
+                <!-- <td><%#= @profile.devorcees%></td> -->
+
+                <% if @profile.devorcees == true%>
+                    <td>Yes</td>
+                <%else%>
+                  <td>No</td>
+                <%end%>
               </tr>
               <tr>
                 <td>Widows</td>
-                <td>No</td>
+                <!-- <td><%#= @profile.widows%></td> -->
+                <% if @profile.widows == true%>
+                    <td>Yes</td>
+                <%else%>
+                  <td>No</td>
+                <%end%>
               </tr>
               <tr>
                 <td>Parents</td>
-                <td>No</td>
+                <% if @profile.parents == true%>
+                    <td>Yes</td>
+                <%else%>
+                  <td>No</td>
+                <%end%>
               </tr>
               
             </tbody>
