@@ -202,7 +202,7 @@ body {
                 <% if alert %>
                   <p class="alert alert-danger"><%= alert %></p>
                 <% end %>
-                 <%= form_for :profile, url: myprofile_index_path, local: true do |f| %>
+                 <%= form_for :profile, url: myprofile_path(@profile), html: {method: :put} do |f| %>
                   
                   <div class="field">
                     <%= f.label :First_name %><br />
@@ -216,14 +216,28 @@ body {
                     <%= f.label :Date_of_birth %><br />
                     <%= f.date_field :date, autofocus: true, autocomplete: "date", class:'input' %>
                   </div>
-                  <!-- <input type="date" id="birthday" name="birthday" -->
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <div class="field">
+                          <%= f.label :country, "Location" %><br />
+                          <%= f.select :country, ['Afghanistan','Aland Islands','Albania','Algeria','American Samoa','Andorra','Angola','Anguilla','Antarctica','Antigua and Barbuda','Argentina','Armenia','Aruba','Australia','Austria','Azerbaijan','Bahamas','Bahrian','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bermuda','Bhutan','Bolivia','Bonaire, Sint Eustatius and Saba','Bosnia and Herzegovina','Botswana','Bouvet Island','Brazil','British Indian Ocean Territory','Brunei Darussalam','Bulgaria','Burkina Faso','Burundi','Cambodia','Cameroon','Canada','Cape Verde','Cayman Islands','Central African Republic','Chad','Chile','China','Christmas Island','Cocos (Keeling) Islands','Colombia','Comoros','Congo, Republic of the (Brazzaville)','Congo, the Democratic Republic of the (Kinshasa)','Cook Island','Costa Rica','Côte d Ivoire','Croatia','Cuba','Curaçao','Cyprus','Czech Republic','Denmark','Djibouti','Dominica','Dominican Republic','Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Ethiopia','Falkland Islands (Islas Malvinas)','Faroe Islands','Fiji','Finland','France','French Guiana','French Polynesia','French Southern and Antarctic Lands','Gabon','Gambia, The','Georgia','Germany','Ghana','Gibraltar','Greece','Greenland','Grenada','Guadeloupe','Guam','Guatemala','Guernsey','Guinea','Guinea-Bissau','Guyana','Haiti','Heard Island and McDonald Islands','Holy See (Vatican City)','Honduras','Hong Kong','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Isle of Man','Israel','Italy','Jamaica','Japan','Jersey','Jordan','Kazakhstan','Kenya','Kiribati','Korea, Democratic People','Korea, Republic of','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg','Macao','Macedonia, Republic of','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Martinique','Mauritania','Mauritius','Mayotte','Mexico','Micronesia, Federated States of','Moldova','Monaco','Mongolia','Montenegro','Montserrat','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','New Caledonia','New Zealand','Nicaragua','Niger','Nigeria','Niue','Norfolk Island','Northern Mariana Isla','Norway','Oman','Pakistan','Palau','Palestine, State of','Panama','Papua New Guinea','Papua New Guinea','Paraguay','Philippines','Pitcairn','Poland','Portugal','Puerto Rico','Qatar','Réunion','Romania','Russian Federation','Rwanda','Saint Barthélemy','Saint Helena, Ascension and Tristan da Cunha','Saint Kitts and Nevis','Saint Lucia','Saint Martin','Saint Pierre and Miquelon','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Sint Maarten (Dutch part)','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Georgia and South Sandwich Islands','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Swaziland','Sweden','Switzerland','Syrian Arab Republic','Taiwan','Tajikistan','Tanzania, United Republic of','Thailand','Timor-Les','Togo','Tokelau','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Turks and Caicos Islands','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United State','United States Minor Outlying Islands','Uruguay','Uzbekistan','Vanuatu','Venezuela, Bolivarian Republic of','Vietnam','Virgin Islands, British','Virgin Islands, U.S.','Wallis and Futuna','Western Sahara','Yemen','Zambia','Zimbabwe'
+                            ],{ prompt:'Select Contry' }, { class: 'input' }%>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="field">
+                          <br />
+                          <%= f.select :region, ['Australian Capital Territory','New South Wales','Northern Territory','Queenslan','South Australia','Tasmania','Victoria','Western Australia'],{ prompt:'Select Region' }, { class: 'input' }%>
+                      </div>
+                    </div>
+                  </div>                 
                   <div class="field">
-                  <%= f.label :Marital_status%><br />
-                  <%= f.select :status, ['Naver Married', 'Devorced', 'Widowed', 'Annulled'],{ prompt:'Select your Status' }, { class: 'input' }%>
-
+                    <%= f.label :Marital_status%><br />
+                    <%= f.select :status, ['Naver Married', 'Devorced', 'Widowed', 'Annulled'],{ prompt:'Select your Marital Status' }, { class: 'input' }%>
                 </div>
+
                 <div class="field">
-                    <%= f.label :Do_you_have_children%><br /><br />
+                    <%= f.label :Do_you_have_children?%><br /><br />
                     <div class="row">
                       <div class="col-lg-2">
                         <%= f.radio_button :children, 'NO' %> NO
@@ -238,7 +252,7 @@ body {
 
                 <div class="field">
                   <h5>Ethnic Origin</h5>
-                    <%= f.label :Are_you_multi_ethnic%><br /><br />
+                    <%= f.label :Are_you_multi_ethnic?%><br /><br />
                     <div class="row">
                       <div class="col-lg-2">
                         <%= f.radio_button :ethnic, 'NO' %> NO
@@ -251,35 +265,37 @@ body {
                 </div>
                 <div class="field">
                  
-                  <%= f.select :ethnicity, ['Australian', 'Afghan', 'Albanian'],{ prompt:'Select Nationality' }, { class: 'input' }%>
+                  <%= f.select :ethnicity, ['Somali'],{ prompt:'Select your ethnicity' }, { class: 'input' }%>
 
                 </div>
                 <div class="field">
                  <h5>Nationality / Citizenship</h5>
                  <p>Your nationality is your relationship with a particular state or country. You'll be able to easily discover this if you think of your passport or other form of identification.</p>
-                  <%= f.select :nationality, ['Austra', 'Afghanistan', 'Albanian'],{ prompt:'Select Nationality' }, { class: 'input' }%>
+                  <%= f.select :nationality, ['Austra', 'Afghanistan', 'Albanian','Somali'],{ prompt:'Select Nationality' }, { class: 'input' }%>
 
                 </div>
-                <div class="field">
+                 <div class="field">
                  <%= f.label :Height %><br />
-                  <%= f.select :height, ['4 feet 9 inches', '4 feet 10 inches', '4 feet 11 inches', '5 feet 1 inches', ],{ prompt:'Select Your Height' }, { class: 'input' }%>
+                  <%= f.select :height, ['4 feet 9 inches', '4 feet 10 inches', '4 feet 11 inches', '5 feet 0 inches','5 feet 1 inches','5 feet 2 inches' ,'5 feet 3 inches','4 feet 5 inches','5 feet 6 inches','5 feet 7 inches','5 feet 8 inches','5 feet 9 inches','5 feet 10 inches','5 feet 11 inches','6 feet 0 inches','6 feet 1 inches','6 feet 2 inches','6 feet 3 inches','6 feet 4 inches','6 feet 5 inches','6 feet 6 inches','6 feet 7 inches','6 feet 8 inches'],{ prompt:'Select Your Height' }, { class: 'input' }%>
 
-                </div>
+                </div> 
                 <div class="field">
                  <%= f.label :Weight %><br />
-                  <%= f.select :weight, ['31 - 35kg', '36 - 40kg',],{ prompt:'Select Your Weight Range' }, { class: 'input' }%>
+                  <%= f.select :weight, ['31 - 35kg', '36 - 40kg','41 - 45kg','46 - 50kg','51 - 55kg','56 - 60kg','61 - 65kg','66 - 70kg','71 - 75kg','76 - 80kg','81 - 85kg','86 - 90kg','91 - 95kg','96 - 100kg','101 - 105kg','106 - 110kg','111 - 115kg','116 - 120kg','121 - 125kg','125kg or more'],{ prompt:'Select Your Weight Range' }, { class: 'input' }%>
 
                 </div>
                 <div class="field">
                  <%= f.label :Build %><br />
-                  <%= f.select :build, ['Slim', 'Average', 'Slim'],{ prompt:'Select Your Build' }, { class: 'input' }%>
+                  <%= f.select :build, ['Skinny', 'Lean (high muscle)', 'Well proportioned','Hourglass figur','Pear-shaped figure','Curvy','Thick','Slim','Average','Sporty','Muscular','Stocky','Bulking','Few extra pounds','Chubby','Heavyset'],{ prompt:'Select Your Build' }, { class: 'input' }%>
 
                 </div>
                 <div class="field">
                  <%= f.label :facial %><br />
-                  <%= f.select :facial, ['Standout', 'Very Attractive', 'Attractive', 'Fairly Attractive','Above Average'],{ prompt:'Select Your Best Describe Facial Apperance' }, { class: 'input' }%>
+                  <%= f.select :facial, ['Standout', 'Very Attractive', 'Attractive', 'Fairly Attractive','Above Average','Average / Regular','Fair / Okay','Plain'],{ prompt:'Select Your Best Describe Facial Apperance' }, { class: 'input' }%>
 
                 </div>
+
+
               
                 <div class="field">
                   <h5>Ethnic Origin</h5>
@@ -294,15 +310,90 @@ body {
                     </div>
                      <div class="field">
                     <%= f.label :When_did_you_start_practicing? %><br />
-                    <%= f.date_field :practice, autofocus: true, autocomplete: "date", class:'input' %>
+                    <%= f.date_field :pratice, autofocus: true, autocomplete: "date", class:'input' %>
                   </div>
                   <div class="field">
                    <%= f.label :Pattern_of_salah %><br />
-                    <%= f.select :pattern, ['Always-1 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
+                    <%= f.select :pattern, ['Always-1 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high','Regularly - I usually pray most of my prayers, maybe miss Fajr sometimes if tired','Sometimes - Pray when I can / When I feel like it / When my iman is high','Rarely - Maybe Jumu ah / Eid Salah / During Ramadan','Never / One-offs' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
                   
+                  </div> 
+
+                     <div class="field">
+                    <%= f.label :Self_summary %><br />
+                    <%= f.text_area :summary, autofocus: true, autocomplete: "summary",size: '50x5', class:'input' %>
                   </div>
+
+                  <div class="field">
+                      <%= f.label :Educational_work %><br />
+                      <%= f.text_area :educatiion, autofocus: true, autocomplete: "education",size: '50x5', class:'input' %>
+                    </div>
+
+                    <div class="field">
+                     <%= f.label :sect %><br />
+                      <%= f.select :sect, ['Salafi','Sunni','Ahlul Hadith','Just Muslim','Shia','Barelwi','Deobandi'], { prompt:'Select your best described group / sect / methodology' }, { class: 'input' }%>
+                    
+                    </div>
+
+                    <div class="field">
+                        <%= f.label :Scholars_taken_from_or_speakers_listened_to %><br />
+                        <%= f.text_area :scholar, autofocus: true, autocomplete: "scholar",size: '50x5', class:'input' %>
+                      </div>
+
+                      <div class="field">
+                        <%= f.label :Dressing_covering %><br />
+                        <%= f.text_area :dressing, autofocus: true, autocomplete: "dressing",size: '50x5', class:'input' %>
+                      </div>
+
+                      <div class="field">
+                        <%= f.label :Islamic_practice %><br />
+                        <%= f.text_area :islamic, autofocus: true, autocomplete: "islamic",size: '50x5', class:'input', placeholder:'Enter some details about your journey into practicing, where you are right now and your goals in practicing' %>
+                      </div>
+
+                      <div class="field">
+                        <%= f.label :My_hobbies %>,  <%= f.label :family_lifestyle %>, <%= f.label :interests_and_skills %><br />
+                        <%= f.text_area :hobby, autofocus: true, autocomplete: "hobby",size: '50x5', class:'input', placeholder:'Enter some details about you and your hobbies, family, lifestyle, interests and skills' %>
+                      </div>
+                      <div class="row"><h3>Open to:</h3></div>
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <%=f.label :reverts %>
+                        </div>
+                        <div class="col-lg-2">
+                           <%= f.check_box :revert, {:class => "input"}, "revert" %>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <%=f.label :Devorcees %>
+                        </div>
+                        <div class="col-lg-2">
+                           <%= f.check_box :devorcees, {:class => "input"}, "devorces" %>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <%=f.label :Widows %>
+                        </div>
+                        <div class="col-lg-2">
+                           <%= f.check_box :widows, {:class => "input"}, "widows" %>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <%=f.label :parents %>
+                        </div>
+                        <div class="col-lg-2">
+                           <%= f.check_box :parents, {:class => "input"}, "parents" %>
+                        </div>
+                      </div>
+                      
+                  
+
                   <div class="actions">
-                    <%= f.submit "Sign up", class:'signup-btn ' %>
+                    <%= f.submit "Update", class:'signup-btn ' %>
                   </div>
                 <% end %>
 

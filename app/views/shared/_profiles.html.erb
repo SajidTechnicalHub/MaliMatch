@@ -18,7 +18,7 @@
   }
   .block {
        width: 100%px;
-       height: 250px;
+       height: 200px;
        border-radius: 10px ;
        padding: 25px;
        color: #595959; 
@@ -27,10 +27,11 @@
        justify-content: center;
        align-content: center;
        border: 1 dotted gray;
+       overflow: auto;
        /*border: 2px solid grey;*/}
 
 </style>
-
+<%= form_tag(profiles_search_path) do%>
 <div class="search-selects">
 	<select name="ethnicity" class="input">
 		<option value="">Ethnicity</option>
@@ -229,7 +230,7 @@
 		<option value="zambian">Zambian</option>
 		<option value="zimbabwean">Zimbabwean</option>
 	</select>
-	<select name="ageFrom" id="ageFrom" class="input">
+	<!-- <select name="ageFrom" id="ageFrom" class="input">
 		<option value="">Age from</option>
 		<option value="16">16</option>
 		<option value="17">17</option>
@@ -318,8 +319,8 @@
 		<option value="47">47</option>
 		<option value="48">48</option>
 		<option value="49">49</option>
-	</select>
-	<select name="rcrs-country" class="dropdowns input">
+	</select> -->
+	<select name="nationality" class="dropdowns input">
 		<option value="">Select Country</option>
 		<option value="Afghanistan">Afghanistan</option>
 		<option value="Åland Islands">Åland Islands</option>
@@ -525,7 +526,7 @@
 		<option value="Slovakia">Slovakia</option>
 		<option value="Slovenia">Slovenia</option>
 		<option value="Solomon Islands">Solomon Islands</option>
-		<option value="Somalia">Somalia</option>
+		<option value="Somali">Somali</option>
 		<option value="South Africa">South Africa</option>
 		<option value="South Georgia and South Sandwich Islands">South Georgia and South Sandwich Islands</option>
 		<option value="South Sudan">South Sudan</option>
@@ -573,12 +574,16 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-9"></div>
-    <div class="col-sm-3 ">
-    	<input type="search" name="search" class='btn btn-outline-info' placeholder="Search" >
+    <div class="col-sm-10">gdfg</div>
+    <div class="col-sm-2 ">
+    	<%= submit_tag 'Search', class: 'btn btn-outline-info' %>
     </div>
   </div>
-
+<!--  <div class="row block">
+  	
+  </div> -->
+<% end %>
   <div class="row block">
   	
+	<%= render partial: 'search_result' %>
   </div>

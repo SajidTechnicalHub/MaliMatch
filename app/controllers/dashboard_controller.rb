@@ -5,6 +5,6 @@ class DashboardController < ApplicationController
   end
 
   def create
-    render 'dashboard/index'
+    # render 'dashboard/index'
   end
 end

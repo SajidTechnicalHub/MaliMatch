@@ -1,0 +1,14 @@
+
+<% if @profiles.present? %>
+	<% @profiles.each do |profile| %>
+		
+	
+		<div class="row">
+			<p><span>F<%= profile.id %>: </span><%= profile.sect %>, <%= profile.nationality %>, <%= profile.region %>, <%= profile.country %> </p>
+			<p><%= profile.summary %></p>
+			<p><%= link_to 'Show Profile', profile_path(profile), class:'nav-link' %></p>
+		</div>
+	<%end%>
+<%else%>
+<h4>No Profile Found</h4>
+<%end%>

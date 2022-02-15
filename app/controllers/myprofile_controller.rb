@@ -4,11 +4,13 @@ class MyprofileController < ApplicationController
   # GET /profiles or /profiles.json
   def index
     @profiles = Profile.all
+    @profile =current_user.profile
     
   end
 
   # GET /profiles/1 or /profiles/1.json
   def show
+    @myprofile = Profile.find_by(id: params[:id])
   end
 
   # GET /profiles/new
@@ -40,9 +42,10 @@ class MyprofileController < ApplicationController
 
   # PATCH/PUT /profiles/1 or /profiles/1.json
   def update
+     @myprofile = Profile.find_by(id: params[:id])
     respond_to do |format|
-      if @profile.update(profile_params)
-        format.html { redirect_to @myprofile, notice: "profile was successfully updated." }
+      if @myprofile.update(profile_params)
+        format.html { redirect_to myprofile_index_path, notice: "profile was successfully updated." }
         format.json { render :show, status: :ok, location: @myprofile }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -69,7 +72,7 @@ class MyprofileController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.fetch(:profile, {}).permit(:fname, :surname, :date, :status, :children, :ethnic, :ethnicity, :nationality, :weight, :build, :user_id)
+      params.fetch(:profile, {}).permit(:fname, :surname, :date, :country, :region, :status, :children, :ethnic, :ethnicity, :nationality, :weight, :build, :facial, :height, :revent, :practice, :pattern, :summary, :educatiion, :sect, :scholar, :dressing, :islamic, :hobby, :revert, :devorcees, :widows, :parents, :user_id)
     end
 end
  

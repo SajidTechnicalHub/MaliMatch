@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_12_161529) do
+ActiveRecord::Schema.define(version: 2022_02_14_235523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,33 @@ ActiveRecord::Schema.define(version: 2022_02_12_161529) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "height"
+    t.boolean "revent"
+    t.text "pratice"
+    t.string "pattern"
+    t.text "summary"
+    t.text "educatiion"
+    t.string "sect"
+    t.text "scholar"
+    t.text "dressing"
+    t.text "islamic"
+    t.text "hobby"
+    t.boolean "revert"
+    t.boolean "devorcees"
+    t.boolean "widows"
+    t.boolean "parents"
+    t.string "country"
+    t.string "region"
+    t.string "facial"
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "recever_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

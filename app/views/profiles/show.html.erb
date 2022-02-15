@@ -1,0 +1,340 @@
+
+
+<style type="text/css">
+  <style type="text/css">
+  * {box-sizing: border-box;}
+
+  /* Full-width input fields */
+    .input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .input:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 2px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for all buttons */
+  .signup-btn{
+        width: 100%;
+        height: 45px;
+        background-color: #00BFFF;
+        color: white;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+      }
+     .signup-btn:hover{
+        width: 100%;
+        height: 45px;
+        background-color: white;
+        color: #00BFFF;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid #00BFFF;
+        /*outline-color: #00BFFF;*/
+      } 
+
+ 
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+   /* height: 100vh;*/
+    /*overflow: auto;*/
+  }
+
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 1000px) {
+      .signup-btn {
+      width: 100%;
+    }
+  }
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  /*background-color: #f1f1f1;*/
+  position: fixed;
+  min-height: 100vh;
+  /*overflow: auto;*/
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   /*margin-top: 100px; */
+
+
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #00BFFF;;
+  color: white;
+  font-size: 20px;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: #00BFFF;
+}
+
+.content {
+  margin-left: 184px;
+  padding: 1px 16px;
+  height: 100vh;
+  /*overflow: auto;*/
+
+}
+
+@media screen and (max-width: 1500px) {
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  .content {margin-left: 10;}
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    margin-left: 0px;
+  }
+  .sidebar a {float: buttom;}
+  div.content {
+    margin-left: 10;
+   width: 50%;
+  }
+}
+
+
+.block1-img{
+      width:100px;
+      height:80px;
+      /*margin-bottom: 10px;*/
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+     }
+     .block {
+       width: 1030px;
+       height: fit-content;
+       border-radius: 10px ;
+       /*padding: 40px;*/
+       color: #595959; 
+       justify-content: center;
+       align-content: center;
+       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+
+     }
+
+     .header{
+      width: 1100px;
+       height: 100px;
+       
+       color: #595959; 
+       
+       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+     }
+     tr td{
+      color: white;
+     }
+     .profile-show-F{
+        padding-right: 55px;
+        padding-left: 80px;
+    }
+    @media (max-width: 1000px) {
+    .profile-show-F{
+        padding-right: 0px!important;
+        padding-left: 0px!important;
+    }
+  
+}
+</style>
+
+
+
+
+
+<div class="sidebar">
+  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path%>
+ <!--  <a class="active" href="#home">Register</a>
+  <a class="active" href="#news">Login</a> -->
+  <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
+  <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
+  <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
+   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
+</div>
+
+<div class="content">
+  <div class="container-fluid">
+    <div class="row header"></div>
+  </div>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-2 mt-4 profile-show-F" >
+        <span class="p-4 bg-info" style=" border-radius:10px;">F<%= @profile.id %></span>
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+        	<h5>27 years old • West Midlands, United Kingdom</h5>
+        </div>
+        <div class="row">
+        	<div class="col-md-2">
+
+        		<button class="btn btn-primary" style="padding-right: 35px;
+        		padding-left: 35px">Request</button>
+        	</div>
+        	<div class="col-md-3">
+        		
+        		<button class="btn btn-danger">Your Account is inactive</button>
+        	</div>
+        	
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+    	<div class="col-lg-6">
+    		<h4>My self summary</h4>
+    		<p>I'm a humble, God fearing, shy, and down to earth with a good sense of humour. I'm shy & quiet to start off with, but with time I open up gradually I'm not those type of girls where they like to be in involved in everything I like to keep myself to myself.</p>
+
+    		<h4>My work / education</h4>
+    		<p>University</p>
+
+    		<h4>My Islam</h4>
+    		<p>Group / Sect / Methodology</p>
+
+    		<p>Suni</p>
+
+    		<h4>Scholars taken from / Speakers listened to?</h4>
+    		<p>N/a</p>
+
+    		<h4>How do I dress?</h4>
+    		<p>I dress modestly alhamdulillah.</p>
+
+    		<h4>My Islam (with detail)</h4>
+    		<p>I would say I have always been practising since a young age, I pray 5 times alhamdulillah and I find watching Islamic videos really comforting for me.</p>
+
+    		<h4>More about me</h4>
+    		<p>My hobbies, family, lifestyle, interests and skills</p>
+    		<p>I'm interested in helping people out, as it makes you feel better knowing you helped someone in need, I like to cook, keep the house tidy and I love to travel.</p>
+    	</div>
+    	<div class="col-lg-6">
+    		<h4>Details</h4>
+    		<div class="bg-secondary " style="border-radius: 10px;">
+    			<table class="table table-hover">
+    				<tbody>
+    					<tr>
+    						<td>Marital status</td>
+    						<td>Never Married</td>
+    					</tr>
+              <tr>
+                <td>Children</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Ethnicity</td>
+                <td>Sierra leonean</td>
+              </tr>
+              <tr>
+                <td>Nationality</td>
+                <td>American</td>
+              </tr>
+              <tr>
+                <td>Height</td>
+                <td>5 feet 4 inches</td>
+              </tr>
+              <tr>
+                <td>Weight</td>
+                <td>41 - 45kg</td>
+              </tr>
+              <tr>
+                <td>Build</td>
+                <td>Slim</td>
+              </tr>
+              <tr>
+                <td>Appearance</td>
+                <td>Attractive</td>
+              </tr>
+              <tr>
+                <td>Revert</td>
+                <td>No</td>
+              </tr>
+               <tr>
+                <td>Practicing since</td>
+                <td>8 years ago</td>
+              </tr>
+               <tr>
+                <td>Prayers</td>
+                <td>Always 5x Daily</td>
+              </tr>
+    				</tbody>
+    			</table>
+    		</div>
+        <h4>Open to matches from</h4>
+        <div class="bg-secondary"style="border-radius: 10px;">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td>Reverts</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Divorcees</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Widows</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Parents</td>
+                <td>No</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+    	</div>
+    </div>
+  </div>
+</div>
