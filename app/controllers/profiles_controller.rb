@@ -27,6 +27,11 @@ class ProfilesController < ApplicationController
     if params[:nationality].present?
       @profiles = @profiles.where('lower(nationality) = ?', params[:nationality].downcase)
     end
+    age_from = params[:ageFrom].to_i
+    age_to = params[:ageTo].to_i
+     if age_from.present? && age_to.present? && age_from <= age_to
+      @profiles = @profiles.where('age >= ? AND age <= ?', age_from, age_to )
+    end
   end
   # def search
   #   render :index
