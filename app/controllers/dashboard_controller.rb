@@ -3,12 +3,19 @@ class DashboardController < ApplicationController
   layout 'dashboard'
   def index
     @requests = Request.all
-
+    @profiles = Profile.all
+    @profile = current_user.profile
+   
     
 
   end
 
   def create
     # render 'dashboard/index'
+  end
+
+  def addon
+    @profiles = Profile.all
+    @profile = current_user.profile
   end
 end

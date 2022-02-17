@@ -26,19 +26,17 @@ class RequestsController < ApplicationController
 
   # POST /requests or /requests.json
   def create
-    # @profile = Profile.find_by(id: params[:id])
-    # byebug
-    # @request = Request.create(sender_id: current_user.id, receiver_id: @profile.user_id)
-    # if params[:sender_id].present? && if params[:receiver_id].present?
-    # @request = Request.!create(sender_id:params[:sender_id], receiver_id:params[:receiver_id], requests:0)
-    # end
+   @profiles = Profile.all
+    @profile = current_user.profile
+    
 
     @request = Request.new(request_params)
-    # # @request.user = current_user
-    # redirect_to dashboard_index_path
+    
 
     respond_to do |format|
       if @request.save
+        remaining_request = @profile.request.to_i - 1 
+       @profile.update(request:remaining_request)
         format.html { redirect_to dashboard_index_path, notice: "request created successfully." }
         format.json { render :show, status: :created, location: @request }
       else

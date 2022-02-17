@@ -220,9 +220,15 @@ body {
         </div>
         <div class="row">
         	<div class="col-md-2">
+            <% if @profile.request <= 0 %>
+              <%= link_to 'Request', settings_index_path, class:"btn btn-warning", style:"padding-right: 35px;
+              padding-left: 35px", :data => {:confirm => 'You have availed all of your Requests? Please visit Subsucription plan for new Requests. Thanks!'} %>
+            <% else %>
+              
+              <%= link_to 'Request', requests_path(receiver_id: @profile.user_id, sender_id: current_user.id), method: 'post', class:"btn btn-primary", style:"padding-right: 35px;
+              padding-left: 35px" %>
+            <% end %>
 
-            <%= link_to 'Request', requests_path(receiver_id: @profile.user_id, sender_id: current_user.id), method: 'post', class:"btn btn-primary", style:"padding-right: 35px;
-            padding-left: 35px" %>
            
 
           

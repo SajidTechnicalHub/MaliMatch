@@ -4,6 +4,9 @@ class MyprofileController < ApplicationController
   # GET /profiles or /profiles.json
   def index
     @profiles = Profile.all
+  
+    @profile = current_user.profile
+
     @profile =current_user.profile || Profile.create(user_id: current_user.id)
     
   end

@@ -2,6 +2,10 @@ class SettingsController < ApplicationController
   # before_action :authenticate_user!
   layout 'dashboard'
   def index
+    @profiles = Profile.all
+  
+    @profile = current_user.profile
+
     flash[:alert] = "You Resubscribe Successfully."
   end
 

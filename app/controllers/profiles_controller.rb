@@ -5,6 +5,10 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
   layout 'dashboard'
   def index
+    @profiles = Profile.all
+    @profile = current_user.profile
+   
+    
     @profiles = Profile.where.not(user_id: current_user.id)
     if params[:ethnicity].present? || params[:nationality].present? || params[:ageFrom].present? || params[:ageTo].present?
       if params[:ethnicity].present?

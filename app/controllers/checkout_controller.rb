@@ -1,6 +1,11 @@
 class CheckoutController < ApplicationController
   # before_action :authenticate_user!
   def index
+
+    @profiles = Profile.all
+    @profile = current_user.profile
+    remaining_request = @profile.request.to_i + 3
+    @profile.update(request:remaining_request)
   end
 
   def show

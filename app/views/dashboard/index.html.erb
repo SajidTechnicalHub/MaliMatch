@@ -174,6 +174,7 @@ body {
       border-radius: 20px;
       color: white;
      }
+     
 </style>
 
 
@@ -187,8 +188,8 @@ body {
    <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
   <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
   <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:213px"  %>
-  <%= link_to "Addon",  dashboard_index_path,  class:'nav-link active' %>
+  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
 </div>
 
@@ -197,7 +198,18 @@ body {
   <div class="container-fluid">
     <div class="row header justify-content-center align-items-center">
       <div class="col-8"></div>
-      <div class="col-4"><span class="px-4 py-2 bg-info remainning-btn">(1) Request Remaining</span></div>
+      <div class="col-4">
+          <% if @profile.request <= 0 %>
+            <span class="px-4 py-2 bg-danger remainning-btn">
+              (<%= @profile.request%>) Request Remaining
+            </span>
+          <% else %>
+            <span class="px-4 py-2 bg-info remainning-btn">
+            (<%= @profile.request%>) Request Remaining
+           </span>
+
+          <% end %>
+        </div>
     </div>
   </div>
   <div class="container">

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'admin/about'
   get 'admin/pricing'
   get 'registration/index'
-  get 'dashboard/dash'
+  get 'dashboard/addon'
   get 'dashboard/profiles'
   devise_for :users
   # get 'checkout/index'
