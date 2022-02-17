@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one :profile
+  has_many :sender_requests, class_name: 'Request'
+  has_many :receiver_requests, class_name: 'Request'
 end

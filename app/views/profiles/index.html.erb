@@ -116,7 +116,7 @@ body {
   .sidebar {
     width: 200px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     margin-left: 0px;
   }
   .sidebar a {float: buttom;}
@@ -169,6 +169,10 @@ body {
        -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
      }
+  .remainning-btn{
+      border-radius: 20px;
+      color: white;
+     }
 </style>
 
 
@@ -187,8 +191,11 @@ body {
 </div>
 
 <div class="content">
-  <div class="container-fluid">
-    <div class="row header"></div>
+ <div class="container-fluid">
+    <div class="row header justify-content-center align-items-center">
+      <div class="col-8"></div>
+      <div class="col-4"><span class="px-4 py-2 bg-info remainning-btn">(1) Request Remaining</span></div>
+    </div>
   </div>
   <div class="container">
     

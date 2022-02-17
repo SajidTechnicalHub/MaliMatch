@@ -1,14 +1,74 @@
 
-<% if @profiles.present? %>
+<style type="text/css">
+	.block {
+       width: 100%px;
+       min-height: 100px;
+       height: fit-content;
+       /*max-height: 150px;*/
+       border-radius: 10px ;
+       padding: 10px;
+       color: #595959; 
+       margin-bottom: 20px;
+       /*margin-top: 50px;*/
+       justify-content: center;
+       align-content: center;
+       border: 1 dotted gray;
+       text-overflow: ellipsis;
+       transition: transform 250ms;
+	   }
+      .block:hover {
+         transform: translateY(-10px);
+      }
+	   .link-style{
+	   	text-decoration: none; 
+	   	color:grey;
+
+	   }
+	   .link-style:hover {
+	   	text-decoration: none; 
+	   	color:grey;
+
+	   }
+	   .signup-btn{
+        width: 120px;
+        height: 30px;
+        background-color: #00BFFF;
+        color: white;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+      }
+     .signup-btn:hover{
+        width: 120px;
+        height: 30px;
+        background-color: white;
+        color: #00BFFF;
+        justify-content: center;
+        align-content: center;
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 2px solid #00BFFF;
+        /*outline-color: #00BFFF;*/
+      }
+      
+
+
+</style>
 	<% @profiles.each do |profile| %>
-		
+		<style type="text/css">.p{text-decoration: none;}</style>
 	
-		<div class="row">
-			   <p><span>F<%= profile.id %>: </span><%= profile.sect %>, <%= profile.nationality %>, <%= profile.region %>, <%= profile.country %> </p>
+		<div class="row block ">
+			   <p style="font-size: 18px;">
+			   	<span style="font-size: 20px; " >F<%= link_to profile.id, profile_path(profile), class:'link-style' %>: </span><%= link_to profile.sect, profile_path(profile), class:'link-style' %>, <%= link_to profile.nationality, profile_path(profile), class:'link-style' %>, <%= link_to profile.region, profile_path(profile), class:'link-style' %>, <%= link_to profile.country, profile_path(profile), class:'link-style' %> </p>
 			<p><%= profile.summary %></p>
-			<p><%= link_to 'Show Profile', profile_path(profile), class:'nav-link' %></p>
+			<p><%= link_to 'Show Profile', profile_path(profile), class:'btn signup-btn' %></p>
 		</div>
-	<%end%>
-<%else%>
-<h4>No Profile Found</h4>
-<%end%>
+	<% end %>
+
+

@@ -108,7 +108,8 @@ body {
 .content {
   margin-left: 184px;
   padding: 1px 16px;
-  height: fit-content;
+  /*height: fit-content;*/
+  overflow: auto;
 
 }
 
@@ -116,7 +117,7 @@ body {
   .sidebar {
     width: 200px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     margin-left: 0px;
   }
   .sidebar a {float: buttom;}
@@ -169,6 +170,10 @@ body {
        -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
      }
+     .remainning-btn{
+      border-radius: 20px;
+      color: white;
+     }
 </style>
 
 
@@ -182,21 +187,26 @@ body {
    <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
   <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
   <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:213px"  %>
+  <%= link_to "Addon",  dashboard_index_path,  class:'nav-link active' %>
    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
 </div>
 
 <div class="content">
+  <!-- Header -->
   <div class="container-fluid">
-    <div class="row header"></div>
+    <div class="row header justify-content-center align-items-center">
+      <div class="col-8"></div>
+      <div class="col-4"><span class="px-4 py-2 bg-info remainning-btn">(1) Request Remaining</span></div>
+    </div>
   </div>
   <div class="container">
     
     <div class="row">
       <div class="col-12">
         <%= render 'shared/dashboard'%>
+     
       </div>
     </div>
   </div>
 </div>
-

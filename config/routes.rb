@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   # get 'myprofile/index'
   get 'profiles/index'
   post 'profiles/search'
@@ -21,7 +22,9 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :myprofile
   resources :profiles
+  resources :requests
   get 'home/index'
   post 'checkout/create', to:'checkout#create'
+  post 'settings/create', to:'settings#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
