@@ -63,12 +63,19 @@
 	<div class="row my-3">
 
 		
-
-		<div class="col-lg-8 my">Reactivate</div>
-		<div class="col-lg-4">
-			<!-- <button class="btn signup-btn">Reactivate</button -->
-			<%= button_to 'Reactivate', settings_create_path, remote: true, class:'btn signup-btn' %>
-		</div>
+		<% if @profile.subscription == nil || @profile.set_days > 30 %>
+			<div class="col-lg-8 my">Your Account is Inactivated</div>
+			<div class="col-lg-4">
+				<!-- <button class="btn signup-btn">Reactivate</button -->
+				<%= button_to 'Reactivate', settings_create_path, remote: true, class:'btn btn-danger',:data => {:confirm => 'Are you sure! You want to activate your account!'} %>
+			</div>
+		<% else %>
+			<div class="col-lg-8 my">Account Activated</div>
+			<div class="col-lg-4">
+				<!-- <button class="btn signup-btn">Reactivate</button -->
+				<%= button_to 'Activated', settings_create_path, remote: true, class:'btn btn-info', :data => {:confirm => 'Are You Sure! You want to renew your subscription!'} %>
+			</div>
+		<% end %>
 	</div>
 	<div class="row">
 		<h4>Reactivating your account means</h4>

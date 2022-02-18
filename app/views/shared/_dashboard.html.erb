@@ -23,14 +23,16 @@
     color: #fff;
 }
 .send-request{
-	height: 200px;
-	position: relative;
-	overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
+		height: 180px;
+		position: relative;
+	  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
    -webkit-box-orient: vertical;
 
-     transition: transform 250ms;
+    transition: transform 250ms;
+    -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
   }
   
   .send-request:hover {
@@ -77,8 +79,8 @@
 
 <div class="row col-3 mt-2">
 	<h3 class="request-text">My Requests Sent</h3>
-	<hr>
 </div>
+	<hr>
 
 
 <div class="row justify-content-center request-block">
@@ -107,8 +109,8 @@
 
 <div class="row col-4 mt-5">
 	<h3 class="request-text">My Requests Received</h3>
-	<hr>
 </div>
+	<hr>
 <div class="row justify-content-center request-block">
 	 <% @requests.each do |received_request| %>
           

@@ -1,9 +1,11 @@
 class CheckoutController < ApplicationController
   # before_action :authenticate_user!
   def index
-
     @profiles = Profile.all
     @profile = current_user.profile
+
+    @profile =current_user.profile || Profile.create(user_id: current_user.id, request: 0)
+    
     remaining_request = @profile.request.to_i + 3
     @profile.update(request:remaining_request)
   end
@@ -35,29 +37,7 @@ class CheckoutController < ApplicationController
     
     return products
   end
-  #   @session = Stripe::Checkout::Session.create({
-  #   mode: 'payment',
-   
-  #   payment_method_types: ['card'],
-  #   line_items: [{
-  #     name: 'Mali Match'
-  #     amount: 50,
-  #     currency: "usd",
-  #     quantity: 1
-  #     # price_data: {
-     
-  #     #   currency: 'eur',
-  #     #     product_data: {
-  #     #       name: 'T-shirt',
-  #     #     },
-  #     #     unit_amount: 2000,
-  #     #   },
-  #     #   quantity: 1,
-  #     # }],
-  #     success_url: root_url,
-  #     cancel_url: root_url,
-  #   })
-  # # end
-  #  respond_to do |format|
-  #     format.js
+
+
+
 end

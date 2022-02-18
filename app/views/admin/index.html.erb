@@ -4620,13 +4620,21 @@ pre.wp-block-verse {
 				<div class="elementor-section-wrap">
 					<section class="elementor-section elementor-top-section elementor-element elementor-element-a2b78e1 elementor-section-full_width elementor-section-height-min-height elementor-section-content-middle elementor-section-stretched elementor-section-height-default elementor-section-items-middle" data-id="a2b78e1" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/SWELdS1fG_E&quot;,&quot;background_video_start&quot;:1}" style="width: 1284px; left: 0px;">
 						<div class="elementor-background-video-container elementor-hidden-phone">
-							<iframe class="elementor-background-video-embed" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/SWELdS1fG_E?controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.nikkahlab.com&amp;widgetid=1" id="widget2" style="width: 1284px; height: 722.25px;"></iframe>
+							<iframe class="elementor-background-video-embed" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/SWELdS1fG_E?controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.nikkahlab.com&amp;widgetid=1" id="widget2" style="width: 1284px; height: 722.25px;"></iframe>    
+              <!-- <video autoplay muted loop id="myVideo">
+                <source src="/assets/images/videobanner.mp4" type="video/mp4">
+
+              </video> -->
+                            
+                <%#= video_tag "assets/images/videobanner.mp4", :size => "320x240", :controls => true %>
 						</div>
 						<div class="elementor-container elementor-column-gap-default">
 							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ee1ee68" data-id="ee1ee68" data-element_type="column">
 								<div class="elementor-widget-wrap elementor-element-populated">
 									<div class="elementor-element elementor-element-bf37c02 elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="bf37c02" data-element_type="widget" data-widget_type="image.default">
-										<div class="elementor-widget-container"> <img width="666" height="375" src="http://www.nikkahlab.com/wp-content/uploads/2021/09/Artboard_1_2x-removebg-preview.png" class="attachment-full size-full" alt="" loading="lazy"> </div>
+										<div class="elementor-widget-container"> 
+                    <%= image_tag("logo.png",class:"attachment-full size-full", style:'width: 400px; height: 220px;') %>
+                    </div>
 									</div>
 									<div class="elementor-element elementor-element-6dcfb2b elementor-widget elementor-widget-heading" data-id="6dcfb2b" data-element_type="widget" data-widget_type="heading.default">
 										<div class="elementor-widget-container">
@@ -5525,7 +5533,11 @@ pre.wp-block-verse {
 													<div class="elementor-element elementor-element-25e1be4 elementor-star-rating--align-left elementor-star-rating-mobile--align-center elementor--star-style-star_fontawesome elementor-widget elementor-widget-star-rating" data-id="25e1be4" data-element_type="widget" data-widget_type="star-rating.default">
 														<div class="elementor-widget-container">
 															<div class="elementor-star-rating__wrapper">
-																<div class="elementor-star-rating" title="5/5" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i> <span itemprop="ratingValue" class="elementor-screen-only">5/5</span></div>
+																<%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
 															</div>
 														</div>
 													</div>
@@ -5554,7 +5566,13 @@ pre.wp-block-verse {
 													<div class="elementor-element elementor-element-3b21ce0 elementor-star-rating--align-left elementor-star-rating-mobile--align-center elementor--star-style-star_fontawesome elementor-widget elementor-widget-star-rating" data-id="3b21ce0" data-element_type="widget" data-widget_type="star-rating.default">
 														<div class="elementor-widget-container">
 															<div class="elementor-star-rating__wrapper">
-																<div class="elementor-star-rating" title="5/5" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i> <span itemprop="ratingValue" class="elementor-screen-only">5/5</span></div>
+																
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                
 															</div>
 														</div>
 													</div>
@@ -5582,7 +5600,11 @@ pre.wp-block-verse {
 													<div class="elementor-element elementor-element-80c22a7 elementor-star-rating--align-left elementor-star-rating-mobile--align-center elementor--star-style-star_fontawesome elementor-widget elementor-widget-star-rating" data-id="80c22a7" data-element_type="widget" data-widget_type="star-rating.default">
 														<div class="elementor-widget-container">
 															<div class="elementor-star-rating__wrapper">
-																<div class="elementor-star-rating" title="5/5" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i><i class="elementor-star-full"></i> <span itemprop="ratingValue" class="elementor-screen-only">5/5</span></div>
+																<%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
+                                  <%= image_tag('star.svg', style:"width:20; height:20px;") %>
 															</div>
 														</div>
 													</div>
@@ -5949,6 +5971,23 @@ pre.wp-block-verse {
 	<script type="text/javascript" src="http://www.nikkahlab.com/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.3.4" id="pro-preloaded-elements-handlers-js"></script>
 	<script type="text/javascript" src="http://www.nikkahlab.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.4.2" id="preloaded-modules-js"></script>
 	<script type="text/javascript" src="http://www.nikkahlab.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.3.4" id="e-sticky-js"></script>
+
+  <script>
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+  </script>
 </body>
 
 </html>
+
+

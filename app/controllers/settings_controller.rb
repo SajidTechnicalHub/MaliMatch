@@ -3,13 +3,19 @@ class SettingsController < ApplicationController
   layout 'dashboard'
   def index
     @profiles = Profile.all
-  
+    @requests = Request.all
     @profile = current_user.profile
-
-    flash[:alert] = "You Resubscribe Successfully."
   end
 
+def setting_checkout
+    @profile = current_user.profile
+     remaining_request = @profile.request.to_i + 3 
+     @profile.update(request:remaining_request, subscription: DateTime.now)
 
+     flash[:alert] = "You Resubscribe Successfully"
+
+     redirect_to settings_index_path
+end
 
   def create
     
@@ -17,7 +23,7 @@ class SettingsController < ApplicationController
           payment_method_types: ['card'],
           line_items: product_items(),
           mode: 'payment',
-          success_url: settings_index_url,
+          success_url: settings_setting_checkout_url,
           cancel_url: root_url
         })
       end

@@ -179,21 +179,20 @@ body {
 
 
 <div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path %>
- <!--  <a class="active" href="#home">Register</a>
-  <a class="active" href="#news">Login</a> -->
-  <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
+ <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
+   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
   <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
   <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
+  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
 </div>
 
 <div class="content">
  <div class="container-fluid">
     <div class="row header justify-content-center align-items-center">
-      <div class="col-8"></div>
-      <div class="col-4">
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4">
         <% if @profile.request <= 0 %>
             <span class="px-4 py-2 bg-danger remainning-btn">
               (<%= @profile.request%>) Request Remaining

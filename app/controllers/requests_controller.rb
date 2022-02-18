@@ -27,7 +27,7 @@ class RequestsController < ApplicationController
   # POST /requests or /requests.json
   def create
    @profiles = Profile.all
-    @profile = current_user.profile
+   @profile = current_user.profile
     
 
     @request = Request.new(request_params)
@@ -35,8 +35,10 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
+        
         remaining_request = @profile.request.to_i - 1 
        @profile.update(request:remaining_request)
+
         format.html { redirect_to dashboard_index_path, notice: "request created successfully." }
         format.json { render :show, status: :created, location: @request }
       else
@@ -48,7 +50,7 @@ class RequestsController < ApplicationController
 
   # PATCH/PUT /requests/1 or /requests/1.json
   def update
-     @request = request.find_by(id: params[:id])
+     @request = request.find_by(id: params[:sender_id])
     respond_to do |format|
       if @myrequest.update(request_params)
         format.html { redirect_to request_index_path, notice: "request was successfully updated." }
@@ -62,7 +64,8 @@ class RequestsController < ApplicationController
 
   # DELETE /requests/1 or /requests/1.json
   def destroy
-    @request.destroy
+    @request = Request.where(user_id: params[:sender_id])
+    @request.destroy!
     respond_to do |format|
       format.html { redirect_to requests_url, notice: "request was successfully destroyed." }
       format.json { head :no_content }

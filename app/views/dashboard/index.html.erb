@@ -1,5 +1,5 @@
 <style type="text/css">
-  <style type="text/css">
+  
   * {box-sizing: border-box;}
 
   /* Full-width input fields */
@@ -65,7 +65,7 @@
       width: 100%;
     }
   }
-</style>
+
 <style>
 body {
   margin: 0;
@@ -157,7 +157,7 @@ body {
        justify-content: center;
        align-content: center;
        -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
 
      }
 
@@ -182,9 +182,7 @@ body {
 
 
 <div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path %>
- <!--  <a class="active" href="#home">Register</a>
-  <a class="active" href="#news">Login</a> -->
+  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
    <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
   <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
   <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
@@ -197,8 +195,8 @@ body {
   <!-- Header -->
   <div class="container-fluid">
     <div class="row header justify-content-center align-items-center">
-      <div class="col-8"></div>
-      <div class="col-4">
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4">
           <% if @profile.request <= 0 %>
             <span class="px-4 py-2 bg-danger remainning-btn">
               (<%= @profile.request%>) Request Remaining
@@ -217,6 +215,7 @@ body {
     <div class="row">
       <div class="col-12">
         <%= render 'shared/dashboard'%>
+       
      
       </div>
     </div>

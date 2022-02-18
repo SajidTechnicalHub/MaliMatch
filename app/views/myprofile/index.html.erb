@@ -1,81 +1,81 @@
 <style type="text/css">
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    /* Full-width input fields */
-      .input {
-      width: 100%;
-      padding: 12px;
-      margin: 5px 0 22px 0;
-      display: inline-block;
-      border: none;
-      background: #f1f1f1;
-    }
 
-    .input:focus {
-      background-color: #ddd;
-      outline: none;
-    }
+/* Full-width input fields */
 
-    hr {
-      border: 2px solid #f1f1f1;
-      margin-bottom: 25px;
-    }
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
-    /* Set a style for all buttons */
-    .signup-btn{
-          width: 100%;
-          height: 45px;
-          background-color: #00BFFF;
-          color: white;
-          justify-content: center;
-          align-content: center;
-          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-          border-radius: 5px;
-          font-size: 18px;
-          font-weight: bold;
-          border: none;
-        }
-       .signup-btn:hover{
-          width: 100%;
-          height: 45px;
-          background-color: white;
-          color: #00BFFF;
-          justify-content: center;
-          align-content: center;
-          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-          border-radius: 5px;
-          font-size: 18px;
-          font-weight: bold;
-          border: 2px solid #00BFFF;
-          /*outline-color: #00BFFF;*/
-        } 
+.input:focus {
+  background-color: #ddd;
+  outline: none;
+}
 
-   
-  </style>
-  <style>
-  body {
-    margin: 0;
-    font-family: "Lato", sans-serif;
-  }
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
 
-  
-  
-       .block {
-         width: 100%;
-         height: fit-content;
-         border-radius: 10px ;
-         /*padding: 40px;*/
-         color: #595959; 
-         justify-content: center;
-         align-content: center;
-         -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-     padding: 10px;
 
-       }
-  
+/* Set a style for all buttons */
+
+.signup-btn {
+  width: 100%;
+  height: 45px;
+  background-color: #00BFFF;
+  color: white;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+.signup-btn:hover {
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  color: #00BFFF;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #00BFFF;
+  /*outline-color: #00BFFF;*/
+}
 </style>
 <style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.block {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  /*padding: 40px;*/
+  color: #595959;
+  justify-content: center;
+  align-content: center;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+  padding: 10px;
+}
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -90,10 +90,8 @@ body {
   min-height: 100vh;
   /*overflow: auto;*/
   -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   /*margin-top: 100px; */
-
-
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+  /*margin-top: 100px; */
 }
 
 .sidebar a {
@@ -102,9 +100,10 @@ body {
   padding: 10px;
   text-decoration: none;
 }
- 
+
 .sidebar a.active {
-  background-color: #00BFFF;;
+  background-color: #00BFFF;
+  ;
   color: white;
   font-size: 20px;
 }
@@ -118,7 +117,6 @@ body {
   margin-left: 184px;
   padding: 1px 16px;
   height: fit-content;
-
 }
 
 @media screen and (max-width: 1500px) {
@@ -128,9 +126,14 @@ body {
     position: fixed;
     margin-left: 0px;
   }
-  .sidebar a {float: buttom;}
-  .content {margin-left: 10;}
+  .sidebar a {
+    float: buttom;
+  }
+  .content {
+    margin-left: 10;
+  }
 }
+
 @media screen and (max-width: 900px) {
   .sidebar {
     width: 150px;
@@ -138,288 +141,454 @@ body {
     position: absolute;
     margin-left: 0px;
   }
-  .sidebar a {float: buttom;}
+  .sidebar a {
+    float: buttom;
+  }
   div.content {
     margin-left: 10;
-   width: 50%;
+    width: 50%;
   }
 }
 
+.block1-img {
+  width: 100px;
+  height: 80px;
+  /*margin-bottom: 10px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
-.block1-img{
-      width:100px;
-      height:80px;
-      /*margin-bottom: 10px;*/
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    
-     }
-     
+.header {
+  width: 100%;
+  height: 100px;
+  color: #595959;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+}
 
-
-     .header{
-      width: 100%;
-       height: 100px;
-       
-       color: #595959; 
-       
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-     }
-  .remainning-btn{
-      border-radius: 20px;
-      color: white;
-     }
+.remainning-btn {
+  border-radius: 20px;
+  color: white;
+}
 </style>
-
-
-
-
-
 <div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path %>
- <!--  <a class="active" href="#home">Register</a>
-  <a class="active" href="#news">Login</a> -->
-   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
-  <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
-  <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
-   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
+  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
+    <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
+      <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
+        <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
+          <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
+            <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
 </div>
-
 <div class="content">
- <div class="container-fluid">
+  <div class="container-fluid">
     <div class="row header justify-content-center align-items-center">
-      <div class="col-8"></div>
-      <div class="col-4">
-        <% if @profile.request <= 0 %>
-            <span class="px-4 py-2 bg-danger remainning-btn">
-              (<%= @profile.request%>) Request Remaining
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4">
+        <% if @profile.request <= 0 %> <span class="px-4 py-2 bg-danger remainning-btn">
+              (<%= @profile.request %>) Request Remaining
             </span>
-          <% else %>
-            <span class="px-4 py-2 bg-info remainning-btn">
-            (<%= @profile.request%>) Request Remaining
+          <% else %> <span class="px-4 py-2 bg-info remainning-btn">
+            (<%= @profile.request %>) Request Remaining
            </span>
-
-          <% end %>
+            <% end %>
       </div>
     </div>
   </div>
   <div class="container">
-    
-        <%#= render 'shared/myprofile'%>
-        <div class="row justify-content-center align-content-center  block">
-              <div class="col-lg-10">
-                <h1>Edit Profile</h1>
-                <p>This form will be completely visible excluding your first name, surname and date of birth.</p>
-                <% if notice %>
-                  <p class="alert alert-success"><%= notice %></p>
-                <% end %>
-                <% if alert %>
-                  <p class="alert alert-danger"><%= alert %></p>
-                <% end %>
-                 <%= form_for :profile, url: myprofile_path(@profile), html: {method: :put} do |f| %>
-                  
-                  <div class="field">
-                    <%= f.label :First_name %><br />
-                    <%= f.text_field :fname, autofocus: true,placeholder:"Enter First Name", autocomplete: "name", class:'input' %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :Surname %><br />
-                    <%= f.text_field :surname, autofocus: true,placeholder:"Enter Surname", autocomplete: "phone", class:'input' %>
-                  </div>
-                  <div class="field">
-                    <%= f.label :Date_of_birth %><br />
-                    <%= f.date_field :dob, autofocus: true, autocomplete: "date", class:'input' %>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                        <div class="field">
-                          <%= f.label :country, "Location" %><br />
-                          <%= f.select :country, ['Afghanistan','Aland Islands','Albania','Algeria','American Samoa','Andorra','Angola','Anguilla','Antarctica','Antigua and Barbuda','Argentina','Armenia','Aruba','Australia','Austria','Azerbaijan','Bahamas','Bahrian','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bermuda','Bhutan','Bolivia','Bonaire, Sint Eustatius and Saba','Bosnia and Herzegovina','Botswana','Bouvet Island','Brazil','British Indian Ocean Territory','Brunei Darussalam','Bulgaria','Burkina Faso','Burundi','Cambodia','Cameroon','Canada','Cape Verde','Cayman Islands','Central African Republic','Chad','Chile','China','Christmas Island','Cocos (Keeling) Islands','Colombia','Comoros','Congo, Republic of the (Brazzaville)','Congo, the Democratic Republic of the (Kinshasa)','Cook Island','Costa Rica','Côte d Ivoire','Croatia','Cuba','Curaçao','Cyprus','Czech Republic','Denmark','Djibouti','Dominica','Dominican Republic','Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Ethiopia','Falkland Islands (Islas Malvinas)','Faroe Islands','Fiji','Finland','France','French Guiana','French Polynesia','French Southern and Antarctic Lands','Gabon','Gambia, The','Georgia','Germany','Ghana','Gibraltar','Greece','Greenland','Grenada','Guadeloupe','Guam','Guatemala','Guernsey','Guinea','Guinea-Bissau','Guyana','Haiti','Heard Island and McDonald Islands','Holy See (Vatican City)','Honduras','Hong Kong','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Isle of Man','Israel','Italy','Jamaica','Japan','Jersey','Jordan','Kazakhstan','Kenya','Kiribati','Korea, Democratic People','Korea, Republic of','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg','Macao','Macedonia, Republic of','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Martinique','Mauritania','Mauritius','Mayotte','Mexico','Micronesia, Federated States of','Moldova','Monaco','Mongolia','Montenegro','Montserrat','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','New Caledonia','New Zealand','Nicaragua','Niger','Nigeria','Niue','Norfolk Island','Northern Mariana Isla','Norway','Oman','Pakistan','Palau','Palestine, State of','Panama','Papua New Guinea','Papua New Guinea','Paraguay','Philippines','Pitcairn','Poland','Portugal','Puerto Rico','Qatar','Réunion','Romania','Russian Federation','Rwanda','Saint Barthélemy','Saint Helena, Ascension and Tristan da Cunha','Saint Kitts and Nevis','Saint Lucia','Saint Martin','Saint Pierre and Miquelon','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Sint Maarten (Dutch part)','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Georgia and South Sandwich Islands','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Swaziland','Sweden','Switzerland','Syrian Arab Republic','Taiwan','Tajikistan','Tanzania, United Republic of','Thailand','Timor-Les','Togo','Tokelau','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Turks and Caicos Islands','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United State','United States Minor Outlying Islands','Uruguay','Uzbekistan','Vanuatu','Venezuela, Bolivarian Republic of','Vietnam','Virgin Islands, British','Virgin Islands, U.S.','Wallis and Futuna','Western Sahara','Yemen','Zambia','Zimbabwe'
+    <%#= render 'shared/myprofile'%>
+      <div class="row justify-content-center align-content-center  block">
+        <div class="col-lg-10">
+          <h1>Edit Profile</h1>
+          <p>This form will be completely visible excluding your first name, surname and date of birth.</p>
+          <!-- <%# if notice %>
+                  <p class="alert alert-success"><%#= notice %></p>
+                <%# end %>
+                <%# if alert %>
+                  <p class="alert alert-danger"><%#= alert %></p>
+                <%# end %> -->
+          <%= form_for :profile, url: myprofile_path(@profile), html: {method: :put} do |f| %>
+            <div class="field">
+              <%= f.label :First_name %>
+                <br />
+                <%= f.text_field :fname, autofocus: true,placeholder:"Enter First Name", autocomplete: "name", class:'input' %>
+            </div>
+            <div class="field">
+              <%= f.label :Surname %>
+                <br />
+                <%= f.text_field :surname, autofocus: true,placeholder:"Enter Surname", autocomplete: "phone", class:'input' %>
+            </div>
+            <div class="field">
+              <%= f.label :Date_of_birth %>
+                <br />
+                <%= f.date_field :dob, autofocus: true, autocomplete: "date", class:'input' %>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="field">
+                  <%= f.label :country, "Location" %>
+                    <br />
+                    <%= f.select :country, ['Afghanistan','Aland Islands','Albania','Algeria','American Samoa','Andorra','Angola','Anguilla','Antarctica','Antigua and Barbuda','Argentina','Armenia','Aruba','Australia','Austria','Azerbaijan','Bahamas','Bahrian','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bermuda','Bhutan','Bolivia','Bonaire, Sint Eustatius and Saba','Bosnia and Herzegovina','Botswana','Bouvet Island','Brazil','British Indian Ocean Territory','Brunei Darussalam','Bulgaria','Burkina Faso','Burundi','Cambodia','Cameroon','Canada','Cape Verde','Cayman Islands','Central African Republic','Chad','Chile','China','Christmas Island','Cocos (Keeling) Islands','Colombia','Comoros','Congo, Republic of the (Brazzaville)','Congo, the Democratic Republic of the (Kinshasa)','Cook Island','Costa Rica','Côte d Ivoire','Croatia','Cuba','Curaçao','Cyprus','Czech Republic','Denmark','Djibouti','Dominica','Dominican Republic','Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Ethiopia','Falkland Islands (Islas Malvinas)','Faroe Islands','Fiji','Finland','France','French Guiana','French Polynesia','French Southern and Antarctic Lands','Gabon','Gambia, The','Georgia','Germany','Ghana','Gibraltar','Greece','Greenland','Grenada','Guadeloupe','Guam','Guatemala','Guernsey','Guinea','Guinea-Bissau','Guyana','Haiti','Heard Island and McDonald Islands','Holy See (Vatican City)','Honduras','Hong Kong','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Isle of Man','Israel','Italy','Jamaica','Japan','Jersey','Jordan','Kazakhstan','Kenya','Kiribati','Korea, Democratic People','Korea, Republic of','Kuwait','Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg','Macao','Macedonia, Republic of','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Martinique','Mauritania','Mauritius','Mayotte','Mexico','Micronesia, Federated States of','Moldova','Monaco','Mongolia','Montenegro','Montserrat','Morocco','Mozambique','Myanmar','Namibia','Nauru','Nepal','Netherlands','New Caledonia','New Zealand','Nicaragua','Niger','Nigeria','Niue','Norfolk Island','Northern Mariana Isla','Norway','Oman','Pakistan','Palau','Palestine, State of','Panama','Papua New Guinea','Papua New Guinea','Paraguay','Philippines','Pitcairn','Poland','Portugal','Puerto Rico','Qatar','Réunion','Romania','Russian Federation','Rwanda','Saint Barthélemy','Saint Helena, Ascension and Tristan da Cunha','Saint Kitts and Nevis','Saint Lucia','Saint Martin','Saint Pierre and Miquelon','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Sint Maarten (Dutch part)','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Georgia and South Sandwich Islands','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Swaziland','Sweden','Switzerland','Syrian Arab Republic','Taiwan','Tajikistan','Tanzania, United Republic of','Thailand','Timor-Les','Togo','Tokelau','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Turks and Caicos Islands','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom','United State','United States Minor Outlying Islands','Uruguay','Uzbekistan','Vanuatu','Venezuela, Bolivarian Republic of','Vietnam','Virgin Islands, British','Virgin Islands, U.S.','Wallis and Futuna','Western Sahara','Yemen','Zambia','Zimbabwe'
                             ],{ prompt:'Select Contry' }, { class: 'input' }%>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="field">
-                          <br />
-                          <%= f.select :region, ['Australian Capital Territory','New South Wales','Northern Territory','Queenslan','South Australia','Tasmania','Victoria','Western Australia'],{ prompt:'Select Region' }, { class: 'input' }%>
-                      </div>
-                    </div>
-                  </div>                 
-                  <div class="field">
-                    <%= f.label :Marital_status%><br />
-                    <%= f.select :status, ['Naver Married', 'Devorced', 'Widowed', 'Annulled'],{ prompt:'Select your Marital Status' }, { class: 'input' }%>
                 </div>
-
+              </div>
+              <div class="col-lg-6">
                 <div class="field">
-                    <%= f.label :Do_you_have_children?%><br /><br />
-                    <div class="row">
-                      <div class="col-lg-2">
-                        <%= f.radio_button :children, 'NO' %> NO
-                      </div>
-                      <div class="col-lg-2">
-                        <%= f.radio_button :children, 'YES' %> YES
-                      </div><br /><br />
-                    </div>
-                   
+                  <br />
+                  <%= f.select :region, ['Australian Capital Territory','New South Wales','Northern Territory','Queenslan','South Australia','Tasmania','Victoria','Western Australia'],{ prompt:'Select Region' }, { class: 'input' }%>
                 </div>
-                
-
-                <div class="field">
-                  <h5>Ethnic Origin</h5>
-                    <%= f.label :Are_you_multi_ethnic?%><br /><br />
-                    <div class="row">
-                      <div class="col-lg-2">
-                        <%= f.radio_button :ethnic, 'NO' %> NO
-                      </div>
-                      <div class="col-lg-2">
-                        <%= f.radio_button :ethnic, 'YES' %> YES
-                      </div><br /><br />
-                    </div>
-                   
-                </div>
-                <div class="field">
-                 
-                  <%= f.select :ethnicity, ['Somali'],{ prompt:'Select your ethnicity' }, { class: 'input' }%>
-
-                </div>
-                <div class="field">
-                 <h5>Nationality / Citizenship</h5>
-                 <p>Your nationality is your relationship with a particular state or country. You'll be able to easily discover this if you think of your passport or other form of identification.</p>
-                  <%= f.select :nationality, ['Austra', 'Afghanistan', 'Albanian','Somali'],{ prompt:'Select Nationality' }, { class: 'input' }%>
-
-                </div>
-                 <div class="field">
-                 <%= f.label :Height %><br />
-                  <%= f.select :height, ['4 feet 9 inches', '4 feet 10 inches', '4 feet 11 inches', '5 feet 0 inches','5 feet 1 inches','5 feet 2 inches' ,'5 feet 3 inches','4 feet 5 inches','5 feet 6 inches','5 feet 7 inches','5 feet 8 inches','5 feet 9 inches','5 feet 10 inches','5 feet 11 inches','6 feet 0 inches','6 feet 1 inches','6 feet 2 inches','6 feet 3 inches','6 feet 4 inches','6 feet 5 inches','6 feet 6 inches','6 feet 7 inches','6 feet 8 inches'],{ prompt:'Select Your Height' }, { class: 'input' }%>
-
-                </div> 
-                <div class="field">
-                 <%= f.label :Weight %><br />
-                  <%= f.select :weight, ['31 - 35kg', '36 - 40kg','41 - 45kg','46 - 50kg','51 - 55kg','56 - 60kg','61 - 65kg','66 - 70kg','71 - 75kg','76 - 80kg','81 - 85kg','86 - 90kg','91 - 95kg','96 - 100kg','101 - 105kg','106 - 110kg','111 - 115kg','116 - 120kg','121 - 125kg','125kg or more'],{ prompt:'Select Your Weight Range' }, { class: 'input' }%>
-
-                </div>
-                <div class="field">
-                 <%= f.label :Build %><br />
-                  <%= f.select :build, ['Skinny', 'Lean (high muscle)', 'Well proportioned','Hourglass figur','Pear-shaped figure','Curvy','Thick','Slim','Average','Sporty','Muscular','Stocky','Bulking','Few extra pounds','Chubby','Heavyset'],{ prompt:'Select Your Build' }, { class: 'input' }%>
-
-                </div>
-                <div class="field">
-                 <%= f.label :facial %><br />
-                  <%= f.select :facial, ['Standout', 'Very Attractive', 'Attractive', 'Fairly Attractive','Above Average','Average / Regular','Fair / Okay','Plain'],{ prompt:'Select Your Best Describe Facial Apperance' }, { class: 'input' }%>
-
-                </div>
-
-
-              
-                <div class="field">
-                  <h5>Ethnic Origin</h5>
-                    <%= f.label :Are_you_a_revent?%><br /><br />
-                    <div class="row">
-                      <div class="col-lg-2">
-                        <%= f.radio_button :revent, 'NO' %> NO
-                      </div>
-                      <div class="col-lg-2">
-                        <%= f.radio_button :revent, 'YES' %> YES
-                      </div><br /><br />
-                    </div>
-                     <div class="field">
-                    <%= f.label :When_did_you_start_practicing? %><br />
-                    <%= f.date_field :practice, autofocus: true, autocomplete: "date", class:'input' %>
-                  </div>
-                  <div class="field">
-                   <%= f.label :Pattern_of_salah %><br />
-                    <%= f.select :pattern, ['Always-1 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high','Regularly - I usually pray most of my prayers, maybe miss Fajr sometimes if tired','Sometimes - Pray when I can / When I feel like it / When my iman is high','Rarely - Maybe Jumu ah / Eid Salah / During Ramadan','Never / One-offs' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
-                  
-                  </div> 
-
-                     <div class="field">
-                    <%= f.label :Self_summary %><br />
-                    <%= f.text_area :summary, autofocus: true, autocomplete: "summary",size: '50x5', class:'input' %>
-                  </div>
-
-                  <div class="field">
-                      <%= f.label :Educational_work %><br />
-                      <%= f.text_area :education, autofocus: true, autocomplete: "education",size: '50x5', class:'input' %>
-                    </div>
-
-                    <div class="field">
-                     <%= f.label :sect %><br />
-                      <%= f.select :sect, ['Salafi','Sunni','Ahlul Hadith','Just Muslim','Shia','Barelwi','Deobandi'], { prompt:'Select your best described group / sect / methodology' }, { class: 'input' }%>
-                    
-                    </div>
-
-                    <div class="field">
-                        <%= f.label :Scholars_taken_from_or_speakers_listened_to %><br />
-                        <%= f.text_area :scholar, autofocus: true, autocomplete: "scholar",size: '50x5', class:'input' %>
-                      </div>
-
-                      <div class="field">
-                        <%= f.label :Dressing_covering %><br />
-                        <%= f.text_area :dressing, autofocus: true, autocomplete: "dressing",size: '50x5', class:'input' %>
-                      </div>
-
-                      <div class="field">
-                        <%= f.label :Islamic_practice %><br />
-                        <%= f.text_area :islamic, autofocus: true, autocomplete: "islamic",size: '50x5', class:'input', placeholder:'Enter some details about your journey into practicing, where you are right now and your goals in practicing' %>
-                      </div>
-
-                      <div class="field">
-                        <%= f.label :My_hobbies %>,  <%= f.label :family_lifestyle %>, <%= f.label :interests_and_skills %><br />
-                        <%= f.text_area :hobby, autofocus: true, autocomplete: "hobby",size: '50x5', class:'input', placeholder:'Enter some details about you and your hobbies, family, lifestyle, interests and skills' %>
-                      </div>
-                      <div class="row"><h3>Open to:</h3></div>
-                      <div class="row">
-                        <div class="col-lg-2">
-                          <%=f.label :reverts %>
-                        </div>
-                        <div class="col-lg-2">
-                           <%= f.check_box :revert, {:class => "input"}, "revert" %>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-lg-2">
-                          <%=f.label :Devorcees %>
-                        </div>
-                        <div class="col-lg-2">
-                           <%= f.check_box :devorcees, {:class => "input"}, "devorces" %>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-lg-2">
-                          <%=f.label :Widows %>
-                        </div>
-                        <div class="col-lg-2">
-                           <%= f.check_box :widows, {:class => "input"}, "widows" %>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-lg-2">
-                          <%=f.label :parents %>
-                        </div>
-                        <div class="col-lg-2">
-                           <%= f.check_box :parents, {:class => "input"}, "parents" %>
-                        </div>
-                      </div>
-                      
-                  
-
-                  <div class="actions">
-                    <%= f.submit "Update", class:'signup-btn ' %>
-                  </div>
-                <% end %>
-
-                
-
               </div>
             </div>
-
+            <div class="field">
+              <%= f.label :Marital_status%>
+                <br />
+                <%= f.select :status, ['Naver Married', 'Devorced', 'Widowed', 'Annulled'],{ prompt:'Select your Marital Status' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <%= f.label :Do_you_have_children?%>
+                <br />
+                <br />
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%= f.radio_button :children, 'NO' %> NO </div>
+                  <div class="col-lg-2">
+                    <%= f.radio_button :children, 'YES' %> YES </div>
+                  <br />
+                  <br /> </div>
+            </div>
+            <div class="field">
+              <h5>Ethnic Origin</h5>
+              <%= f.label :Are_you_multi_ethnic?%>
+                <br />
+                <br />
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%= f.radio_button :ethnic, 'NO' %> NO </div>
+                  <div class="col-lg-2">
+                    <%= f.radio_button :ethnic, 'YES' %> YES </div>
+                  <br />
+                  <br /> </div>
+            </div>
+            <div class="field">
+              <%= f.select :ethnicity, ['Somali'],{ prompt:'Select your ethnicity' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <h5>Nationality / Citizenship</h5>
+              <p>Your nationality is your relationship with a particular state or country. You'll be able to easily discover this if you think of your passport or other form of identification.</p>
+              <%= f.select :nationality, ['Afghan',
+                                 'Albanian',
+                                  'Algerian',
+                                  'American',
+                                  'Andorran',
+                                  'Angolan',
+                                  'Antiguans',
+                                  'Argentinean',
+                                  'Armenian',
+                                  'Australian',
+                                  'Austrian',
+                                  'Azerbaijani',
+                                  'Bahamian',
+                                  'Bahraini',
+                                  'Bangladeshi',
+                                  'Barbadian',
+                                  'Barbudans',
+                                  'Batswana',
+                                  'Belarusian',
+                                  'Belgian',
+                                  'Belizean',
+                                  'Beninese',
+                                  'Bhutanese',
+                                  'Bolivian',
+                                  'Bosnian',
+                                  'Brazilian',
+                                  'British',
+                                  'Bruneian',
+                                  'Bulgarian',
+                                  'Burkinabe',
+                                  'Burmese',
+                                  'Burundian',
+                                  'Cambodian',
+                                  'Cameroonian',
+                                  'Canadian',
+                                  'Cape Verdean',
+                                  'Central African',
+                                  'Chadian',
+                                  'Chilean',
+                                  'Chinese',
+                                  'Colombian',
+                                  'Comoran',
+                                  'Congolese',
+                                  'Costa Rican',
+                                  'Croatian',
+                                    'Cuban',
+                                  'Cypriot',
+                                    'Czech',
+                                  'Danish',
+                                  'Djibouti',
+                                  'Dominican',
+                                    'Dutch',
+                                  'East Timorese',
+                                  'Ecuadorean',
+                                  'Egyptian',
+                                  'Emirian',
+                                  'Equatorial Guinean',
+                                  'Eritrean',
+                                  'Estonian',
+                                  'Ethiopian',
+                                  'Fijian',
+                                  'Filipino',
+                                  'Finnish',
+                                  'French',
+                                  'Gabonese',
+                                  'Gambian',
+                                  'Georgian',
+                                  'German',
+                                  'Ghanaian',
+                                    'Greek',
+                                  'Grenadian',
+                                  'Guatemalan',
+                                  'Guinea-Bissauan',
+                                  'Guinean',
+                                  'Guyanese',
+                                  'Haitian',
+                                  'Herzegovinian',
+                                  'Honduran',
+                                  'Hungarian',
+                                  'Icelander',
+                                  'Indian',
+                                  'Indonesian',
+                                  'Iranian',
+                                    'Iraqi',
+                                    'Irish',
+                                  'Italian',
+                                  'Ivorian',
+                                  'Jamaican',
+                                  'Japanese',
+                                  'Jordanian',
+                                  'Kazakhstani',
+                                  'Kenyan',
+                                  'Kittian and Nevisian',
+                                  'Kurdish',
+                                  'Kuwaiti',
+                                  'Kyrgyz',
+                                  'Laotian',
+                                  'Latvian',
+                                  'Lebanese',
+                                  'Liberian',
+                                  'Libyan',
+                                  'Liechtensteiner',
+                                  'Lithuanian',
+                                  'Luxembourger',
+                                  'Macedonian',
+                                  'Malagasy',
+                                  'Malawian',
+                                  'Malaysian',
+                                  'Maldivan',
+                                  'Malian',
+                                    'Maltese',
+                                  'Marshallese',
+                                  'Mauritanian',
+                                  'Mauritian',
+                                  'Mexican',
+                                  'Micronesian',
+                                  'Moldovan',
+                                    'Monacan',
+                                  'Mongolian',
+                                    'Moroccan',
+                                  'Mosotho',
+                                  'Motswana',
+                                  'Mozambican',
+                                  'Namibian',
+                                  'Nauruan',
+                                  'Nepalese',
+                                  'New Zealander',
+                                  'Ni-Vanuatu',
+                                  'Nicaraguan',
+                                  'Nigerien',
+                                  'Nigerian',
+                                  'North Korean',
+                                  'Northern Irish',
+                                  'Norwegian',
+                                    'Omani',
+                                  'Pakistani',
+                                  'Palauan',
+                                  'Palestinian',
+                                  'Panamanian',
+                                  'Papua New Guinean',
+                                  'Paraguayan',
+                                  'Peruvian',
+                                  'Polish',
+                                  'Portuguese',
+                                  'Qatari',
+                                  'Romanian',
+                                  'Russian',
+                                  'Rwandan',
+                                  'Saint Lucian',
+                                  'Salvadoran',
+                                  'Samoan',
+                                  'San Marinese',
+                                  'Sao Tomean',
+                                    'Saudi',
+                                  'Scottish',
+                                  'Senegalese',
+                                  'Serbian',
+                                  'Seychellois',
+                                  'Sierra Leonean',
+                                  'Singaporean',
+                                  'Slovakian',
+                                  'Slovenian',
+                                  'Solomon Islander',
+                                  'Somali',
+                                  'South African',
+                                    'South Korean',
+                                  'Spanish',
+                                   'Sri Lankan',
+                                  'Sudanese',
+                                  'Surinamer',
+                                    'Swazi',
+                                  'Swedish',
+                                    'Swiss',
+                                  'Syrian',
+                                  'Taiwanese',
+                                    'Tajik',
+                                  'Tanzanian',                                'Thai',
+                                  'Togolese',
+                                  'Tongan',
+                                  'Trinidadian or Tobagonian',
+                                  'Tunisian',
+                                  'Turkish',
+                                  'Tuvaluan',
+                                  'Ugandan',
+                                  'Ukrainian',
+                                  'Uruguayan',
+                                  'Uzbekistani',
+                                  'Venezuelan',
+                                  'Vietnamese',
+                                    'Welsh',
+                                  'Yemeni',
+                                  'Zambian',
+                                  'Zimbabwean',],{ prompt:'Select Nationality' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <%= f.label :Height %>
+                <br />
+                <%= f.select :height, ['4 feet 9 inches', '4 feet 10 inches', '4 feet 11 inches', '5 feet 0 inches','5 feet 1 inches','5 feet 2 inches' ,'5 feet 3 inches','4 feet 5 inches','5 feet 6 inches','5 feet 7 inches','5 feet 8 inches','5 feet 9 inches','5 feet 10 inches','5 feet 11 inches','6 feet 0 inches','6 feet 1 inches','6 feet 2 inches','6 feet 3 inches','6 feet 4 inches','6 feet 5 inches','6 feet 6 inches','6 feet 7 inches','6 feet 8 inches'],{ prompt:'Select Your Height' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <%= f.label :Weight %>
+                <br />
+                <%= f.select :weight, ['31 - 35kg', '36 - 40kg','41 - 45kg','46 - 50kg','51 - 55kg','56 - 60kg','61 - 65kg','66 - 70kg','71 - 75kg','76 - 80kg','81 - 85kg','86 - 90kg','91 - 95kg','96 - 100kg','101 - 105kg','106 - 110kg','111 - 115kg','116 - 120kg','121 - 125kg','125kg or more'],{ prompt:'Select Your Weight Range' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <%= f.label :Build %>
+                <br />
+                <%= f.select :build, ['Skinny', 'Lean (high muscle)', 'Well proportioned','Hourglass figur','Pear-shaped figure','Curvy','Thick','Slim','Average','Sporty','Muscular','Stocky','Bulking','Few extra pounds','Chubby','Heavyset'],{ prompt:'Select Your Build' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <%= f.label :facial %>
+                <br />
+                <%= f.select :facial, ['Standout', 'Very Attractive', 'Attractive', 'Fairly Attractive','Above Average','Average / Regular','Fair / Okay','Plain'],{ prompt:'Select Your Best Describe Facial Apperance' }, { class: 'input' }%>
+            </div>
+            <div class="field">
+              <h5>Ethnic Origin</h5>
+              <%= f.label :Are_you_a_revent?%>
+                <br />
+                <br />
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%= f.radio_button :revent, 'NO' %> NO </div>
+                  <div class="col-lg-2">
+                    <%= f.radio_button :revent, 'YES' %> YES </div>
+                  <br />
+                  <br /> </div>
+                <div class="field">
+                  <%= f.label :When_did_you_start_practicing? %>
+                    <br />
+                    <%= f.date_field :practice, autofocus: true, autocomplete: "date", class:'input' %>
+                </div>
+                <div class="field">
+                  <%= f.label :Pattern_of_salah %>
+                    <br />
+                    <%= f.select :pattern, ['Always-1 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high','Regularly - I usually pray most of my prayers, maybe miss Fajr sometimes if tired','Sometimes - Pray when I can / When I feel like it / When my iman is high','Rarely - Maybe Jumu ah / Eid Salah / During Ramadan','Never / One-offs' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
+                </div>
+                <div class="field">
+                  <%= f.label :Self_summary %>
+                    <br />
+                    <%= f.text_area :summary, autofocus: true, autocomplete: "summary",size: '50x5', class:'input' %>
+                </div>
+                <div class="field">
+                  <%= f.label :Educational_work %>
+                    <br />
+                    <%= f.text_area :education, autofocus: true, autocomplete: "education",size: '50x5', class:'input' %>
+                </div>
+                <div class="field">
+                  <%= f.label :sect %>
+                    <br />
+                    <%= f.select :sect, ['Salafi','Sunni','Ahlul Hadith','Just Muslim','Shia','Barelwi','Deobandi'], { prompt:'Select your best described group / sect / methodology' }, { class: 'input' }%>
+                </div>
+                <div class="field">
+                  <%= f.label :Scholars_taken_from_or_speakers_listened_to %>
+                    <br />
+                    <%= f.text_area :scholar, autofocus: true, autocomplete: "scholar",size: '50x5', class:'input' %>
+                </div>
+                <div class="field">
+                  <%= f.label :Dressing_covering %>
+                    <br />
+                    <%= f.text_area :dressing, autofocus: true, autocomplete: "dressing",size: '50x5', class:'input' %>
+                </div>
+                <div class="field">
+                  <%= f.label :Islamic_practice %>
+                    <br />
+                    <%= f.text_area :islamic, autofocus: true, autocomplete: "islamic",size: '50x5', class:'input' %>
+                </div>
+                <div class="field">
+                  <%= f.label :My_hobbies %>,
+                    <%= f.label :family_lifestyle %>,
+                      <%= f.label :interests_and_skills %>
+                        <br />
+                        <%= f.text_area :hobby, autofocus: true, autocomplete: "hobby",size: '50x5', class:'input' %>
+                </div>
+                <div class="row">
+                  <h3>Open to:</h3></div>
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%=f.label :reverts %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= f.check_box :revert, {:class => "input"}, "revert" %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%=f.label :Devorcees %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= f.check_box :devorcees, {:class => "input"}, "devorces" %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%=f.label :Widows %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= f.check_box :widows, {:class => "input"}, "widows" %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                    <%=f.label :parents %>
+                  </div>
+                  <div class="col-lg-2">
+                    <%= f.check_box :parents, {:class => "input"}, "parents" %>
+                  </div>
+                </div>
+                <div class="actions">
+                  <%= f.submit "Update", class:'signup-btn ' %>
+                </div>
+                <% end %>
+            </div>
+        </div>
       </div>
-    </div>
- 
+  </div>

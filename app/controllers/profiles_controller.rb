@@ -5,11 +5,22 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
   layout 'dashboard'
   def index
-    @profiles = Profile.all
+    @profiles = Profile.where(user_id: current_user.id)
     @profile = current_user.profile
-   
+
+    # checking promoted subscription
+    if (@profile.set_promoted_date > 0 && @profile.set_promoted_date <= 14)
+      
+
+      if @profiles.select{|profile| profile.set_promoted_date != nil}
+      @profiles.find{|profile| profile.set_promoted_date != nil}
+      end
+      
+    end
     
-    @profiles = Profile.where.not(user_id: current_user.id)
+    # @profiles = Profile.where.not(user_id: current_user.id)
+
+    # searching
     if params[:ethnicity].present? || params[:nationality].present? || params[:ageFrom].present? || params[:ageTo].present?
       if params[:ethnicity].present?
         @profiles = @profiles.where('lower(ethnicity) = ?', params[:ethnicity].downcase)
@@ -24,7 +35,7 @@ class ProfilesController < ApplicationController
       end
     else 
 
-      @profiles = Profile.all
+      @profiles = Profile.where.not(user_id: current_user.id)
     
     end
   end
@@ -34,6 +45,9 @@ class ProfilesController < ApplicationController
 
 
   def show
+    
     @profile = Profile.find_by(id: params[:id])
+    @current_user_profile = current_user.profile
+    
   end
 end

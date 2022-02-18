@@ -2,28 +2,8 @@
   <style type="text/css">
   * {box-sizing: border-box;}
 
-  /* Full-width input fields */
-    .input {
-    width: 100%;
-    padding: 12px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  .input:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  hr {
-    border: 2px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* Set a style for all buttons */
-  .signup-btn{
+  
+ .signup-btn{
         width: 100%;
         height: 45px;
         background-color: #00BFFF;
@@ -34,7 +14,6 @@
         border-radius: 5px;
         font-size: 18px;
         font-weight: bold;
-        border: none;
       }
      .signup-btn:hover{
         width: 100%;
@@ -50,8 +29,6 @@
         border: 2px solid #00BFFF;
         /*outline-color: #00BFFF;*/
       } 
-
- 
   /* Add padding to container elements */
   .container {
     padding: 16px;
@@ -65,8 +42,7 @@
       width: 100%;
     }
   }
-</style>
-<style>
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -108,8 +84,8 @@ body {
 .content {
   margin-left: 184px;
   padding: 1px 16px;
-  /*height: fit-content;*/
-  overflow: auto;
+  height: fit-content;
+  /*overflow: auto;*/
 
 }
 
@@ -175,6 +151,38 @@ body {
       color: white;
      }
      
+
+
+      .block-promoted {
+       width: 300px;
+       height: 450px;
+       border-radius: 10px ;
+       padding: 20px;
+       color: #595959; 
+       margin-bottom: 30px;
+       margin-top: 70px;
+       
+
+     }
+
+    .box-shadow-medium {
+         -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+         box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075); }
+      @media(max-width: 1180px){
+        .block-promoted{
+          margin: auto;
+          width: 100%;
+          margin-bottom: 30px;
+          margin-top: 70px;
+        }
+        
+      }
+      @media(max-width: 993px){
+        .signup-btn{
+          margin-top: 30px;
+       }
+  
+
 </style>
 
 
@@ -182,17 +190,17 @@ body {
 
 
 <div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path %>
- <!--  <a class="active" href="#home">Register</a>
-  <a class="active" href="#news">Login</a> -->
+  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
    <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
   <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
   <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:213px"  %>
-  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active' %>
+  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
 </div>
 
+
+  
 <div class="content">
   <!-- Header -->
   <div class="container-fluid">
@@ -214,11 +222,34 @@ body {
   </div>
   <div class="container">
     
-    <div class="row">
-      <div class="col-12">
-        
-     
+    <div class="row justify-content-center align-items-center">
+      
+        <div class="col-lg-4 ">
+            <div class="block-promoted box-shadow-medium  ">
+               <center> <h3><span style="color:orange; font: bold;">Promoted Pakage</span></h3>
+                <h3>$14.99</h3>
+                <%= link_to image_tag("premium.png", class:'block1-img mb-2'), root_path %>
+                <p>This package upgrades your profile and makes you show up at the top of searches that include you and on the general Profiles page for 30 days. This increases your chances of having your profile seen and requested!</p></center>
+              
+                <%= button_to 'Buy Now', addons_premium_path, remote: true, class:'btn signup-btn mt-3' %>
+             </div>
       </div>
+      
+        <div class="col-lg-4 ">
+            <div class="block-promoted box-shadow-medium  ">
+                <center><h3><span style="color:orange;">1 Additional Request</span></h3>
+                <h3>.99c</h3>
+                <%= link_to image_tag("premium.png", class:'block1-img mb-2'), root_path %>
+                <p class="mb-5">1 additional requests to matches you find this month
+                  Good value for money</p></center>
+                  <br>
+                <%= button_to 'Buy Now', addons_path, remote: true, class:'btn signup-btn mt-5 ' %>
+             </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+
+            

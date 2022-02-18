@@ -1,0 +1,10 @@
+var stripe = Stripe('pk_test_51KRv3EG8369TqtsuG77t87iYOIkBTyXL5DEBG1p5rIoslRdeTjIsCvBdlVeO4DWVvGTZi8bO0pQzsLryG7p0F96r00B28q7Zox');
+var checkoutButton = document.getElementById('checkout-button');
+
+
+  stripe.redirectToCheckout({
+    
+    sessionId: '<%= @session.id %>'
+  }).then(function (result) {
+    console.log(result.error.message);
+  });
