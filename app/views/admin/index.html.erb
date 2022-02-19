@@ -4569,7 +4569,7 @@ pre.wp-block-verse {
 								<div class="elementor-widget-container">
 									<nav migration_allowed="1" migrated="0" role="navigation" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
 										<ul id="menu-1-f46985e" class="elementor-nav-menu" data-smartmenus-id="1644744221729158">
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-140 current_page_item menu-item-351"><%= link_to 'Home', root_path, class: 'elementor-item elementor-item-active', style:"color:black" %></li>
+											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-140 current_page_item menu-item-351"><%= link_to 'Home', root_path, class: 'elementor-item elementor-item-active'%></li>
 											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><%= link_to 'About Us', admin_about_path, class: 'elementor-item' %></li>
 											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><%= link_to 'Pricing', price_index_path, class: 'elementor-item' %></li>
 											 <% if user_signed_in? %>
@@ -4619,12 +4619,40 @@ pre.wp-block-verse {
 			<div data-elementor-type="wp-page" data-elementor-id="140" class="elementor elementor-140" data-elementor-settings="[]">
 				<div class="elementor-section-wrap">
 					<section class="elementor-section elementor-top-section elementor-element elementor-element-a2b78e1 elementor-section-full_width elementor-section-height-min-height elementor-section-content-middle elementor-section-stretched elementor-section-height-default elementor-section-items-middle" data-id="a2b78e1" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/youtu.be\/SWELdS1fG_E&quot;,&quot;background_video_start&quot;:1}" style="width: 1284px; left: 0px;">
-						<div class="elementor-background-video-container elementor-hidden-phone">
-							<iframe class="elementor-background-video-embed" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/SWELdS1fG_E?controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.nikkahlab.com&amp;widgetid=1" id="widget2" style="width: 1284px; height: 722.25px;"></iframe>    
-              <!-- <video autoplay muted loop id="myVideo">
-                <source src="/assets/images/videobanner.mp4" type="video/mp4">
+						<div class="elementor-background-video-container elementor-hidden-phone"><!-- class="elementor-background-video-container elementor-hidden-phone" -->
+							<!-- <iframe class="elementor-background-video-embed" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/SWELdS1fG_E?controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.nikkahlab.com&amp;widgetid=1" id="widget2" style="width: 1284px; height: 722.25px;"></iframe>  -->   
+              <video autoplay muted loop id="myVideo" class="elementor-background-video-embed">
+                <source src="/assets/videos/videobanner.mp4" type="video/mp4">
 
-              </video> -->
+              </video>
+
+
+              <!-- Optional: some overlay text to describe the video -->
+              <!-- <div class="content">
+                <h1>Heading</h1>
+                <p>Lorem ipsum...</p>
+                Use a button to pause/play the video with JavaScript
+                <button id="myBtn" onclick="myFunction()">Pause</button>
+              </div> -->
+              <script type="text/javascript">
+                
+                // Get the video
+                var video = document.getElementById("myVideo");
+
+                // Get the button
+                var btn = document.getElementById("myBtn");
+
+                // Pause and play the video, and change the button text
+                function myFunction() {
+                  if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                  } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                  }
+                }
+                </script>
                             
                 <%#= video_tag "assets/images/videobanner.mp4", :size => "320x240", :controls => true %>
 						</div>

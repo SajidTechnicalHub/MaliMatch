@@ -12,7 +12,7 @@ class Profile < ApplicationRecord
     self.age = age
   end
 
-require 'date'
+
 
 def set_days
   if subscription !=nil

@@ -34,7 +34,7 @@ class MyprofileController < ApplicationController
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to myprofile_index_path, notice: "profile was successfully Updated." }
+        format.html { redirect_to dashboar_index_path, notice: "profile was successfully Updated." }
         format.json { render :show, status: :created, location: @myprofile }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -48,7 +48,7 @@ class MyprofileController < ApplicationController
      @myprofile = Profile.find_by(id: params[:id])
     respond_to do |format|
       if @myprofile.update(profile_params)
-        format.html { redirect_to myprofile_index_path, notice: "profile was successfully updated." }
+        format.html { redirect_to dashboard_index_path, notice: "profile was successfully updated." }
         format.json { render :show, status: :ok, location: @myprofile }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -75,7 +75,7 @@ class MyprofileController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.fetch(:profile, {}).permit(:fname, :surname, :date, :country, :region, :status, :children, :ethnic, :ethnicity, :nationality, :weight, :build, :facial, :height, :revent, :practice, :pattern, :summary, :educatiion, :sect, :scholar, :dressing, :islamic, :hobby, :revert, :devorcees, :widows, :parents, :user_id)
+      params.fetch(:profile, {}).permit(:fname, :surname, :date, :country, :region, :status, :children, :ethnic, :ethnicity, :nationality, :weight, :build, :facial, :height, :revent, :practice, :pattern, :summary, :educatiion, :sect, :scholar, :dressing, :islamic, :hobby, :revert, :devorcees, :widows, :parents, :dob, :user_id)
     end
 end
  
