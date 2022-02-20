@@ -21,12 +21,12 @@ class ProfilesController < ApplicationController
     # @profiles = Profile.where.not(user_id: current_user.id)
 
     # searching
-    if params[:ethnicity].present? || params[:nationality].present? || params[:ageFrom].present? || params[:ageTo].present?
+    if params[:ethnicity].present? || params[:country].present? || params[:ageFrom].present? || params[:ageTo].present?
       if params[:ethnicity].present?
         @profiles = @profiles.where('lower(ethnicity) = ?', params[:ethnicity].downcase)
       end
-      if params[:nationality].present?
-        @profiles = @profiles.where('lower(nationality) = ?', params[:nationality].downcase)
+      if params[:country].present?
+        @profiles = @profiles.where('lower(country) = ?', params[:country].downcase)
       end
       age_from = params[:ageFrom].to_i
       age_to = params[:ageTo].to_i
