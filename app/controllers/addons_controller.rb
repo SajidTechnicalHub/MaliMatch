@@ -73,6 +73,8 @@ def update_premium
   
 end
 
-
+def policy
+  
+end
 
 end

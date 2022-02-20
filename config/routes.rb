@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'addons/update_request'
   post 'addons/premium'
   get 'addons/update_premium'
+  get 'addons/policy'
   # get 'myprofile/index'
   get 'profiles/index'
   post 'profiles/search'
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   get 'dashboard/addon'
   get 'dashboard/dashboard_checkout'
   
-  get 'dashboard/profiles'
+  get 'dashboard/policy'
   devise_for :users
   # get 'checkout/index'
   # get 'checkout/show'
