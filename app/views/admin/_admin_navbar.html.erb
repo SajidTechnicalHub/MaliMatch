@@ -1,0 +1,93 @@
+
+<style type="text/css">
+    @media (min-width: 768px) {
+    .navbar-brand.abs
+        {
+            position: absolute;
+            width: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+
+        }
+    }
+
+    .button-style {
+        background-color: red;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .button-style:hover {
+        background-color: red;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+}
+    .navlink-style{
+
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .active{
+
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .active, .navlink-style:hover{
+
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+      
+
+</style>
+
+<nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center ">
+    <div class="container">
+        <!-- <a href="/" class="navbar-brand d-flex w-50 me-auto">Navbar 3</a> -->
+        <%= link_to image_tag("logo.png", style:"width:120px; height:70px; margin-top:-10px"), root_path, class:'navbar-brand d-flex w-50 me-auto' %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="navbar-nav w-100 justify-content-center mt-2">
+                <li class="nav-item active ">
+                    
+                    <%= link_to 'Home',  root_path, class:'  navlink-style mt-2' %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'About ',  admin_aboutus_path, class:' navlink-style' %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Pricing',  price_index_path, class:' navlink-style' %>
+                </li>
+
+                 <% if user_signed_in? %>
+                    <li class=""><%= link_to 'Dashboard', dashboard_index_path, class: 'navlink-style' %></li>
+                <% end %>
+            </ul>
+            <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
+                <% if user_signed_in? %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><%= link_to 'logout',  destroy_user_session_path, method: :delet, class:'button-style' %></a>
+                    </li>
+                    
+                <% else %>
+                 <li class="nav-item">
+                        <a class="nav-link" href="#"><%= link_to 'Login',  registration_index_path, class:'button-style' %></a>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</nav>
