@@ -60,7 +60,20 @@
         top: 0;
         z-index: -2;
 }
-.content {
+@media(max-width: 600px){
+  .home_video {
+        width: 100vw;
+        height: 100px;
+        position: absolute;
+        /*object-fit: cover;*/
+        top: 0;
+        z-index: -1;
+      }
+      #myVide{
+        height: 100px;
+      }
+}
+/*.content {
   position: absolute;
   top: 503px;
   left: -20px;
@@ -68,7 +81,7 @@
   width: 100%;
   padding: 20px;
   height: 100vh;
-}
+}*/
     </style>
 
 <%= render 'admin_navbar' %>
@@ -84,7 +97,7 @@
     <div class="content">
       
       <!-- Use a button to pause/play the video with JavaScript -->
-      <button id="myBtn" onclick="myFunction()">Pause</button>
+      <!-- button id="myBtn" onclick="myFunction()">Pause</button> -->
     </div>
    
 
