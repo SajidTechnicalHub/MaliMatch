@@ -69,11 +69,8 @@
         top: 0;
         z-index: -1;
       }
-      #myVide{
-        height: 100px;
-      }
 }
-/*.content {
+.content {
   position: absolute;
   top: 503px;
   left: -20px;
@@ -81,7 +78,12 @@
   width: 100%;
   padding: 20px;
   height: 100vh;
-}*/
+}
+button{
+  /*padding: 5px;*/
+  background-color: blue;
+  color: white;
+}
     </style>
 
 <%= render 'admin_navbar' %>
@@ -94,12 +96,12 @@
 </div>
 
     <!-- Optional: some overlay text to describe the video -->
-    <div class="content">
+    <!-- <div class="content">
       
-      <!-- Use a button to pause/play the video with JavaScript -->
-      <!-- button id="myBtn" onclick="myFunction()">Pause</button> -->
+      Use a button to pause/play the video with JavaScript
+      <button id="myBtn" onclick="myFunction()">Play</button>
     </div>
-   
+    -->
 
   <div class="container mt-5">
     <div class="row justify-content-center">
@@ -182,7 +184,7 @@
           video.play();
           btn.innerHTML = "Pause";
         } else {
-          video.pause();
+          // video.pause();
           btn.innerHTML = "Play";
         }
       }
