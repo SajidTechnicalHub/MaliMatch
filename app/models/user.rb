@@ -6,4 +6,11 @@ class User < ApplicationRecord
   has_one :profile
   has_many :sender_requests, class_name: 'Request'
   has_many :receiver_requests, class_name: 'Request'
+
+
+
+  validates :wquestion, :presence => true
+  validates :wemail, :presence => true
+  validates :wname, :presence => true
+  validates :wmobile, :presence => true
 end
