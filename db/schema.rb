@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_24_115715) do
+ActiveRecord::Schema.define(version: 2022_02_25_125659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_115715) do
     t.integer "request"
     t.date "subscription"
     t.date "promoteddate"
+    t.string "requeststatus"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

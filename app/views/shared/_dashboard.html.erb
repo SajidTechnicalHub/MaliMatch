@@ -91,13 +91,13 @@
 		<div class="col-lg-3 ">
 			<div class="card border-secondary mb-3 send-request" style="max-width: 18rem;">
 			  <div class="card-header">
-			  	<%= link_to 'F',request_path(@profile.id), class:'link-style' %>
-			  	<%= link_to @profile.id, request_path(@profile.id), class:'link-style' %>
+			  	<%= link_to 'F',dashboard_path(@profile.id), class:'link-style' %>
+			  	<%= link_to @profile.id, dashboard_path(@profile.id), class:'link-style' %>
 			  	
 			  </div>
 			  <div class="card-body text-secondary">
 			    
-			    <span class="card-text"><%= link_to @profile.summary, request_path(@profile.id), class:'link-style' %></span>
+			    <span class="card-text"><%= link_to @profile.summary, dashboard_path(@profile.id), class:'link-style' %></span>
 			  </div>
 			</div>
 		</div>

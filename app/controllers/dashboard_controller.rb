@@ -11,6 +11,10 @@ class DashboardController < ApplicationController
     
 
   end
+  def show
+     @profile = Profile.find_by(id: params[:id])
+    @current_user_profile = current_user.profile
+  end
 
   def dashboard_checkout
     @profiles = Profile.all

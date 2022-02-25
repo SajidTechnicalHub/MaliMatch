@@ -35,8 +35,10 @@ Rails.application.routes.draw do
   resources :profiles
   resources :requests
   resources :addons
-  get 'home/index'
+  get 'home/index' 
   post 'checkout/create', to:'checkout#create'
   post 'settings/create', to:'settings#create'
+  # get 'requests/accept_request/:id', to:'requests#accept_request'
+  # get 'requests/reject_request/:id', to:'requests#reject_request'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

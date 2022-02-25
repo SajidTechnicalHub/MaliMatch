@@ -4,10 +4,32 @@ class RequestsController < ApplicationController
   layout 'dashboard'
   # GET /requests or /requests.json
   def index
-    @requests = Request.find_by(id: current_user.id)
-    
+    # @requests = Request.find_by(id: current_user.id)
+
+    if params[:accept]
+
+      @profile = Profile.find_by(id: params[:accept])
+      @profile.update(requeststatus:'accepted')
+      redirect_to request_path(@profile)
+
+    end
+
+    if params[:reject]
+
+      @profile = Profile.find_by(id: params[:reject])
+      @profile.update(requeststatus:'rejected')
+      redirect_to request_path(@profile)
+
+    end
     
   end
+
+  # def accept_request
+  #   @profile = Profile.find_by(id: params[:id])
+  # end
+  # def reject_request
+  #   @profile = Profile.find_by(id: params[:id])
+  # end
 
   # GET /requests/1 or /requests/1.json
   def show

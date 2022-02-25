@@ -133,7 +133,7 @@ body {
   .sidebar {
     width: 200px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     margin-left: 0px;
   }
   .sidebar a {float: buttom;}
@@ -165,7 +165,7 @@ body {
     
      }
      .block {
-       width: 830px;
+       width: 1030px;
        height: fit-content;
        border-radius: 10px ;
        /*padding: 40px;*/
@@ -200,6 +200,10 @@ body {
     }
   
 }
+ .remainning-btn{
+      border-radius: 20px;
+      color: white;
+     }
 </style>
 
 
@@ -207,23 +211,35 @@ body {
 
 
 <div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), dashboard_index_path%>
- <!--  <a class="active" href="#home">Register</a>
-  <a class="active" href="#news">Login</a> -->
-  <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
+  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
+   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
   <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
   <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active', style:"margin-top:270px"  %>
+  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
+  <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
    <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
 </div>
 
 <div class="content">
   <div class="container-fluid">
-    <div class="row header"></div>
+    <div class="row header justify-content-center align-items-center">
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4">
+        <% if @current_user_profile.request <= 0 %>
+          <span class="px-4 py-2 bg-danger remainning-btn">
+            (<%= @current_user_profile.request%>) Request Remaining
+          </span>
+        <% else %>
+          <span class="px-4 py-2 bg-info remainning-btn">
+          (<%= @current_user_profile.request%>) Request Remaining
+         </span>
+
+        <% end %>
+    </div>
   </div>
   <div class="container">
     
-    <div class="row mt-2">
+    <div class="row">
       <div class="col-md-2 mt-4 profile-show-F" >
         <span class="p-4 bg-info text-white font-weight-bolder" style=" border-radius:10px;">F<%= @profile.id %></span>
       </div>
@@ -232,54 +248,26 @@ body {
         	<h5><%= @profile.age %> years old • <%= @profile.region %>, <%= @profile.country %></h5>
         </div>
         <div class="row">
-        	<div class="col-md-3">
-
-            <%= link_to 'Request Accepted', requests_path(accept: @profile.id) , class:"btn btn-primary", style:"padding-right: 20px;
-            padding-left: 20px"%>
+        	<div class="col-md-2">
+            
+            <%= link_to 'Request', '', class:"btn btn-secondary text-white", style:"padding-right: 35px;
+              padding-left: 35px", :data => {:confirm => 'You have already requested to this user'} %>
           
         	</div>
-
-        	<div class="col-md-3">
-        		
-        		<%= link_to 'Request Rejected', requests_path(reject: @profile.id), data: {:confirm => 'Are you sure?'}, class:"btn btn-danger"%>
+          <% if @current_user_profile.set_days <= 30 && @current_user_profile.subscription != nil%>
+        	<div class="col-md-6">
+        		  <button class="btn btn-success text-white">( <%=30 - @current_user_profile.set_days%> )  days remaining in your subscription expire!</button>
         	</div>
-      
+        		<% else %>
+            <div class="col-md-4">
+              <button class="btn btn-danger text-white">Your Account is Inactive</button>
+          </div>
+              
+            <% end %>
+        	
         </div>
       </div>
     </div>
-        <% if @profile.requeststatus == 'accepted' %>
-          <div class=" block mt-4 p-5">
-            
-            <div class="row">
-              <div class="col-lg-4">
-                <p><strong>Name</strong></p>
-              </div>
-              <div class="col-lg-4">
-                <p><%= @profile.user.name %></p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-4">
-                <p><strong>Phone</strong></p>
-              </div>
-              <div class="col-lg-4">
-                <p><%= @profile.user.phone %></p>
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                  <p><strong>Email</strong></p>
-                </div>
-                <div class="col-lg-4">
-                  <p><%= @profile.user.email %></p>
-                </div>
-              
-            </div>
-          </div>
-        <% end%>
-
-        
     <div class="row mt-5">
     	<div class="col-lg-6">
     		<h4>My self summary</h4>
@@ -300,7 +288,7 @@ body {
     		<p><%= @profile.dressing%></p>
 
     		<h4>My Islam (with detail)</h4>
-    		<p>I would say I have always been practising since a young age, I pray 5 times alhamdulillah and I find watching Islamic videos really comforting for me.</p>
+    		<p><%= @profile.islamic%></p>
 
         <h4>Prayers</h4>
         <p><%= @profile.pattern%></p>
@@ -419,4 +407,3 @@ body {
     </div>
   </div>
 </div>
-
