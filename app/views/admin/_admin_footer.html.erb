@@ -88,7 +88,16 @@ ul li
 		</div>
 		<div class="col-lg-3 ">
 			<center>
-				<%= link_to 'Login',  registration_index_path, class:'button-style' %></center>
+				<% if user_signed_in? %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><%= link_to 'logout',  destroy_user_session_path, method: :delete, class:'button-style' %></a>
+                    </li>
+                    
+                <% else %>
+                 <li class="nav-item">
+                        <a class="nav-link" href="#"><%= link_to 'Login',  new_user_session_path, class:'button-style' %></a>
+                    </li>
+                <% end %></center>
 		</div>
 
 </div>

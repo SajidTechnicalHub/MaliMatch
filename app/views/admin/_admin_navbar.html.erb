@@ -79,12 +79,12 @@
             <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
                 <% if user_signed_in? %>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><%= link_to 'logout',  destroy_user_session_path, method: :delet, class:'button-style' %></a>
+                        <a class="nav-link" href="#"><%= link_to 'logout',  destroy_user_session_path, method: :delete, class:'button-style' %></a>
                     </li>
                     
                 <% else %>
                  <li class="nav-item">
-                        <a class="nav-link" href="#"><%= link_to 'Login',  registration_index_path, class:'button-style' %></a>
+                        <a class="nav-link" href="#"><%= link_to 'Login',  new_user_session_path, class:'button-style' %></a>
                     </li>
                 <% end %>
             </ul>

@@ -154,16 +154,25 @@ div.content {
     
      }
      .block {
-       width: 1030px;
+       width: 500px;
        height: fit-content;
-       margin-top: 70px;
+       margin-top: 10px;
        border-radius: 10px ;
        /*padding: 40px;*/
        color: #595959; 
-       justify-content: center;
-       align-content: center;
+       /*justify-content: center;
+       align-content: center;*/
        -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
+
+     }
+    .user-img{
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+       
 
      }
 </style>
@@ -179,12 +188,22 @@ div.content {
     <%= link_to "Register", new_user_registration_path,  class:'nav-link active'  %>
     <%= link_to "Login",  new_user_session_path,  class:'nav-link active'  %>
   </div>
-<div class="content">
-  <div class="container">
-    <div class="row justify-content-center align-items-center block">
-      <div class="col-lg-6 ">
-          <h1 >Sign In</h1>
-          <p>This page is for people who have already registered on this new website. If you have not yet registered. If this is your first time on our new website, we will not have any of your details yet.</p>
+<div class="content ">
+  <div class="container ">
+    <div class="row ">
+      <div class="col-lg-6 py-3 px-4">
+        <h2 class="font-weight-bold">Welcome to Mali Match</h2>
+        <p>This is a beta release of what is going to be a fully fledged Mali Match system. It is an automated system for you to be able to send your requests and receive your responses and is for existing members. If you don't currently have an active Mali Match subscription, head over to malimatch.com to subcribe to Mali Match and then return here to use our system.</p>
+        <p>Currently this system is not made for candidates who have a Mali Match subscription through Stripe. If your subscription with us is through Stripe, please send us an email at info@malimatch.com for our team to resolve this within 24 hours.</p>
+        <p>What's new:</p>
+        <p>
+          <ul>
+            <li>We now support request rollover, so if you don't end up using all three of your Mali Match requests, when your subscription fee is paid, you will be given 3 additional requests, regardless of whether or not you've used the previous ones.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-lg-6 block">
+          <%= image_tag('user_img.png', class:'user-img') %>
           <hr>
           <% if notice %>
             <p class="alert alert-success"><%= notice %></p>
@@ -214,7 +233,17 @@ div.content {
             <%= f.submit "Sign In", class:'signup-btn ' %>
           </div>
         <% end %>
-        <%= link_to "Forgot your password?", new_password_path(resource_name), class:'nav-link text-center mt-2'  %>
+        <div class="row mb-2">
+          <div class="col-lg-6">
+            
+            <%= link_to "Forgot your password?", new_password_path(resource_name), class:'nav-link text-center mt-2'  %>
+          </div>
+          <div class="col-lg-6">
+          <%= link_to "Sign Up", new_user_registration_path, class:'nav-link text-center mt-2'  %>
+            
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>

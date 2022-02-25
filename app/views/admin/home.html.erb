@@ -54,7 +54,7 @@
      
       .home_video {
         width: 100vw;
-        height: 87vh;
+        height: 480px;
         position: absolute;
         object-fit: cover;
         top: 0;
@@ -95,20 +95,13 @@ button{
   
 </div>
 
-    <!-- Optional: some overlay text to describe the video -->
-    <!-- <div class="content">
-      
-      Use a button to pause/play the video with JavaScript
-      <button id="myBtn" onclick="myFunction()">Play</button>
-    </div>
-    -->
 
   <div class="container mt-5">
     <div class="row justify-content-center">
       <%= image_tag("logo.png",class:"", style:'width: 400px; height: 220px;') %>
       <center ><h2 style="color:white">Making Marriage Easy</h2></center>
-      <%= image_tag("apple.png",class:"mt-2", style:'width: 200px; height: 50px;') %>
-      <%= image_tag("google.png",class:"mt-2", style:'width: 200px; height: 50px;') %>
+      <%#= image_tag("apple.png",class:"mt-2", style:'width: 200px; height: 50px;') %>
+      <%#= image_tag("google.png",class:"mt-2", style:'width: 200px; height: 50px;') %>
     </div>
   </div>
 
@@ -133,7 +126,7 @@ button{
          <%= image_tag("match_find_heart.png",class:"mobile-view-center", style:'width: 350px; height: 150px;') %>
       </div>
       <div class="row justify-content-center p-5 find-mobile">
-        <h2>Find Matches On MALIMATCH</h2>
+        <h2>Find Matches On Mali Match</h2>
         <p style="color:black; padding: 20px;">Finding a match has never been easier just find a profile that you are interested in and request them its that easy</p>
       </div>
     </div>
@@ -166,11 +159,11 @@ button{
 
 </div>
 
-<%= render 'admin_footer1' %>
+<%#= render 'admin_footer1' %>
 <%= render 'admin_footer' %>
 
   
- <script type="text/javascript">
+<!--  <script type="text/javascript">
       
       // Get the video
       var video = document.getElementById("myVideo");
@@ -188,5 +181,18 @@ button{
           btn.innerHTML = "Play";
         }
       }
-      </script>
+  </script> -->
 
+<!-- <script type="text/javascript">
+  var promise = document.querySelector('#myVideo').play();
+
+  if (promise !== undefined) {
+    promise.then(_ => {
+      // Autoplay started!
+      promise.play();
+    }).catch(error => {
+      // Autoplay was prevented.
+      // Show a "Play" button so that user can start playback.
+    });
+  }
+</script> -->
