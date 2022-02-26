@@ -234,14 +234,14 @@ body {
         <div class="row">
         	<div class="col-md-3">
 
-            <%= link_to 'Request Accepted', requests_path(accept: @profile.id) , class:"btn btn-primary", style:"padding-right: 20px;
+            <%= link_to 'Accept Request', requests_path(accept: @profile.id) , class:"btn btn-primary", style:"padding-right: 20px;
             padding-left: 20px"%>
           
         	</div>
 
         	<div class="col-md-3">
         		
-        		<%= link_to 'Request Rejected', requests_path(reject: @profile.id), data: {:confirm => 'Are you sure?'}, class:"btn btn-danger"%>
+        		<%= link_to 'Reject Request', requests_path(reject: @profile.id), data: {:confirm => 'Are you sure?'}, class:"btn btn-danger"%>
         	</div>
       
         </div>
