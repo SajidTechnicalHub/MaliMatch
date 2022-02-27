@@ -86,12 +86,20 @@ class RequestsController < ApplicationController
 
   # DELETE /requests/1 or /requests/1.json
   def destroy
-    @request = Request.where(user_id: params[:sender_id])
-    @request.destroy!
-    respond_to do |format|
-      format.html { redirect_to requests_url, notice: "request was successfully destroyed." }
-      format.json { head :no_content }
+    profile_id = params[:profile_id].to_i
+    @requests = Request.all
+    @requests.each do |r|
+      if current_user.id == r.sender_id
+
+        if r.profile_id == profile_id
+         r.destroy
+
+       end
+
+      end
     end
+    redirect_to dashboard_index_path 
+      
   end
 
   private
@@ -105,7 +113,8 @@ class RequestsController < ApplicationController
     def request_params
       params[:sender_id] = params[:sender_id].to_i
       params[:receiver_id] = params[:receiver_id].to_i
-      params.permit(:sender_id, :receiver_id, :requests)
+      params[:profile_id] = params[:profile_id].to_i
+      params.permit(:sender_id, :receiver_id, :requests, :profile_id)
     end
 end
  

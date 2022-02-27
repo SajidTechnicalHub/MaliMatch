@@ -248,11 +248,13 @@ body {
         	<h5><%= @profile.age %> years old • <%= @profile.region %>, <%= @profile.country %></h5>
         </div>
         <div class="row">
-        	<div class="col-md-2">
+        	<div class="col-md-3">
             
-            <%= link_to 'Request', '', class:"btn btn-secondary text-white", style:"padding-right: 35px;
+            <%#= link_to 'Request', '', class:"btn btn-secondary text-white", style:"padding-right: 35px;
               padding-left: 35px", :data => {:confirm => 'You have already requested to this user'} %>
           
+          <%= link_to 'Delete Request', request_path(profile_id: @profile.id), class:"btn btn-danger text-white", style:"padding-right: 35px;
+              padding-left: 35px", method: :delete, :data => {:confirm => 'Are you sure! You want to delete this request.'} %>
         	</div>
           <% if @current_user_profile.set_days <= 30 && @current_user_profile.subscription != nil%>
         	<div class="col-md-6">

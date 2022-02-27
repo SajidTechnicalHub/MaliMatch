@@ -254,7 +254,7 @@ body {
               padding-left: 35px", :data => {:confirm => 'You have availed all of your Requests? Please visit Subsucription plan for new Requests. Thanks!'} %>
             <% else %>
               
-              <%= link_to 'Request', requests_path(receiver_id: @profile.user_id, sender_id: current_user.id), method: 'post', class:"btn btn-primary", style:"padding-right: 35px;
+              <%= link_to 'Request', requests_path(receiver_id: @profile.user_id, sender_id: current_user.id, profile_id: @profile.id), method: 'post', class:"btn btn-primary", style:"padding-right: 35px;
               padding-left: 35px" %>
             <% end %>
 

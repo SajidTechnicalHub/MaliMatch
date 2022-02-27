@@ -5,6 +5,8 @@ class Profile < ApplicationRecord
   before_save :set_days
   before_save :set_promoted_date
 
+  # has_one :request
+
 
   def set_age
     age = Date.today.year - (self.dob || Date.today)&.to_date&.year
