@@ -10,15 +10,16 @@ class ProfilesController < ApplicationController
      
 
     # checking promoted subscription
-    if (@profile.set_promoted_date > 0 && @profile.set_promoted_date <= 14)
-      
+    if @profile.set_promoted_date != nil
+      if (@profile.set_promoted_date > 0 && @profile.set_promoted_date <= 14)
+        
 
-      if @profiles.select{|profile| profile.set_promoted_date != nil}
-      @profiles.find{|profile| profile.set_promoted_date != nil}
+        if @profiles.select{|profile| profile.set_promoted_date != nil}
+        @profiles.find{|profile| profile.set_promoted_date != nil}
+        end
+        
       end
-      
     end
-    
     # @profiles = Profile.where.not(user_id: current_user.id)
 
     # searching
