@@ -213,9 +213,9 @@ body {
               <br />
               <div class="row">
                 <div class="col-lg-2">
-                  <%= f.radio_button :gender, 'Male', checked: 'checked', data: {behavior: "toggle-products"}  %> Male </div>
+                  <%= f.radio_button :gender, true, checked: 'checked', data: {behavior: "toggle-products"}  %> Male </div>
                 <div class="col-lg-3">
-                  <%= f.radio_button :gender, 'Female', data: {behavior: "toggle-products"} %> Female </div>
+                  <%= f.radio_button :gender, false, data: {behavior: "toggle-products"} %> Female </div>
                 <br />
                 <br /> 
     
@@ -310,7 +310,7 @@ body {
   $('.wali-info').hide();
   $('input[type="radio"][data-behavior="toggle-products"]').change(function(evt) {
     // $('.wali-info').hide();
-    if($(this).val() == "Male") { 
+    if($(this).val() == "true") { 
       $('.wali-info').hide();
       
       console.log('Hide wali info');
