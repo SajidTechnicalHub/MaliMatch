@@ -3,7 +3,7 @@ class Profile < ApplicationRecord
 
   before_save :set_age
   before_save :set_days
-  before_save :set_promoted_date
+  # before_save :set_promoted_date
 
   # has_one :request
 
