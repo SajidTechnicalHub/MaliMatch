@@ -14,7 +14,7 @@
       font-family: 'Open Sans';
    }
 	.block {
-       width: 100%px;
+       width: 100%;
        min-height: 100px;
        height: fit-content;
        /*max-height: 150px;*/
@@ -93,15 +93,30 @@
 
 
 </style>
-	<% @profiles.each do |profile| %>
-		
+
+<div class="container">
+   <div class="row">
+      <% @profiles.each do |profile| %>
+      <div class="col-lg-4">
+               
+            
+               <div class=" block ">
+                     <p style="font-size: 18px;">
+                        <span style="font-size: 20px; " >
+                           <% if profile.user.gender == true %>
+                           <%= link_to 'M', profile_path(profile), class:'link-style' %>
+                           <% else %>
+                           <%= link_to 'F', profile_path(profile), class:'link-style' %>
+                           
+                           <% end %>
+                           <%= link_to profile.id, profile_path(profile), class:'link-style' %>: </span><%= link_to profile.sect, profile_path(profile), class:'link-style' %>, <%= link_to profile.nationality, profile_path(profile), class:'link-style' %>, <%= link_to profile.region, profile_path(profile), class:'link-style' %>, <%= link_to profile.country, profile_path(profile), class:'link-style' %> </p>
+                  <p><%= profile.summary %></p>
+                  <p><%= link_to 'Show Profile', profile_path(profile), class:'btn signup-btn' %></p>
+               </div>
+      </div>
+      <% end %>
+   </div>
+</div>
 	
-		<div class="row block ">
-			   <p style="font-size: 18px;">
-			   	<span style="font-size: 20px; " >F<%= link_to profile.id, profile_path(profile), class:'link-style' %>: </span><%= link_to profile.sect, profile_path(profile), class:'link-style' %>, <%= link_to profile.nationality, profile_path(profile), class:'link-style' %>, <%= link_to profile.region, profile_path(profile), class:'link-style' %>, <%= link_to profile.country, profile_path(profile), class:'link-style' %> </p>
-			<p><%= profile.summary %></p>
-			<p><%= link_to 'Show Profile', profile_path(profile), class:'btn signup-btn' %></p>
-		</div>
-	<% end %>
 
 

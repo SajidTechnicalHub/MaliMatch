@@ -12,5 +12,5 @@ class User < ApplicationRecord
   # validates :wquestion, :presence => true
   # validates :wemail, :presence => true
   # validates :wname, :presence => true
-  # validates :wmobile, :presence => true
+  # validates :agree, :presence => true
 end

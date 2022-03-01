@@ -235,7 +235,7 @@ body {
 
             <div class="field">
               <%= f.label :wali_email, 'Email' %><br />
-              <%= f.email_field :wemail, autofocus: true,placeholder:"Enter Email", autocomplete: "wemail", class:'input' %>
+              <%= f.email_field :wemail, autofocus: true, placeholder:"Enter Email", autocomplete: "wemail", class:'input' %>
             </div>
 
             <div class="field">
@@ -267,6 +267,20 @@ body {
               <%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation, placeholder:"Conform Password", autocomplete: "new-password", class:'input' %>
             </div>
+
+            <div class="field">
+                <%= f.label :agree, 'You agree to use My Mali Match in a halal manner. Only use this service for the purposes of marriage and in a manner that complies with the sunnah. Please get in contact with the Wali after receiving a match. We pray that Allah grants you a righteous partner?'%>
+                  <br />
+                  <br />
+                  <div class="row">
+                  <div class="col-lg-2">
+                    <%= f.radio_button :agree, 'YES' %> Yes </div>
+
+                  <div class="col-lg-2">
+                    <%= f.radio_button :agree, 'NO', data: {behavior: "toggle-agree"} %> No </div>
+                  <br />
+                  <br /> 
+              </div>
             <div class="field">
                 <%= f.check_box :remember_me, style:'margin-bottom:15px' %>
                 <%= f.label :remember_me %>
@@ -318,5 +332,22 @@ $('input[type="radio"][data-behavior="toggle-question"]').change(function(evt) {
     }
   });
 
+
+
 });
+
+ $(document).ready(function() {
+   $('input[type="radio"][data-behavior="toggle-agree"]').change(function(evt) {
+      
+      if($(this).val() == "NO") { 
+        
+        $(this).prop('checked', false);
+        alert('You can not complete signup procedure!');
+        // console.log('no clicked');
+        // $(this).checked = false; 
+      }
+    });
+
+ });
+
 </script>

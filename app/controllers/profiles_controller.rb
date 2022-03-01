@@ -5,8 +5,9 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
   layout 'dashboard'
   def index
-    @profiles = Profile.where(user_id: current_user.id)
+    @profiles = Profile.joins(:user).where.not(user_id: current_user.id).where("users.gender = #{!current_user.gender}")
     @profile = current_user.profile
+     
 
     # checking promoted subscription
     if (@profile.set_promoted_date > 0 && @profile.set_promoted_date <= 14)
@@ -35,7 +36,9 @@ class ProfilesController < ApplicationController
       end
     else 
 
-      @profiles = Profile.where.not(user_id: current_user.id)
+      # @profiles = Profile.where.not(user_id: current_user.id)
+      # @profiles = Profile.joins(:user).where(user_id: current_user.id).where("users.gender = #{!current_user.gender}")
+
     
     end
   end
