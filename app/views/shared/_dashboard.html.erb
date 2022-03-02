@@ -85,7 +85,7 @@
 	
 <div class="card ">
 	<div class="card-header">
-		<h4>My Send Request</h4>
+		<h4>Requests Sent</h4>
 	</div>
 	<div class="card-body">
 		<div class="row justify-content-center request-block">
@@ -98,10 +98,10 @@
 
 					  <div class="card-header">
 					  	 <% if @profile.user.gender == true %>
-					  		<%= link_to 'M',dashboard_path(@profile.id), class:'link-style' %>
+					  		<%= link_to 'M', dashboard_path(@profile.id), class:'link-style' %>
 		       
 		                  <% else %>
-					  		<%= link_to 'F',dashboard_path(@profile.id), class:'link-style' %>
+					  		<%= link_to 'F', dashboard_path(@profile.id), class:'link-style' %>
 		                  
 		                  <% end %>
 					  	<%= link_to @profile.id, dashboard_path(@profile.id), class:'link-style' %>
@@ -128,7 +128,7 @@
 </div> -->
 <div class="card ">
 	<div class="card-header">
-		<h4>My Received Request</h4>
+		<h4>Requests Received</h4>
 	</div>
 	<div class="card-body">
 		<div class="row justify-content-center request-block">
