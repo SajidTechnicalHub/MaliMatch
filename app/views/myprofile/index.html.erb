@@ -194,7 +194,7 @@ body {
   <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
     <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
       <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
-        <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
+        <%= link_to "My Profile",  myprofile_index_path,  class:'nav-link active'  %>
           <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
             <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
@@ -504,7 +504,7 @@ body {
                 <%= f.select :build, ['Skinny', 'Lean (high muscle)', 'Well proportioned','Hourglass figur','Pear-shaped figure','Curvy','Thick','Slim','Average','Sporty','Muscular','Stocky','Bulking','Few extra pounds','Chubby','Heavyset'],{ prompt:'Select Your Build' }, { class: 'input' }%>
             </div>
             <div class="field">
-              <%= f.label :facial %>
+              <%= f.label :Apperance %>
                 <br />
                 <%= f.select :facial, ['Standout', 'Very Attractive', 'Attractive', 'Fairly Attractive','Above Average','Average / Regular','Fair / Okay','Plain'],{ prompt:'Select Your Best Describe Facial Apperance' }, { class: 'input' }%>
             </div>
@@ -528,7 +528,7 @@ body {
                 <div class="field">
                   <%= f.label :Pattern_of_salah %>
                     <br />
-                    <%= f.select :pattern, ['Always-1 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high','Regularly - I usually pray most of my prayers, maybe miss Fajr sometimes if tired','Sometimes - Pray when I can / When I feel like it / When my iman is high','Rarely - Maybe Jumu ah / Eid Salah / During Ramadan','Never / One-offs' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
+                    <%= f.select :pattern, ['Always-5 pray my 5 prayers always', 'Almost always - I always pray 5 times a day but slip up on rare occasions', 'Sometimes - Pray when I can / When I feel like it / When my iman is high','Regularly - I usually pray most of my prayers, maybe miss Fajr sometimes if tired','Sometimes - Pray when I can / When I feel like it / When my iman is high','Rarely - Maybe Jumu ah / Eid Salah / During Ramadan','Never / One-offs' ], { prompt:'Select Your Pattern of Salah ' }, { class: 'input' }%>
                 </div>
                 <div class="field">
                   <%= f.label :Self_summary %>
