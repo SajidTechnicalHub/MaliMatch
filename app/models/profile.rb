@@ -1,4 +1,7 @@
 class Profile < ApplicationRecord
+
+  # validates :dob, presence: true
+
   belongs_to :user
 
   before_save :set_age
@@ -7,6 +10,7 @@ class Profile < ApplicationRecord
 
   # has_one :request
 
+  
 
   def set_age
     age = Date.today.year - (self.dob || Date.today)&.to_date&.year

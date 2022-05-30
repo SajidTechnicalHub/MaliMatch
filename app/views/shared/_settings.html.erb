@@ -65,7 +65,7 @@
 
 		
 		<% if @profile.subscription == nil || @profile.set_days > 30 %>
-			<div class="col-lg-8 my">Your Account is Inactivated</div>
+			<div class="col-lg-8 my">Your Account is Inactivate</div>
 			<div class="col-lg-4">
 				<!-- <button class="btn signup-btn">Reactivate</button -->
 				<%= button_to 'Reactivate', settings_create_path, remote: true, class:'btn btn-danger',:data => {:confirm => 'Are you sure! You want to activate your account!'} %>

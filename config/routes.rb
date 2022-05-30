@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   get 'admin/aboutus'
   root 'admin#home'
   get 'admin/pricing'
-  get 'registration/index'
+  # get 'registration/index'
   get 'dashboard/addon'
   get 'dashboard/dashboard_checkout'
   
   get 'dashboard/policy'
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   # get 'checkout/index'
   # get 'checkout/show'
   # get 'about/index1'
@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get 'home/index' 
   post 'checkout/create', to:'checkout#create'
   post 'settings/create', to:'settings#create'
+  get 'settings/create', to:'settings#create'
   # get 'requests/accept_request/:id', to:'requests#accept_request'
   # get 'requests/reject_request/:id', to:'requests#reject_request'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
