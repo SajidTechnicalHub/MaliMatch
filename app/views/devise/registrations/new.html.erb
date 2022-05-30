@@ -204,7 +204,14 @@ body {
           </div>
           <div class="field">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true,placeholder:"Enter Email", autocomplete: "email", class:'input' %>
+            <%= f.email_field :email, autofocus: true,placeholder:"Enter Email", autocomplete: "email", class:'input', data: {behavior: "toggle-email"}  %>
+          </div>
+
+          <div class="field">
+            
+            <%= f.label :email_confirmation %><br />
+            <%= f.email_field :email_confirmation, autofocus: true,placeholder:"Confirm Email", autocomplete: "email_confirmation", class:'input', data: {behavior: "toggle-email_confirmation"} %>
+            <span id="email_error" style="color: red"></span>
           </div>
 
           <div class="field">
@@ -350,4 +357,36 @@ $('input[type="radio"][data-behavior="toggle-question"]').change(function(evt) {
 
  });
 
+
+$(document).ready(function() {
+  var x, y;
+  $('input[type="email"][data-behavior="toggle-email"]').change(function(evt) {
+   x = $(this).val()
+  console.log(x)
+ });
+
+  $('input[type="email"][data-behavior="toggle-email_confirmation"]').change(function(evtt) {
+      var lblName = document.getElementById("email_error");
+      y = $(this).val()
+      
+      console.log(y)
+      if(x===y){
+        lblName.innerHTML = '';
+      }
+      else{
+        // alert('not confirm')
+        lblName.innerHTML = 'Email did not match! Please Enter Correct Email.';
+      }
+
+      
+ 
+       
+
+    });
+  
+  
+     
+  
+
+ });
 </script>

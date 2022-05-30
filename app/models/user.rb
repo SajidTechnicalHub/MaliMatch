@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :receiver_requests, class_name: 'Request'
 
 
+  validates :email, confirmation: true
+  # validates :email_confirmation, presence: true
 
   # validates :wquestion, :presence => true
   # validates :wemail, :presence => true
