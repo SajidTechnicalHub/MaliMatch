@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # root 'admin/index'
   get 'admin/about'
   get 'admin/aboutus'
-  root 'admin#home'
+  get 'admin/home'
   get 'admin/pricing'
   # get 'registration/index'
   get 'dashboard/addon'
@@ -35,7 +35,10 @@ Rails.application.routes.draw do
   resources :profiles
   resources :requests
   resources :addons
-  get 'home/index' 
+  root 'home#index' 
+  get 'home/about'
+  get 'home/membership'
+  get 'home/profile'
   post 'checkout/create', to:'checkout#create'
   post 'settings/create', to:'settings#create'
   get 'settings/create', to:'settings#create'
