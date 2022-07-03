@@ -1,0 +1,488 @@
+<style type="text/css">
+    /**{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+body{
+  overflow-x: hidden;
+  position: relative;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /*1rem = 10px*/
+/*}*/
+
+
+  /*=========================================
+       Header section start
+      ========================================= */
+
+.header{
+  padding: 0 4.8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: #e7f5ff;*/
+  background-color: white;
+  margin-top: 0px;
+
+
+}
+.header-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header-title-text{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  line-height: 8px;
+  
+}
+.header-title-text-style{
+  /*color: #212529;*/
+  /*color: blue;*/
+  color: #3f3e87;
+  font-size: 15px;
+  font-weight: 500;
+  
+}
+.vertile-line {
+  /*border-left: 2px solid  #212529;*/
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color:#3f3e87;
+  padding-right: 2px;
+
+
+}
+
+ .logo{
+  height: 6rem;
+}
+
+.navbar-list{
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  /*text-decoration: none;*/
+}
+
+.navbar-link:link,
+.navbar-link:visited{
+
+  display: inline-block; /*inline-block so that padding can be used on the text*/
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 450;
+  color: #212529;
+  transition: all 0.3s;
+}
+.navbar-link:hover,
+.navbar-link:active{
+  color: #364fc7;
+}
+
+.mobile-navbar-btn{
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobile-nav-icon{
+  width: 4rem;
+  height: 4rem;
+  color: #212529;
+}
+.mobile-nav-icon[name = "close-outline"]{
+  display: none;
+}
+/*sticky-header*/
+
+
+.sticky-header .header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:7rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+.sticky-header .header:hover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:7rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+  /*=========================================
+       Header section start
+      ========================================= */
+
+.header{
+  padding: 0 4.8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: #e7f5ff;*/
+  background-color: white;
+  margin-top: 0px;
+
+
+}
+.header-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header-title-text{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  line-height: 8px;
+  
+}
+.header-title-text-style{
+  /*color: #212529;*/
+  /*color: blue;*/
+  color: #3f3e87;
+  font-size: 15px;
+  font-weight: 500;
+  
+}
+.vertile-line {
+  /*border-left: 2px solid  #212529;*/
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color:#3f3e87;
+  padding-right: 2px;
+
+
+}
+
+ .logo{
+  height: 6rem;
+}
+
+.navbar-list{
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  /*text-decoration: none;*/
+}
+
+.navbar-link:link,
+.navbar-link:visited{
+
+  display: inline-block; /*inline-block so that padding can be used on the text*/
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 450;
+  color: #212529;
+  transition: all 0.3s;
+}
+.navbar-link:hover,
+.navbar-link:active{
+  color: #364fc7;
+}
+
+.mobile-navbar-btn{
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobile-nav-icon{
+  width: 4rem;
+  height: 4rem;
+  color: #212529;
+}
+.mobile-nav-icon[name = "close-outline"]{
+  display: none;
+}
+/*sticky-header*/
+
+
+.sticky-header .header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:7rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+.sticky-header .header:hover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:7rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+
+/*=========================================
+    Mobile Responsive slider banner start
+  ========================================= */
+
+@media(max-width: 62rem){
+   .sticky-header .slide-banner{
+      z-index: -1;
+    }
+  .slide-banner{
+    height: fit-content;
+    width: 110rem;
+    bottom: -8rem;
+    /*left: 4rem;*/
+    right: 10rem;
+    top: 30rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border-radius: 2rem;*/
+    gap: 1px;
+  }
+  .banner-block{
+    height: 20rem;
+    width: 80rem;
+    margin-right: 20rem;
+    
+}
+
+}
+/*=========================================
+    Mobile Responsive start
+  ========================================= */
+
+  @media (max-width: 62rem){
+
+    .mobile-navbar-btn{
+      display: block;
+      z-index: 999;
+      /*border: 3px solid #212529;
+      color: #212529;*/
+    }
+
+    .header{
+      position: relative;
+    }
+
+
+    .navbar{
+      /*display: none;*/
+      width: 60%;
+      height: 100vh;
+      /*background: #e7f5ff ;*/
+      background: white ;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /*to get the transition*/
+
+      transform: translateX(50%);
+      transition: all 0.5s linear;
+
+      /*to hide the sidebar transition*/
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      /*position: relative;*/
+      z-index: 999;
+
+    }
+
+    .navbar-list{
+      flex-direction: column;
+      /*justify-content: center;*/
+     /* align-items: center;*/
+    }
+
+    .active .navbar{
+      transform: translate(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn 
+    .mobile-nav-icon[name="close-outline"]{
+      display: block;
+    }
+
+    .active .mobile-navbar-btn 
+    .mobile-nav-icon[name="menu-outline"]{
+      display: none;
+    }
+   
+    .sticky-header .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height:8rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    }
+  .navbar-link,
+  .navbar-link:hover,
+  .navbar-link:active{
+    color: #364fc7;
+    font-size: 2rem!important;
+
+  }
+  
+}
+
+
+
+
+</style>
+
+<header class=" header ">
+	<div class="header-title">
+         <%= image_tag('logo.png', class:"logo") %>
+
+		<div class="vertile-line"></div>
+		<div class="header-title-text">
+			
+			<span class="header-title-text-style">Kanganpur  </span><br>
+			<span class="header-title-text-style">Leads </span><br>
+			<span class="header-title-text-style">School & College </span>
+		</div>
+
+	</div>
+
+	<nav class="navbar">
+		<ul class="navbar-list">
+			<li>
+				<%= link_to 'Home', root_path, class:'navbar-link' %>
+			</li>
+			<li>
+				<%= link_to 'About Us', root_path, class:'navbar-link' %>
+			</li>
+			<li>
+				<%= link_to 'Faculty', root_path, class:'navbar-link' %>
+			</li>
+			<li>
+				<%= link_to 'Admission', root_path, class:'navbar-link' %>
+			</li>
+			<li>
+				<%= link_to 'News & Events', root_path, class:'navbar-link' %>
+			</li>
+			
+			<li><a class="navbar-link" href="https://web.facebook.com/" target="_blank">Contacts</a></li>
+
+		</ul>
+	</nav>
+	<div class="mobile-navbar-btn">
+		
+		<ion-icon name="menu-outline" class="mobile-nav-icon" ></ion-icon>
+		<ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+	</div>
+	</header>
+
+
+
+<script type="text/javascript">
+       
+        const mobile_nav = document.querySelector(".mobile-navbar-btn");
+        const nav_header = document.querySelector(".header");
+
+        const toggleNavbar = () =>{
+
+            // alert("close navbar")
+            nav_header.classList.toggle("active")
+        }
+
+        mobile_nav.addEventListener("click", () => toggleNavbar())
+
+
+        // Sticky Navbar
+
+        const section_slider = document.querySelector(".section-slider")
+        const observer = new IntersectionObserver(
+            (entries) =>{
+
+            const ent  = entries[0];
+            console.log(ent);
+
+            ent.isIntersecting == false
+            ? document.body.classList.add("sticky-header")
+            : document.body.classList.remove("sticky-header");
+        }, {
+
+            root: null,
+            rootMargin: "-80px",
+            threshold: 0,
+
+        });
+
+        observer.observe(section_slider);
+
+
+
+        // count animation start
+        $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 3000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+        // count animation end
+
+        // image magnific
+        $(document).ready(function() {
+          $('.gallarys').magnificPopup({
+            delegate: 'a',
+            type:'image',
+            gallery:{
+                enabled:true
+            }
+
+            });
+        });
+    </script>

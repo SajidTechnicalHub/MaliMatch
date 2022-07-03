@@ -1,0 +1,154 @@
+
+<style type="text/css">
+  /* ********************************
+      Bootstrap header
+  ******************************** */
+
+  .header-bg-color {
+    /* background: rgba(0,91,200,0.9); */
+    background: #244161;
+    backdrop-filter: saturate(180%) blur(20px);
+    /* margin-top: 80px; */
+  }
+
+  .navbar {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+  }
+
+  .nav-link {
+    color: white !important;
+    /* font-size: 16px!important;
+      margin-right: 30px!important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+  }
+
+  .header-logo {
+    padding: 3px;
+    border: 2px solid #fff;
+    border-radius: 10px 0px 10px 0px;
+
+
+  }
+  .main-logo{
+    height: 40px;
+    width: 200px;
+  }
+  .nav-item {
+    margin-left: 20px !important;
+  }
+
+  .navbar-toggler {
+    color: #fff !important;
+    /* border: 1px solid white!important; */
+    border: none !important;
+
+  }
+
+  @media (max-width:991px) {
+    .navbar-toggler {
+      color: #fff !important;
+    }
+  }
+
+  @media (min-width:998px) {
+    .navbar-toggler-icon {
+      color: #fff !important;
+    }
+
+    .header-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-left: 50px;
+    }
+
+    .header-logo {
+      padding: 3px;
+      border: 2px solid #fff;
+      border-radius: 10px 0px 10px 0px;
+
+    }
+
+    .nav-link {
+      color: white !important;
+      font-size: 14px !important;
+      margin-right: 10px !important;
+      padding: 3px 10px !important;
+      border: 1px solid #244161;
+      border-radius: 150px;
+    }
+
+    .active,
+    .nav-link:hover {
+      border: 1px solid #fff;
+      border-radius: 150px !important;
+      color: white !important;
+      font-size: 14px !important;
+      margin-right: 10px !important;
+      padding: 3px 10px !important;
+      cursor: pointer;
+    }
+
+  }
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark header-bg-color">
+        <div class="container-fluid">
+          <a href='/Sophos-reactapp' class="navbar-brand">
+            <span class='header-title'>
+             
+              <img src="./logo.png" class='main-logo' alt="logo" />
+            </span>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+                
+                <a href='/Sophos-reactapp' class=" nav-link">Documentation</a>
+                
+              </li>
+              <li class="nav-item">
+                
+                <a href='/Sophos-reactapp/projects' class=" nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                
+                <a href='/Sophos-reactapp/admin' class=" nav-link">Dashboard</a>
+              </li>
+              
+              <li class="nav-item">
+               
+                <a href='/Sophos-reactapp' class=" nav-link">Features</a>
+                
+              </li>
+              <li class="nav-item ">
+                
+                <a activeclass='' class=" nav-link" href='/Sophos-reactapp/free_trail'>Free Trail</a>
+              </li>
+        
+            </ul>
+
+          </div>
+        </div>
+      </nav>
