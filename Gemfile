@@ -6,6 +6,7 @@ gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'devise'
 gem 'stripe'
 gem 'jquery-rails'
+gem 'owlcarousel-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record

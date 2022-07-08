@@ -13,7 +13,7 @@
         background: #5650ce;
         border: none;
         /*position: fixed;*/
-        z-index: 999;
+       /* z-index: 999;
 }*/
 </style>
 
@@ -29,15 +29,15 @@
             <ul class="menu">
                 <li>
                     <!-- <a href="#" class="active">Home</a> -->
-                    <%= link_to 'Home',  root_path, class:'active' %>
-                    <ul class="submenu">
+                    <%= link_to 'Home', root_path, class:'active' %>
+                    <!-- <ul class="submenu">
                         <li>
-                            <a href="index.html" class="active">Home One</a>
+                            <a href="#" class="active">Home One</a>
                         </li>
                         <li>
-                            <a href="index2.html">Home Two</a>
+                            <a href="#">Home Two</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <!-- a href="community.html">Community</a -->
@@ -49,9 +49,14 @@
                     <%= link_to 'Membership',  home_membership_path, class:'' %>
 
                 </li>
-                <li>
+                <% if user_signed_in? %>
+                    <li>
+                        <%= link_to 'Dashboard', myprofile_index_path%>  
+                    </li>
+                <% end %>
+                <!-- <li>
                     <%= link_to 'Dashboard',  dashboard_index_path, class:'' %>
-                </li>
+                </li> -->
                
                  
                 <li class="user-profile">
@@ -60,12 +65,25 @@
                         <%= link_to image_tag("user-demo.png"), root_path %>
                     
                     <ul class="submenu">
+                        
+
+                        <% if user_signed_in? %>
+                            <li>
+                                <%= link_to 'Profile',  myprofile_index_path, class:'' %>
+                            </li>
+                            <li class="nav-item">
+                                <%= link_to 'logout',  destroy_user_session_path, method: :delete %>
+                            </li>
+                            
+                        <% else %>
                         <li>
-                            <%= link_to 'Profile',  home_membership_path, class:'' %>
-                        </li>
-                        <li>
-                            <%= link_to 'logout',  root_path, class:'' %>
-                        </li>
+                                <%= link_to 'Profile',  new_user_session_path, class:'' %>
+                            </li>
+                         <li >
+                                <%= link_to 'Login',  new_user_session_path, class:'' %>
+                            </li>
+                        <% end %>
+
                     </ul>
                 </li>
             </ul>
@@ -166,9 +184,4 @@
                 headerOne.addClass("header-active");
             }
         });
-
-
-       
-
-        
 </script>

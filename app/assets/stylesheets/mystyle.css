@@ -5513,7 +5513,8 @@ input[type=submit] {
 .footer-section {
   padding: 120px 0px 25px;
   position: relative;
-  background: #3b2196;
+  /*background: #3b2196;*/
+  background: #00BFFF;
   overflow: hidden;
 }
 .footer-section .shape1 {
@@ -5558,7 +5559,8 @@ input[type=submit] {
   position: relative;
 }
 .footer-section .newslater-section .newslater-wrapper .newslater-form input {
-  background: #4126a1;
+  /*background: #4126a1;*/
+  background: #00BFFF;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0px 60px 0px 30px;
@@ -5603,6 +5605,7 @@ input[type=submit] {
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+  text-decoration: none;
 }
 .footer-section .footer-links .link-wrapper .f-solial-links li a i {
   margin-right: 5px;
@@ -5862,7 +5865,8 @@ input[type=submit] {
 .header-section.header-active {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  background: #5650ce;
+  /*background: #5650ce;*/
+  background: #00BFFF;
   border: none;
   animation-name: fadeInDown;
   -webkit-animation-name: fadeInDown;
@@ -6130,7 +6134,8 @@ input[type=submit] {
   padding: 13px 45px;
 }
 .banner-section.home2 {
-  background-image: url("hero-banner2.jpg") !important;
+  /*background-image: url("hero-banner2.jpg") !important;*/
+  background-color: #00BFFF;
   padding: 189px 0 220px;
 }
 .banner-section.home2 .img3 {
@@ -6801,7 +6806,7 @@ input[type=submit] {
 /* How it work Section Starts Here*/
 .how-it-work-section {
   padding: 118px 0px 120px;
-  background: url(../images/h-it-w/bg-img.jpg);
+  background: url(bg-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -6901,7 +6906,8 @@ input[type=submit] {
 .join-now-section {
   padding: 123px 0px 120px;
   overflow: hidden;
-  background: #5736cb;
+  /*background: #5736cb;*/
+  background:#00BFFF ;
   position: relative;
 }
 .join-now-section .shape1 {
@@ -7640,7 +7646,8 @@ input[type=submit] {
   margin-bottom: 26px;
 }
 .home2-sucess-stories-section .top-content {
-  background: url(subg.jpg);
+  /*background: url(subg.jpg);*/
+  background: #00BFFF;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -7665,7 +7672,8 @@ input[type=submit] {
 /*Breadcrumb-Section Stars Here*/
 .breadcrumb-area {
   padding: 170px 0 70px;
-  background: url("bc-about.jpg");
+  /*background: url("bc-about.jpg");*/
+  background: #00BFFF;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9983,7 +9991,8 @@ input[type=submit] {
 .membership-section .pricing-plans {
   padding: 193px 0px 101px;
   overflow: hidden;
-  background: #5736cb;
+  /*background: #5736cb;*/
+  background: #00BFFF;
   position: relative;
   text-align: center;
 }
@@ -14089,7 +14098,8 @@ input[type=submit] {
     .header-wrapper .menu li .submenu li a:hover,
     .header-wrapper .menu li .submenu li a.active {
         padding-left: 10px;
-        color: #5650ce;
+        /*color: #5650ce;*/
+        color: #00BFFF;
     }
 
     .header-wrapper .menu li .submenu::before {
