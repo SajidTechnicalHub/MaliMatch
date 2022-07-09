@@ -12095,7 +12095,7 @@ input[type=submit] {
 }
 .log-reg .log-reg-inner .main-content.inloginp .button-wrapper {
   display: block;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 #email-confirm .modal-content {
@@ -26605,3 +26605,22 @@ Primary style
 
 
 /*Custom css*/
+
+input{
+  height: 50px!important;
+}
+
+.malimatch-gender-block{
+  display:flex; 
+  gap:5px; 
+  align-items:center;
+}
+.malimatch-login-logo-block{
+  display: flex;
+  position: relative;
+}
+.malimatch-logo-text{
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+}
