@@ -12,5 +12,11 @@ class HomeController < ApplicationController
   def profile
     
   end
+  def login
+  end
+
+  def register
+    
+  end
 
 end

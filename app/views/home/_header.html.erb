@@ -61,10 +61,10 @@
                  
                 <li class="user-profile">
                     
-                        
-                        <%= link_to image_tag("user-demo.png"), root_path %>
+                       <span></span> 
+                        <%= link_to image_tag("user-demo.png"), 'javascript:void(0);' %>
                     
-                    <ul class="submenu">
+                    <ul class="submenu" >
                         
 
                         <% if user_signed_in? %>
@@ -76,11 +76,12 @@
                             </li>
                             
                         <% else %>
-                        <li>
-                                <%= link_to 'Profile',  new_user_session_path, class:'' %>
-                            </li>
-                         <li >
+                            
+                             <li >
                                 <%= link_to 'Login',  new_user_session_path, class:'' %>
+                            </li>
+                            <li >
+                                <%= link_to 'Sign Up',  new_user_registration_path, class:'' %>
                             </li>
                         <% end %>
 
@@ -114,7 +115,8 @@
                 element.siblings('.faq-item').find('.faq-content').slideUp(300, "swing");
             }
         });
-    $('.header-bar').on('click', function () {
+    //MenuBar
+        $('.header-bar').on('click', function () {
             $(".menu").toggleClass("active");
             $(".header-bar").toggleClass("active");
             $('.overlay').toggleClass('active');
@@ -124,7 +126,7 @@
             $(".header-bar").removeClass("active");
             $('.overlay').removeClass('active');
         });
-
+        
         //Menu Dropdown Icon Adding
         $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
         // drop down menu width overflow problem fix
@@ -153,6 +155,11 @@
                 element.siblings('li').find('ul').slideUp(300, "swing");
             }
         })
+
+
+
+
+
         // Scroll To Top
         var scrollTop = $(".scrollToTop");
         $(window).on('scroll', function () {

@@ -38,6 +38,8 @@ Rails.application.routes.draw do
   root 'home#index' 
   get 'home/about'
   get 'home/membership'
+  get 'home/login'
+  get 'home/register'
   get 'home/profile'
   post 'checkout/create', to:'checkout#create'
   post 'settings/create', to:'settings#create'

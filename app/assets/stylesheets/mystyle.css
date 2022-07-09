@@ -4828,7 +4828,8 @@ input[type=submit] {
   -webkit-transform: translateY(150px);
   -ms-transform: translateY(150px);
   transform: translateY(150px);
-  background: #5650ce;
+  /*background: #5650ce;*/
+  background: #00BFFF;
   text-align: center;
 }
 .scrollToTop:hover {
@@ -4872,7 +4873,8 @@ input[type=submit] {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background: #5650ce;
+  /*background: #5650ce;*/
+  background: #00BFFF;
 }
 .video-button a {
   display: block;
@@ -5997,7 +5999,7 @@ input[type=submit] {
 .banner-section {
   padding: 189px 0 120px;
   position: relative;
-  background: url("hero-banner.png");
+  /*background: url("hero-banner.png");*/
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -11837,7 +11839,7 @@ input[type=submit] {
   display: inline-block;
 }
 .log-reg .image {
-  background: url(../images/reg.jpg);
+  background: url(reg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11849,7 +11851,7 @@ input[type=submit] {
   z-index: -1;
 }
 .log-reg .image.image-log {
-  background: url(../images/log.jpg) !important;
+  background: url(log.jpg) !important;
 }
 .log-reg .log-reg-inner {
   padding-top: 30px;
@@ -11885,7 +11887,7 @@ input[type=submit] {
 .log-reg .log-reg-inner .section-header.inloginp {
   text-align: center;
   margin-bottom: 30px;
-  padding-top: 80px;
+  padding-top: 10px;
 }
 .log-reg .log-reg-inner .section-header.inloginp .title {
   font-size: 28px;
@@ -13328,7 +13330,8 @@ input[type=submit] {
 #usernotification .modal-body .view-all-link {
   display: block;
   width: 100%;
-  background: #5650ce;
+  /*background: #5650ce;*/
+  background: #00BFFF;
   text-align: center;
   color: #fff;
   padding: 12px 10px 12px;
@@ -14301,7 +14304,8 @@ input[type=submit] {
     .header-wrapper .menu {
         display: none;
         position: fixed;
-        background: #5650ce;
+        /*background: #5650ce;*/
+        background: #00BFFF;
         width: 100%;
         max-width: 500px;
         top: 59px;
@@ -14366,7 +14370,8 @@ input[type=submit] {
     .header-section {
         -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        background: #5650ce;
+        /*background: #5650ce;*/
+        background: #00BFFF;
         border: none;
     }
 
@@ -26597,3 +26602,6 @@ Primary style
     }
   }
   
+
+
+/*Custom css*/

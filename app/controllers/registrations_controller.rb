@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
-
+# layout 'register'
 
  protected
 
