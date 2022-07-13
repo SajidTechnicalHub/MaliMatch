@@ -19,7 +19,14 @@
 
    <div class="malimatch-profile-block">
       <div class="malimatch-profile-id">
-          <span class="p-4 bg-info text-white font-weight-bolder" style=" border-radius:10px;">F<%= @profile.id %></span>
+          
+          <% if @profile.user.gender == true %>
+              <span class="p-4 bg-info text-white font-weight-bolder" style=" border-radius:10px;">M <%= @profile.id %></span>
+           
+          <% else %>
+             <span class="p-4 bg-info text-white font-weight-bolder" style=" border-radius:10px;">F <%= @profile.id %></span>
+                      
+          <% end %>
       </div>
      <div class="malimatch-profile-age-block">
         <div class="malimatch-profile-age">

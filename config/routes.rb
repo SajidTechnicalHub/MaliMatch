@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   resources :profiles
   resources :requests
   resources :addons
+  get 'requests/request_received'
   root 'home#index' 
   get 'home/about'
   get 'home/membership'

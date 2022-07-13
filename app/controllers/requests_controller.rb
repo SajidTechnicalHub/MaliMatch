@@ -24,6 +24,10 @@ class RequestsController < ApplicationController
     
   end
 
+  def request_received
+    
+  end
+
   # def accept_request
   #   @profile = Profile.find_by(id: params[:id])
   # end
@@ -34,6 +38,8 @@ class RequestsController < ApplicationController
   # GET /requests/1 or /requests/1.json
   def show
     @profile = Profile.find_by(id: params[:id])
+     
+    @current_user_profile = current_user.profile
   end
 
   # # GET /requests/new
