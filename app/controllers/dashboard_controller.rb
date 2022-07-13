@@ -11,6 +11,11 @@ class DashboardController < ApplicationController
     
 
   end
+  
+  def dashboard_home
+    
+  end
+
   def show
      @profile = Profile.find_by(id: params[:id])
     @current_user_profile = current_user.profile

@@ -7673,7 +7673,10 @@ input[type=submit] {
 
 /*Breadcrumb-Section Stars Here*/
 .breadcrumb-area {
-  padding: 170px 0 70px;
+  /*padding: 170px 0 70px;*/
+  padding-top: 100px;
+  padding-left: 70px;
+  padding-bottom: 30px;
   /*background: url("bc-about.jpg");*/
   background: #00BFFF;
   background-size: cover;
@@ -26615,6 +26618,10 @@ input{
   gap:5px; 
   align-items:center;
 }
+.malimatch-gender-checkbox{
+  width: 15px!important;
+  height: 15px!important;
+}
 .malimatch-login-logo-block{
   display: flex;
   position: relative;
@@ -26623,4 +26630,10 @@ input{
   position: absolute;
   bottom: 10px;
   left: 25px;
+}
+.malimatch-select-height{
+  height: 50px!important;
+}
+.malimatch-textarea-height{
+  height: 150px!important;
 }
