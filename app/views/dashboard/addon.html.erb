@@ -1,266 +1,67 @@
-<style type="text/css">
-  <style type="text/css">
-  * {box-sizing: border-box;}
-  /* cyrillic-ext */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 400;
-    font-stretch: 100%;
-    src: url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-  }
-  
-  *{
-    font-family: 'Open Sans';
-  }
-  
- .signup-btn{
-        width: 100%;
-        height: 45px;
-        background-color: #00BFFF;
-        color: white;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-      }
-     .signup-btn:hover{
-        width: 100%;
-        height: 45px;
-        background-color: white;
-        color: #00BFFF;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: 2px solid #00BFFF;
-        /*outline-color: #00BFFF;*/
-      } 
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-   /* height: 100vh;*/
-  }
-
-
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 1000px) {
-      .signup-btn {
-      width: 100%;
-    }
-  }
-
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 250px;
-  /*background-color: #f1f1f1;*/
-  position: fixed;
-  min-height: 100vh;
-  /*overflow: auto;*/
-  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   /*margin-top: 100px; */
-
-
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #00BFFF;;
-  color: white;
-  font-size: 20px;
-}
-
-.sidebar a:hover {
-  background-color: white;
-  color: #00BFFF;
-}
-
-.content {
-  margin-left: 184px;
-  padding: 1px 16px;
-  height: fit-content;
-  /*overflow: auto;*/
-
-}
-
-@media screen and (max-width: 1500px) {
-  .sidebar {
-    width: 200px;
-    height: 100vh;
-    position: fixed;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  .content {margin-left: 10;}
-}
-@media screen and (max-width: 900px) {
-  .sidebar {
-    width: 150px;
-    height: 100vh;
-    position: absolute;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  div.content {
-    margin-left: 10;
-   width: 50%;
-  }
-}
-
-
-.block1-img{
-      width:100px;
-      height:80px;
-      /*margin-bottom: 10px;*/
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    
-     }
-     .block {
-       width: 1030px;
-       height: 1100px;
-       border-radius: 10px ;
-       /*padding: 40px;*/
-       color: #595959; 
-       justify-content: center;
-       align-content: center;
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-
-     }
-
-     .header{
-      width: 1030px;
-       height: 100px;
-       margin-left: 7px;
-       color: #595959;
-       
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-     }
-     .remainning-btn{
-      border-radius: 20px;
-      color: white;
-     }
-     
-
-
-      .block-promoted {
-       width: 300px;
-       height: 450px;
-       border-radius: 10px ;
-       padding: 20px;
-       color: #595959; 
-       margin-bottom: 30px;
-       margin-top: 70px;
-       
-
-     }
-
-    .box-shadow-medium {
-         -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-         box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075); }
-      @media(max-width: 1180px){
-        .block-promoted{
-          margin: auto;
-          width: 100%;
-          margin-bottom: 30px;
-          margin-top: 70px;
-        }
-        
-      }
-      @media(max-width: 993px){
-        .signup-btn{
-          margin-top: 30px;
-       }
-  
-
-</style>
 
 
 
-
-
-<div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
-   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
-  <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
-  <%= link_to "My Profile",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
-   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
-</div>
-
-
-  
-<div class="content">
-  <!-- Header -->
-  <div class="container-fluid">
-    <div class="row header justify-content-center align-items-center">
-      <div class="col-8"></div>
-      <div class="col-4">
-          <% if @profile.request <= 0 %>
-            <span class="px-4 py-2 bg-danger remainning-btn">
-              (<%= @profile.request%>) Request Remaining
-            </span>
-          <% else %>
-            <span class="px-4 py-2 bg-info remainning-btn">
-            (<%= @profile.request%>) Request Remaining
-           </span>
-
-          <% end %>
+    <!-- ==========Preloader========== -->
+    <!-- <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
-  </div>
+    </div> -->
+    <!-- ==========Preloader========== -->
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+
+
   <div class="container">
-    
+    <div class="page-title">
+        Upgrade Membership Plan
+    </div>
     <div class="row justify-content-center align-items-center">
       
-        <div class="col-lg-4 ">
-            <div class="block-promoted box-shadow-medium  ">
-               <center> <h3><span style="color:orange; font: bold;">Promoted Pakage</span></h3>
-                <h3>$14.99</h3>
-                <%= link_to image_tag("premium.png", class:'block1-img mb-2'), root_path %>
+        <div class="col-lg-6 ">
+            <div class="single-plan ">
+               
+                <p class="duration">
+                      Promoted Pakage
+                  </p>
+                
+                <h4 class="number">
+                    <sup>$</sup>14.99
+                </h4>
+                <%#= link_to image_tag("premium.png", class:'block1-img mb-2'), root_path %>
                 <p>This package upgrades your profile and makes you show up at the top of searches that include you and on the general Profiles page for 30 days. This increases your chances of having your profile seen and requested!</p></center>
               
-                <%= button_to 'Buy Now', addons_premium_path, remote: true, class:'btn signup-btn mt-3' %>
+                <%= button_to 'Buy Now', addons_premium_path, remote: true, class:'custom-button', style:'width:150px' %>
              </div>
       </div>
       
-        <div class="col-lg-4 ">
-            <div class="block-promoted box-shadow-medium  ">
-                <center><h3><span style="color:orange;">1 Additional Request</span></h3>
-                <h3>.99c</h3>
-                <%= link_to image_tag("premium.png", class:'block1-img mb-2'), root_path %>
-                <p class="mb-5"  style = 'margin-top:40px'>1 additional request.</p></center>
+        <div class="col-lg-6 ">
+            <div class="single-plan ">
+                <!-- <center><h3><span style="color:orange;">1 Additional Request</span></h3> -->
+                  <p class="duration">
+                      1 Additional Request
+                  </p>
+                
+                <h4 class="number">
+                    .99<sup>c</sup>
+                </h4>
+                
+                <p class="mb-5"  style = 'margin-top:45px'>1 additional request.</p></center>
                   <br>
-                <%= button_to 'Buy Now', addons_path, remote: true, class:'btn signup-btn mt-5 ' %>
+                <%#= image_tag("plan-bg.png", style:'width:100%')%>
+                <%= button_to 'Buy Now', addons_path, remote: true, class:'custom-button ', style:'width:150px' %>
              </div>
       </div>
 
     </div>
-  </div>
-</div>
 
 
-            
+
