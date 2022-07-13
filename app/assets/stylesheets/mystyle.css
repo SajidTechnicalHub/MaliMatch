@@ -26637,3 +26637,54 @@ input{
 .malimatch-textarea-height{
   height: 150px!important;
 }
+.remainning-btn {
+  border-radius: 20px;
+  color: white;
+}
+.malimatch-profile-block{
+    display: flex;
+    /*justify-content: space-between;*/
+    align-content: center;
+    gap: 20px;
+  }
+  .malimatch-profile-id{
+    display: flex;
+    flex-direction: column;
+  }
+  .malimatch-profile-request-btn{
+    padding:5px 10px;
+    background-color: skyblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .malimatch-profile-request-btn:hover{
+    padding:5px 10px;
+    background-color: skyblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .malimatch-profile-request-btn-danger{
+    padding:5px 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .malimatch-profile-request-btn-danger:hover{
+    padding:5px 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  /*@media(max-width: 993px){
+     .malimatch-profile-block{
+      display: flex;
+      flex-direction: column!important;
+      
+      align-content: center;
+      gap: 20px;
+    }
+  }*/

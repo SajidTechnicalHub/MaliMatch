@@ -1,281 +1,55 @@
 
 
-<style type="text/css">
-  <style type="text/css">
-  /* cyrillic-ext */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 400;
-    font-stretch: 100%;
-    src: url(https://fonts.gstatic.com/s/opensans/v27/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-  }
-  
-  *{
-    font-family: 'Open Sans';
-  }
-  * {box-sizing: border-box;}
-
-  /* Full-width input fields */
-    .input {
-    width: 100%;
-    padding: 12px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  .input:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  hr {
-    border: 2px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* Set a style for all buttons */
-  .signup-btn{
-        width: 100%;
-        height: 45px;
-        background-color: #00BFFF;
-        color: white;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-      }
-     .signup-btn:hover{
-        width: 100%;
-        height: 45px;
-        background-color: white;
-        color: #00BFFF;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: 2px solid #00BFFF;
-        /*outline-color: #00BFFF;*/
-      } 
-
- 
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-   /* height: 100vh;*/
-    /*overflow: auto;*/
-  }
-
-
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 1000px) {
-      .signup-btn {
-      width: 100%;
-    }
-  }
-</style>
-<style>
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 250px;
-  /*background-color: #f1f1f1;*/
-  position: fixed;
-  min-height: 100vh;
-  /*overflow: auto;*/
-  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   /*margin-top: 100px; */
-
-
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #00BFFF;;
-  color: white;
-  font-size: 20px;
-}
-
-.sidebar a:hover {
-  background-color: white;
-  color: #00BFFF;
-}
-
-.content {
-  margin-left: 184px;
-  padding: 1px 16px;
-  height: 100vh;
-  /*overflow: auto;*/
-
-}
-
-@media screen and (max-width: 1500px) {
-  .sidebar {
-    width: 200px;
-    height: 100vh;
-    position: fixed;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  .content {margin-left: 10;}
-}
-@media screen and (max-width: 900px) {
-  .sidebar {
-    width: 150px;
-    height: 100vh;
-    position: absolute;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  div.content {
-    margin-left: 10;
-   width: 50%;
-  }
-}
-
-
-.block1-img{
-      width:100px;
-      height:80px;
-      /*margin-bottom: 10px;*/
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    
-     }
-     .block {
-       width: 1030px;
-       height: fit-content;
-       border-radius: 10px ;
-       /*padding: 40px;*/
-       color: #595959; 
-       justify-content: center;
-       align-content: center;
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-
-     }
-
-     .header{
-      width: 1030px;
-       height: 100px;
-       margin-left: 7px;
-       color: #595959; 
-       
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-     }
-     tr td{
-      color: white;
-     }
-     .profile-show-F{
-        padding-right: 55px;
-        padding-left: 80px;
-    }
-    @media (max-width: 1000px) {
-    .profile-show-F{
-        padding-right: 0px!important;
-        padding-left: 0px!important;
-    }
-  
-}
- .remainning-btn{
-      border-radius: 20px;
-      color: white;
-     }
-</style>
-
-
-
-
-
-<div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
-   <%= link_to "Dashboard", dashboard_index_path,  class:'nav-link active'  %>
-  <%= link_to "Profiles",  profiles_index_path,  class:'nav-link active'  %>
-  <%= link_to "My Profiles",  myprofile_index_path,  class:'nav-link active'  %>
-  <%= link_to "Addons",  dashboard_addon_path,  class:'nav-link active', style:"margin-top:213px"  %>
-  <%= link_to "Settings",  settings_index_path,  class:'nav-link active' %>
-   <%= link_to "Logout", destroy_user_session_path, method: :delete, class:'nav-link active'  %>
-</div>
-
 <div class="content">
-  <div class="container-fluid">
-    <div class="row header justify-content-center align-items-center">
-      <div class="col-lg-8"></div>
-      <div class="col-lg-4">
-        <% if @current_user_profile.request <= 0 %>
-          <span class="px-4 py-2 bg-danger remainning-btn">
-            (<%= @current_user_profile.request%>) Request Remaining
-          </span>
-        <% else %>
-          <span class="px-4 py-2 bg-info remainning-btn">
-          (<%= @current_user_profile.request%>) Request Remaining
-         </span>
+  <div class="page-title">
+       Find Profile
+       <div class="right">
+           <% if @current_user_profile.request <= 0 %>
+                 <span class="px-4 py-2 bg-danger remainning-btn">
+                   (<%= @current_user_profile.request%>) Request Remaining
+                 </span>
+               <% else %>
+                 <span class="px-4 py-2 bg-info remainning-btn">
+                 (<%= @current_user_profile.request%>) Request Remaining
+                </span>
 
-        <% end %>
-    </div>
-  </div>
-  <div class="container">
-    
-    <div class="row">
-      <div class="col-md-2 mt-4 profile-show-F" >
-        <span class="p-4 bg-info text-white font-weight-bolder" style=" border-radius:10px;">F<%= @profile.id %></span>
+              <% end %>
+       </div>
+   </div>
+
+   <div class="malimatch-profile-block">
+      <div class="malimatch-profile-id">
+          <span class="p-4 bg-info text-white font-weight-bolder" style=" border-radius:10px;">F<%= @profile.id %></span>
       </div>
-      <div class="col-md-10">
-        <div class="row">
-        	<h5><%= @profile.age %> years old • <%= @profile.region %>, <%= @profile.country %></h5>
-        </div>
-        <div class="row">
-        	<div class="col-md-2">
-            <% if @current_user_profile.request <= 0 || @current_user_profile.set_days > 30 || @current_user_profile.subscription == nil %>
-              <%= link_to 'Request', settings_index_path, class:"btn btn-warning text-white", style:"padding-right: 35px;
-              padding-left: 35px", :data => {:confirm => 'You have availed all of your Requests? Please visit Subsucription plan for new Requests. Thanks!'} %>
+     <div class="malimatch-profile-age-block">
+        <div class="malimatch-profile-age">
+          <h5><%= @profile.age %> years old • <%= @profile.region %>, <%= @profile.country %></h5>
+       </div>
+       <div class="malimatch-profile-request">
+        <% if @current_user_profile.request <= 0 || @current_user_profile.set_days > 30 || @current_user_profile.subscription == nil %>
+              <%= link_to 'Request', settings_index_path, class:"malimatch-profile-request-btn", :data => {:confirm => 'You have availed all of your Requests? Please visit Subsucription plan for new Requests. Thanks!'} %>
             <% else %>
               
-              <%= link_to 'Request', requests_path(receiver_id: @profile.user_id, sender_id: current_user.id, profile_id: @profile.id), method: 'post', class:"btn btn-primary", style:"padding-right: 35px;
-              padding-left: 35px" %>
+              <%= link_to 'Request', requests_path(receiver_id: @profile.user_id, sender_id: current_user.id, profile_id: @profile.id), method: 'post', class:"malimatch-profile-request-btn" %>
             <% end %>
-
-           
-
+      </div>
+   </div>
+    <div class="malimatch-profile-subsucribe">
+     <% if @current_user_profile.set_days <= 30 && @current_user_profile.subscription != nil%>
           
-        	</div>
-          <% if @current_user_profile.set_days <= 30 && @current_user_profile.subscription != nil%>
-        	<div class="col-md-6">
-        		  <button class="btn btn-success text-white">( <%=30 - @current_user_profile.set_days%> )  days remaining in your subscription expire!</button>
-        	</div>
-        		<% else %>
-            <div class="col-md-4">
+              <button class="btn btn-success text-white">( <%=30 - @current_user_profile.set_days%> )  days remaining in your subscription expire!</button>
+          
+            <% else %>
+          
               <button class="btn btn-danger text-white">Your Account is Inactive</button>
-          </div>
+          
               
             <% end %>
-        	
-        </div>
-      </div>
-    </div>
+   </div>
+  </div>
+
+  <div class="container">
+  
     <div class="row mt-5">
     	<div class="col-lg-6">
     		<h4>My self summary</h4>

@@ -16,17 +16,12 @@
       <div id="collapseOne" class="collapse show" aria-labelledby="panelsStayOpen-headingOne" data-parent="#accordionExample">
         <div class="card-body">
           <ul class="links">
-              <li>
-                  <a href="user-setting.html">Profile Info</a>
+               <li>
+                 <%= link_to 'Profiles', profiles_index_path %>
               </li>
               <li>
-                  <a href="user-notification.html">Notifications</a>
-              </li>
-              <li>
-                  <a class="active" href="user-friend-request.html">Friend Requests</a>
-              </li>
-              <li>
-                  <a href="user-badges.html">Badges</a>
+                 <%= link_to 'My Profile', myprofile_index_path, class:'active' %>
+                
               </li>
           </ul>
         </div>
