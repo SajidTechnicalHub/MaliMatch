@@ -53,35 +53,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-header" id="headingRequests">
-          <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRequests" aria-expanded="false" aria-controls="collapseRequests">
-            <div class="icon">
-                <i class="fas fa-cogs"></i>
-            </div> 
-            <span>
-                Requests
-            </span>
-            <div class="t-icon">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus"></i>
-            </div>
-          </button>
-      </div>
-      <div id="collapseRequests" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-            <ul class="links">
-                <li>
-                    <a href="user-account-info.html">Requests Sent</a>
-                </li>
-                <li>
-                    <a href="user-change-pass.html">Requests Received</a>
-                </li>
-                
-            </ul>
-        </div>
-      </div>
-    </div>
+   
     <div class="card">
       <div class="card-header" id="headingTwo">
           <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -100,14 +72,13 @@
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
             <ul class="links">
-                <li>
-                    <a href="user-account-info.html">Account Info</a>
-                </li>
+               
                 <li>
                     <a href="user-change-pass.html">Change Password</a>
                 </li>
                 <li>
-                    <a href="user-privicy-setting.html">Privacy Settings</a>
+                    <!-- <a href="user-privicy-setting.html">Settings</a> -->
+                    <%= link_to 'Settings', settings_index_path %>
                 </li>
                 <li>
                     <a href="user-verify-account.html">Verified account</a>
@@ -138,15 +109,12 @@
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
         <div class="card-body">
             <ul class="links">
+                
                 <li>
-                    <a href="user-billing.html">Billing & Payout</a>
+                    <%= link_to 'Upgrade Membership Plan', dashboard_addon_path %>
+                    
                 </li>
-                <li>
-                    <a href="user-plan.html">Upgrade Membership Plan</a>
-                </li>
-                <li>
-                    <a href="user-purchase.html">View Purchase History</a>
-                </li>
+                
             </ul>
         </div>
       </div>
