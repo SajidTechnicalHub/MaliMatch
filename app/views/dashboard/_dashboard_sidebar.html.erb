@@ -74,18 +74,21 @@
             <ul class="links">
                
                 <li>
-                    <a href="user-change-pass.html">Change Password</a>
+                   
+                    <%= link_to 'Change Email', edit_user_registration_path %>
+                </li>
+                <li>
+                   
+                    <%= link_to 'Change Password', edit_user_registration_path %>
                 </li>
                 <li>
                     <!-- <a href="user-privicy-setting.html">Settings</a> -->
                     <%= link_to 'Settings', settings_index_path %>
                 </li>
-                <li>
-                    <a href="user-verify-account.html">Verified account</a>
-                </li>
-                <li>
+               
+                <!-- <li>
                     <a href="user-close-account.html">Close Account</a>
-                </li>
+                </li> -->
             </ul>
         </div>
       </div>
