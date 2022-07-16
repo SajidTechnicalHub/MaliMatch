@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
-
+# layout 'register'
 
  protected
 
@@ -13,6 +13,6 @@ class RegistrationsController < Devise::RegistrationsController
         UserMailer.with(user: @user).welcome_email.deliver_now
         
 
-      price_index_path
+      home_membership_path
   end
 end
