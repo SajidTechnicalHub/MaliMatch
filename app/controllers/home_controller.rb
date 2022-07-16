@@ -1,7 +1,22 @@
 class HomeController < ApplicationController
+  layout 'home'
   def index
-      if current_user.present?
-       render 'dashboard/index'
-     end
+      
   end
+  def about
+    
+  end
+  def membership
+    
+  end
+  def profile
+    
+  end
+  def login
+  end
+
+  def register
+    
+  end
+
 end

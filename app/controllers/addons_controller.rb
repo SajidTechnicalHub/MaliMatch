@@ -1,5 +1,5 @@
 class AddonsController < ApplicationController
-  layout 'dashboard'
+  # layout 'dashboard'
   def index
   end
 

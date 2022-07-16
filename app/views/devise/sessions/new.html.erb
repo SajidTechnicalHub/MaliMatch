@@ -1,253 +1,86 @@
 
-<style type="text/css">
-  * {box-sizing: border-box;}
-
-  /* Full-width input fields */
-    .input {
-    width: 100%;
-    padding: 12px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  .input:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  hr {
-    border: 2px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* Set a style for all buttons */
-  .signup-btn{
-        width: 100%;
-        height: 45px;
-        background-color: #00BFFF;
-        color: white;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-      }
-     .signup-btn:hover{
-        width: 100%;
-        height: 45px;
-        background-color: white;
-        color: #00BFFF;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: 2px solid #00BFFF;
-        /*outline-color: #00BFFF;*/
-      } 
-
- 
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-    /*height: 100vh;*/
-  }
 
 
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 1000px) {
-      .signup-btn {
-      width: 100%;
-    }
-  }
-</style>
-<style>
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 250px;
-  /*background-color: #f1f1f1;*/
-  position: fixed;
-  height: 100vh;
-  overflow: auto;
-  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   /*margin-top: 100px; */
-
-
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #00BFFF;;
-  color: white;
-  font-size: 20px;
-}
-
-.sidebar a:hover {
-  background-color: white;
-  color: #00BFFF;
-}
-
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 100vh;
-  margin-bottom: 100px;
-}
-
-@media screen and (max-width: 1500px) {
-  .sidebar {
-    width: 200px;
-    height: 100vh;
-    position: fixed;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  div.content {margin-left: 10;}
-}
-@media screen and (max-width: 900px) {
-  .sidebar {
-    width: 150px;
-    height: 100vh;
-    position: absolute;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  div.content {
-    margin-left: 10;
-   width: 50%;
-  }
-}
-
-
-.header{
-  width: 100%;
-  height: 100px;
-  /*-webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);*/
-}
-.block1-img{
-      width:100px;
-      height:80px;
-      /*margin-bottom: 10px;*/
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    
-     }
-     .block {
-       width: 500px;
-       height: fit-content;
-       margin-top: 10px;
-       border-radius: 10px ;
-       /*padding: 40px;*/
-       color: #595959; 
-       /*justify-content: center;
-       align-content: center;*/
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-       box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-
-     }
-    .user-img{
-      width: 200px;
-      height: 200px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-       
-
-     }
-</style>
-
-
-
-
-
-  <div class="sidebar">
-    <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
-   <!--  <a class="active" href="#home">Register</a>
-    <a class="active" href="#news">Login</a> -->
-    <%= link_to "Register", new_user_registration_path,  class:'nav-link active'  %>
-    <%= link_to "Login",  new_user_session_path,  class:'nav-link active'  %>
-  </div>
-<div class="content ">
-  <div class="container ">
-    <div class="row ">
-      <div class="col-lg-6 py-3 px-4">
-        <h2 class="font-weight-bold">Welcome to Mali Match</h2>
-        <!-- <p>This is a beta release of what is going to be a fully fledged Mali Match system. It is an automated system for you to be able to send your requests and receive your responses and is for existing members. If you don't currently have an active Mali Match subscription, head over to malimatch.com to subcribe to Mali Match and then return here to use our system.</p>
-        <p>Currently this system is not made for candidates who have a Mali Match subscription through Stripe. If your subscription with us is through Stripe, please send us an email at info@malimatch.com for our team to resolve this within 24 hours.</p>
-        <p>What's new:</p>
-        <p>
-          <ul>
-            <li>We now support request rollover, so if you don't end up using all three of your Mali Match requests, when your subscription fee is paid, you will be given 3 additional requests, regardless of whether or not you've used the previous ones.</li>
-          </ul>
-        </p> -->
-      </div>
-      <div class="col-lg-6 block">
-          <%= image_tag('user_img.png', class:'user-img') %>
-          <hr>
-          <% if notice %>
-            <p class="alert alert-success"><%= notice %></p>
-          <% end %>
-          <% if alert %>
-            <p class="alert alert-danger"><%= alert %></p>
-          <% end %>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field">
-            <%= f.label :email, class:'font-weight-bold'%><br />
-            <%= f.email_field :email, autofocus: true, placeholder:"Enter Email", autocomplete: "email", class:'input' %>
+  <!-- ========== Login & Registation Section ========== -->
+  <section class="log-reg">
+    <div class="top-menu-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <span style="display: flex; gap:5px; align-items: center;">
+              <i class="fas fa-chevron-left"></i> 
+            <%= link_to 'Back to mali match', root_path, class:'backto-home' %>
+            </span>
           </div>
-
-          <div class="field">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password",placeholder:"Enter Password", class:'input' %>
-          </div>
-
-          <% if devise_mapping.rememberable? %>
-            <div class="field">
-              <%= f.check_box :remember_me, style:'margin-bottom:15px' %>
-              <%= f.label :remember_me %>
+          <div class="col-lg-7 ">
+            <div class="logo">
+              <%= link_to image_tag('logo.png', style:'width:70px; height:50px'), root_path %>
             </div>
-          <% end %>
-          
-          <div class="actions mt-2 ">
-            <%= f.submit "Sign In", class:'signup-btn ' %>
-          </div>
-        <% end %>
-        <div class="row mb-2">
-          <div class="col-lg-6">
-            
-            <%= link_to "Forgot your password?", new_password_path(resource_name), class:'nav-link text-center mt-2'  %>
-          </div>
-          <div class="col-lg-6">
-          <%= link_to "Sign Up", new_user_registration_path, class:'nav-link text-center mt-2'  %>
-            
           </div>
         </div>
-        
       </div>
     </div>
-  </div>
-</div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="image image-log">
+        </div>
+        <div class="col-lg-7">
+          
+          <div class="log-reg-inner">
+            <div class="section-header">
+              <h2 class="title">
+                Welcome to MALI MATCH
+              </h2>
+            </div>
+            <div class="main-content inloginp">
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          
+                <div class="form-group">
+                  <label for="">Your Address</label>
+            <%= f.email_field :email, autofocus: true, placeholder:"Enter Email", autocomplete: "email", class:'my-form-control' %>
+                  <!-- <input type="email" class="my-form-control" placeholder="Enter Your Email"> -->
+                </div>
+
+                
+
+                <div class="form-group">
+                  <label for="">Password</label>
+                  <%= f.password_field :password, autocomplete: "current-password",placeholder:"Enter Password", class:'my-form-control' %>
+                  <!-- <input type="text" class="my-form-control" placeholder="Enter Your Password"> -->
+                </div>
+                <p class="f-pass">
+                  Forgot your password? <%= link_to 'recover password', new_user_password_path %> 
+                </p>
+                <% if devise_mapping.rememberable? %>
+                  <div style="display: flex; align-items:center; gap:5px; margin-bottom: -20px;" >
+                    
+                    <%= f.check_box :remember_me, style:'height: 15px; width: 15px; margin-top:-5px' %>
+                    <%= f.label :remember_me %>
+                  </div>
+                <% end %>
+                <div class="button-wrapper">
+                  <!-- <button type="submit" class="custom-button">Sign IN</button> -->
+                  <%= f.submit "Sign In", class:'custom-button ' %>
+                </div>
+                <% end %>
+                <div class="or">
+                  <p>OR</p> 
+                </div>
+                <div class="or-content">
+                  
+                  <p class="or-signup">
+                    Don't have an account? <%= link_to 'Sign up here', new_user_registration_path %> 
+                  </p>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Login & Registation Section ========== -->
 
 
 

@@ -1,0 +1,248 @@
+
+    <!-- ==========Overlay========== -->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- ==========Overlay========== -->
+
+
+    <!-- ==========Breadcrumb-Section========== -->
+    <section class="breadcrumb-area profile-bc-area">
+        <div class="container">
+            <div class="content">
+                <h2 class="title extra-padding">
+                    Membership
+                </h2>
+                <ul class="breadcrumb-list extra-padding">
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        Membership
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Breadcrumb-Section========== -->
+
+     <!-- ==========Membership-Section========== -->
+     <section class="membership-section">
+         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="content">
+                        <div class="section-header">
+                            <h6 class="sub-title extra-padding">
+                                Upgrade Your Profile
+                            </h6>
+                            <h2 class="title">
+                                Premium Memeber Plan
+                            </h2>
+                            <p class="text">
+                                Benefit from Mali Match at its maximum you!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="row m-s-top justify-content-center align-items-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="plan-info">
+                        <div class="icon">
+                            <%= link_to image_tag("icon1.png"), root_path %>
+
+                        </div>
+                        <h4 class="title">
+                            Unlimited Messages 
+                        </h4>
+                        <p class="text">
+                            Send and receive messages
+                            with no limits 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="plan-info">
+                        <div class="icon">
+                            <%= link_to image_tag("icon2.png"), root_path %>
+                            <!-- <img src="assets/images/membership/icon2.png" alt=""> -->
+                        </div>
+                        <h4 class="title">
+                            VIP Badge
+                        </h4>
+                        <p class="text">
+                            Send and receive messages
+                            with no limits 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="plan-info">
+                        <div class="icon">
+                            <!-- <img src="assets/images/membership/icon3.png" alt=""> -->
+                            <%= link_to image_tag("icon3.png"), root_path %>
+                        </div>
+                        <h4 class="title">
+                            Unlimited matches 
+                        </h4>
+                        <p class="text">
+                            Send and receive messages
+                            with no limits 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="plan-info">
+                        <div class="icon">
+                            <%= link_to image_tag("icon4.png"), root_path %>
+                        </div>
+                        <h4 class="title">
+                            Take more messages  
+                        </h4>
+                        <p class="text">
+                            Send and receive messages
+                            with no limits 
+                        </p>
+                    </div>
+                </div>
+             </div>
+             <div class="row">
+                 <div class="col-lg-12">
+                    <div class="pricing-plan-wrapper">
+                            <%= link_to image_tag("left-img.png"), root_path, class:"left-img" %>
+                            <%= link_to image_tag("price-right-img.png"), root_path, class:"right-img" %>
+                        <!-- <img class="left-img" src="assets/images/membership/left-img.png" alt="">
+                        <img class="right-img" src="assets/images/membership/right-img.png" alt=""> -->
+                        <div class="row justify-content-center">
+                           
+                            <div class="col-lg-3 col-md-6">
+                               <div class="single-plan">
+                                   <p class="duration">
+                                       1 Month
+                                   </p>
+                                   <h4 class="number">
+                                       <sup>$</sup>50
+                                   </h4>
+                                   <p class="stamet">
+                                       Per Month
+                                   </p>
+                                   <!-- <a href="#" class="custom-button">Buy Now!</a> -->
+                                   <% if user_signed_in? %>
+                                        <%= button_to 'Buy Now!', checkout_create_path, remote: true, class:'custom-button', style:'padding: 0px 30px!important; height:35px!important; text-transform: uppercase;' %>
+                                                
+                                    <% else %>
+                                        <%= button_to 'Buy Now!', new_user_session_path, class:'custom-button', style:'padding: 0px 30px!important; height:35px!important; text-transform: uppercase;'  %>
+
+                                    <% end %>
+                                   <%= link_to image_tag("plan-bg.png"), root_path, class:"shape" %>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+         <div class="pricing-plans">
+           <!--  <img class="shape1" src="assets/images/join/heartshape.png" alt=""> -->
+            <%= link_to image_tag("heartshape.png"), root_path, class:"shape1" %>
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <p class="contact-link">
+                            If you have any questions <a href="#">Contact Us</a>
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <!-- ==========Membership-Section========== -->
+
+    <!-- ==========Faq-Section========== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="content">
+                        <div class="section-header">
+                            <h6 class="sub-title extra-padding">
+                                Got any Question
+                            </h6>
+                            <h2 class="title">
+                                We’ve Got Answers
+                            </h2>
+                            <p class="text">
+                                Try to check out frequently ask questions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-area">
+                <div class="faq-wrapper">
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h6 class="title">What is Mali Match? </h6>
+                            <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                            <p>MALIMATCH is a fully sunnah complaint matrimony service that allows muslims to find their ideal spouse without compromising their faith. We truly believe that starting a relationship in the correct way taught to us by our beloved Prophet Muhammad Peace and blessings be upon him. We wanted to create a platform that people can use to find a spouse according to the sunnah and this way our marriages may be blessed. </p>
+                           <p>Marriage is a beautiful sunnah of our prophet and we wanted to help our brothers and sisters find the one in the right way. We found that many brothers and sisters found difficulty in finding a spouse due to not knowing where to begin or not knowing details about potentials. Our Platform solves both these problems by bringing all the options to you.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item active open">
+                        <div class="faq-title">
+                            <h6 class="title">What kind of photos can I use? </h6>
+                            <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                            <p>Being that Tickto does not own any of the tickets sold on our site, we do not have the ability to exchange or replace tickets with other inventory. </p>
+                            <p>If you would like to "upgrade" or change the location of your seats, you can relist your current tickets for sale here and purchase other tickets of your choice. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h6 class="title">Which are the payment methods?</h6>
+                            <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                            <p>Being that Tickto does not own any of the tickets sold on our site, we do not have the ability to exchange or replace tickets with other inventory. </p>
+                            <p>If you would like to "upgrade" or change the location of your seats, you can relist your current tickets for sale here and purchase other tickets of your choice. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h6 class="title">How Our Matchmaking Works ?</h6>
+                            <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                            <p>Being that Tickto does not own any of the tickets sold on our site, we do not have the ability to exchange or replace tickets with other inventory. </p>
+                            <p>If you would like to "upgrade" or change the location of your seats, you can relist your current tickets for sale here and purchase other tickets of your choice. </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h6 class="title">How can i delete my profile?</h6>
+                            <span class="right-icon"></span>
+                        </div>
+                        <div class="faq-content">
+                            <p>If you close your account, you will be unsubscribed from all your followers and friends, and will lose access forever.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========Faq-Section========== -->
+
+    
+
+</body>
+
+</html>

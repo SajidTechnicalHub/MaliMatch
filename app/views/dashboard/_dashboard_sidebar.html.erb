@@ -1,0 +1,126 @@
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="panelsStayOpen-headingOne">
+          <button class="" data-bs-toggle="collapse" data-bs-target="#collapseDashboard" aria-expanded="false" aria-controls="collapseDashboard">
+            <div class="icon">
+                <i class="fas fa-user"></i>
+            </div> 
+            <span>Dashboard</span>
+            <div class="t-icon">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-minus"></i>
+            </div>
+          </button>
+      </div>
+  
+      <div id="collapseDashboard" class="collapse" aria-labelledby="panelsStayOpen-headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <ul class="links">
+               <li>
+                 <%= link_to 'Requests', dashboard_index_path %>
+              </li>
+             
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="panelsStayOpen-headingOne">
+          <button class="" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <div class="icon">
+                <i class="fas fa-user"></i>
+            </div> 
+            <span>My Profile</span>
+            <div class="t-icon">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-minus"></i>
+            </div>
+          </button>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="panelsStayOpen-headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <ul class="links">
+               <li>
+                 <%= link_to 'Profiles', profiles_index_path %>
+              </li>
+              <li>
+                 <%= link_to 'My Profile', myprofile_index_path, class:'active' %>
+                
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+          <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="icon">
+                <i class="fas fa-cogs"></i>
+            </div> 
+            <span>
+                Account
+            </span>
+            <div class="t-icon">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-minus"></i>
+            </div>
+          </button>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+            <ul class="links">
+               
+                <li>
+                   
+                    <%= link_to 'Change Email', edit_user_registration_path %>
+                </li>
+                <li>
+                   
+                    <%= link_to 'Change Password', edit_user_registration_path %>
+                </li>
+                <li>
+                    <!-- <a href="user-privicy-setting.html">Settings</a> -->
+                    <%= link_to 'Settings', settings_index_path %>
+                </li>
+               
+                <!-- <li>
+                    <a href="user-close-account.html">Close Account</a>
+                </li> -->
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header" id="headingThree">
+          <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <div class="icon">
+                <i class="far fa-credit-card"></i>
+            </div> 
+            <span>
+                Subscriptions & Payments
+            </span>
+            <div class="t-icon">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-minus"></i>
+            </div>
+          </button>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+            <ul class="links">
+                
+                <li>
+                    <%= link_to 'Upgrade Membership Plan', dashboard_addon_path %>
+                    
+                </li>
+                
+            </ul>
+        </div>
+      </div>
+    </div>
+  
+</div>

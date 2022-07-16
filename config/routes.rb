@@ -15,11 +15,13 @@ Rails.application.routes.draw do
   # root 'admin/index'
   get 'admin/about'
   get 'admin/aboutus'
-  root 'admin#home'
+  get 'admin/home'
   get 'admin/pricing'
   # get 'registration/index'
   get 'dashboard/addon'
   get 'dashboard/dashboard_checkout'
+  get 'dashboard/dashboard_home'
+  
   
   get 'dashboard/policy'
   devise_for :users, controllers: { registrations: "registrations" }
@@ -35,7 +37,13 @@ Rails.application.routes.draw do
   resources :profiles
   resources :requests
   resources :addons
-  get 'home/index' 
+  get 'requests/request_received'
+  root 'home#index' 
+  get 'home/about'
+  get 'home/membership'
+  get 'home/login'
+  get 'home/register'
+  get 'home/profile'
   post 'checkout/create', to:'checkout#create'
   post 'settings/create', to:'settings#create'
   get 'settings/create', to:'settings#create'

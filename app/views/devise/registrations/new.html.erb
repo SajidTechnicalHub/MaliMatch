@@ -1,314 +1,198 @@
-<style type="text/css">
-  <style type="text/css">
-  * {box-sizing: border-box;}
-
-  /* Full-width input fields */
-    .input {
-    width: 100%;
-    padding: 12px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  .input:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  hr {
-    border: 2px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* Set a style for all buttons */
-  .signup-btn{
-        width: 100%;
-        height: 45px;
-        background-color: #00BFFF;
-        color: white;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: none;
-      }
-     .signup-btn:hover{
-        width: 100%;
-        height: 45px;
-        background-color: white;
-        color: #00BFFF;
-        justify-content: center;
-        align-content: center;
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: bold;
-        border: 2px solid #00BFFF;
-        /*outline-color: #00BFFF;*/
-      } 
-
- 
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-   /* height: 100vh;*/
-  }
-
-
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 1000px) {
-      .signup-btn {
-      width: 100%;
-    }
-  }
-</style>
-<style>
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 250px;
-  /*background-color: #f1f1f1;*/
-  position: fixed;
-  height: 100vh;
-  overflow: auto;
-  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   /*margin-top: 100px; */
-
-
-}
-
-.sidebar a {
-  display: block;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #00BFFF;;
-  color: white;
-  font-size: 20px;
-}
-
-.sidebar a:hover {
-  background-color: white;
-  color: #00BFFF;
-}
-
-  .content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: fit-content;
-}
-
-@media screen and (max-width: 1500px) {
-  .sidebar {
-    width: 200px;
-    height: 100vh;
-    position: fixed;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  .content {margin-left: 10;}
-}
-@media screen and (max-width: 900px) {
-  .sidebar {
-    width: 150px;
-    height: 100vh;
-    position: absolute;
-    margin-left: 0px;
-  }
-  .sidebar a {float: buttom;}
-  .content {
-    margin-left: 10;
-   width: 50%;
-  }
-}
-
-
-.header{
-  width: 100%;
-  height: 100px;
-  /*-webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);*/
-}
-.block1-img{
-      width:100px;
-      height:80px;
-      /*margin-bottom: 10px;*/
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    
-     }
-     .block {
-       width: 1030px;
-       height: fit-content;
-       border-radius: 10px ;
-       /*margin-top: 10px;*/
-       color: #595959; 
-       justify-content: center;
-       align-content: center;
-       -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.075);
-      border: 50px   solid #f1f1f1;
-
-     }
-</style>
 
 
 
-
-
-<div class="sidebar">
-  <%= link_to image_tag("logo.png", class:'block1-img'), root_path %>
- <!--  <a class="active" href="#home">Register</a>
-  <a class="active" href="#news">Login</a> -->
-  <%= link_to "Register", new_user_registration_path,  class:'nav-link active'  %>
-    <%= link_to "Login",  new_user_session_path,  class:'nav-link active'  %>
-</div>
-
-<div class="content">
-  <div class="container">
-    <div class="row justify-content-center align-items-center block">
-      <div class="col-lg-6">
-        <h1 class="mt-3">Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
-        <% if notice %>
-          <p class="alert alert-success"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p class="alert alert-danger"><%= alert %></p>
-        <% end %>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-          <div class="field">
+  <!-- ========== Login & Registation Section ========== -->
+  <section class="log-reg">
+    <div class="top-menu-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <span style="display: flex; gap:5px; align-items: center;">
+              <i class="fas fa-chevron-left"></i> 
+            <%= link_to 'Back to mali match', root_path, class:'backto-home' %>
+            </span>
+          </div>
+          <div class="col-lg-7 ">
+            <div class="logo ">
+              <%= link_to image_tag('logo.png', style:'width:70px; height:50px'), root_path %>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="image">
+        </div>
+        <div class="col-lg-7">
+          <div class="log-reg-inner">
+            <div class="section-header">
+              <h2 class="title">
+                Welcome to MALI MATCH
+              </h2>
+              <p>
+                Let's create your profile! Just fill in the fields below, and
+                we’ll get a new account.
+              </p>
+            </div>
+            <div class="main-content"style='padding-left:20px ;' >
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+             <%= render "devise/shared/error_messages", resource: resource %>
+             <h4 class="content-title">Acount Details</h4>
+          <div class="form-group">
             <%= f.label :name %><br />
-            <%= f.text_field :name, autofocus: true,placeholder:"Enter Full Name", autocomplete: "name", class:'input' %>
+            <%= f.text_field :name, autofocus: true,placeholder:"Enter Full Name", autocomplete: "name", class:'my-form-control' %>
           </div>
-          <div class="field">
+          <div class="form-group">
             <%= f.label :phone %><br />
-            <%= f.text_field :phone, autofocus: true,placeholder:"Enter Phone No", autocomplete: "phone", class:'input' %>
+            <%= f.text_field :phone, autofocus: true,placeholder:"Enter Phone No", autocomplete: "phone", class:'my-form-control' %>
           </div>
-          <div class="field">
+          <div class="form-group">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true,placeholder:"Enter Email", autocomplete: "email", class:'input', data: {behavior: "toggle-email"}  %>
+            <%= f.email_field :email, autofocus: true,placeholder:"Enter Email", autocomplete: "email", class:'my-form-control', data: {behavior: "toggle-email"}  %>
           </div>
 
-          <div class="field">
+          <div class="form-group">
             
             <%= f.label :email_confirmation %><br />
-            <%= f.email_field :email_confirmation, autofocus: true,placeholder:"Confirm Email", autocomplete: "email_confirmation", class:'input', data: {behavior: "toggle-email_confirmation"} %>
+            <%= f.email_field :email_confirmation, autofocus: true,placeholder:"Confirm Email", autocomplete: "email_confirmation", class:'my-form-control', data: {behavior: "toggle-email_confirmation"} %>
             <span id="email_error" style="color: red"></span>
           </div>
 
-          <div class="field">
+          <div class="form-group">
             <%= f.label :gender, 'Select Gender '%>
-              <br />
-              <br />
+             
               <div class="row">
-                <div class="col-lg-2">
-                  <%= f.radio_button :gender, true, checked: 'checked', data: {behavior: "toggle-products"}  %> Male </div>
-                <div class="col-lg-3">
-                  <%= f.radio_button :gender, false, data: {behavior: "toggle-products"} %> Female </div>
-                <br />
-                <br /> 
+                <div class="col-lg-2 malimatch-gender-block">
+                  <%= f.radio_button :gender, true, checked: 'checked', data: {behavior: "toggle-products"}, style:'height: 15px; width: 15px;'  %> Male </div>
+                <div class="col-lg-3 malimatch-gender-block">
+                  <%= f.radio_button :gender, false, data: {behavior: "toggle-products"}, style:'height: 15px; width: 15px;' %> Female </div>
+               
     
 
           <div class="wali-info">
-            <h4>Add Wali Information:</h4>
-
-            <div class="field">
+            <h4 class="content-title">Add Wali Information</h4>
+            <div class="form-group">
               <%= f.label :wali_name, 'Full Name' %><br />
-              <%= f.text_field :wname, autofocus: true,placeholder:"Enter Wali Full Name", autocomplete: "wname", class:'input' %>
+              <%= f.text_field :wname, autofocus: true,placeholder:"Enter Wali Full Name", autocomplete: "wname", class:'my-form-control' %>
             </div>
 
-            <div class="field">
+            <div class="form-group">
               <%= f.label :wali_mobile, 'Mobile' %><br />
-              <%= f.text_field :wmobile, autofocus: true,placeholder:"Enter Phone No", autocomplete: "wmobile", class:'input' %>
+              <%= f.text_field :wmobile, autofocus: true,placeholder:"Enter Phone No", autocomplete: "wmobile", class:'my-form-control' %>
             </div>
 
-            <div class="field">
+            <div class="form-group">
               <%= f.label :wali_email, 'Email' %><br />
-              <%= f.email_field :wemail, autofocus: true, placeholder:"Enter Email", autocomplete: "wemail", class:'input' %>
+              <%= f.email_field :wemail, autofocus: true, placeholder:"Enter Email", autocomplete: "wemail", class:'my-form-control' %>
             </div>
 
-            <div class="field">
+            <div class="form-group">
               <%= f.label :wali_question, 'Does your wali approve for you to use this service? '%>
                 <br />
                 <br />
                 <div class="row">
-                  <div class="col-lg-2">
-                    <%= f.radio_button :wquestion, 'NO', data: {behavior: "toggle-question"} %> NO </div>
-                  <div class="col-lg-2">
-                    <%= f.radio_button :wquestion, 'YES' %> YES </div>
-                  <br />
-                  <br /> 
+                  <div class="col-lg-2 malimatch-gender-block" >
+                    <%= f.radio_button :wquestion, 'NO', style:'height: 15px; width: 15px;', data: {behavior: "toggle-question"} %> NO 
+                  </div>
+
+                  <div class="col-lg-2 malimatch-gender-block">
+                    <%= f.radio_button :wquestion, 'YES', style:'height: 15px; width: 15px;' %> YES 
+                  </div>
+                   
               </div>
           </div>
         </div>
 
           <div class="password">
             
-            <div class="field">
+            <div class="form-group">
               <%= f.label :password %>
               <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
-              <%= f.password_field :password,placeholder:"Enter Password", autocomplete: "new-password", class:'input' %>
+              <%= f.password_field :password,placeholder:"Enter Password", autocomplete: "new-password", class:'my-form-control' %>
             </div>
 
-            <div class="field">
+            <div class="form-group">
               <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, placeholder:"Conform Password", autocomplete: "new-password", class:'input' %>
+              <%= f.password_field :password_confirmation, placeholder:"Conform Password", autocomplete: "new-password", class:'my-form-control' %>
             </div>
 
-            <div class="field">
-                <%= f.label :agree, 'You agree to use My Mali Match in a halal manner. Only use this service for the purposes of marriage and in a manner that complies with the sunnah. Please get in contact with the Wali after receiving a match. We pray that Allah grants you a righteous partner?'%>
-                  <br />
-                  <br />
+            <div class="form-group">
+                <p style="font-size:14px;">You agree to use My Mali Match in a halal manner. Only use this service for the purposes of marriage and in a manner that complies with the sunnah. Please get in contact with the Wali after receiving a match. We pray that Allah grants you a righteous partner?</p>
+                  
+        
                   <div class="row">
-                  <div class="col-lg-2">
-                    <%= f.radio_button :agree, 'YES' %> Yes </div>
+                  <div class="col-lg-2 malimatch-gender-block">
+                    <%= f.radio_button :agree, 'YES', style:'height: 15px; width: 15px;' %> Yes </div>
 
-                  <div class="col-lg-2">
-                    <%= f.radio_button :agree, 'NO', data: {behavior: "toggle-agree"} %> No </div>
-                  <br />
-                  <br /> 
+                  <div class="col-lg-2 malimatch-gender-block">
+                    <%= f.radio_button :agree, 'NO', style:'height: 15px; width: 15px;', data: {behavior: "toggle-agree"} %> No </div>
+                  
               </div>
-            <div class="field">
-                <%= f.check_box :remember_me, style:'margin-bottom:15px' %>
-                <%= f.label :remember_me %>
-            </div>
+              <br>
+              <div style="display: flex; align-items:center; gap:5px;" >
+                
+                <%= f.check_box :remember_me, style:'height: 15px; width: 15px; margin-top:-10px' %>
+                <p>Remember me</p>
+              </div>
 
               <p>By creating an account you agree to our <%= link_to 'Terms & Privacy', addons_policy_path, style:"color:dodgerblue" %>.</p>
 
             <div class="actions">
-              <%= f.submit "Sign up", class:'signup-btn mb-4 ' %>
+              <%= f.submit "Sign Up", class:'custom-button ' %>
+            </div>
+
+            <div class="or">
+              <p>OR</p> 
+            </div>
+            <div class="or-content">
+              
+              <p class="or-signup">
+                Already have an account? <%= link_to 'Sign in here', new_user_session_path %> 
+              </p>
             </div>
           <% end %>
-       </div>
-            
+       
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        
+  <!-- ========== Login & Registation Section ========== -->
 
+  <!-- Modal -->
+  <div class="modal fade" id="email-confirm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="top-img">
+            <!-- <img src="assets/images/c-image.png" alt=""> -->
+            <%= image_tag("c-image.png") %>
+          </div>
+          <div class="main-content">
+            <h4 class="title">
+              Check Your Inbox, Please!
+            </h4>
+            <p>
+              A link to verify account has been sent to the email supplied. Please open the link and follow the prompts
+              to verify
+              email.
+            </p>
+            <p class="send-again">
+              Didn't get e-mail? <a href="#">
+                Send it again
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 
 
 <script type="text/javascript">

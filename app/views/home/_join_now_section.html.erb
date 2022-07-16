@@ -1,0 +1,23 @@
+<section class="join-now-section">
+        <!-- <img class="shape1" src="assets/images/join/heartshape.png" alt=""> -->
+        <%= link_to image_tag("heartshape.png", class:"shape1"), root_path %>
+        <%= link_to image_tag("img.png", class:"shape2"), root_path %>
+        <!-- <img class="shape2" src="assets/images/join/img.png" alt=""> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content">
+                        <div class="section-header white-color">
+                            <h2 class="title wow fadeInUp">
+                                Best Ways to Find Your
+                                True Sole Mate 
+                            </h2>
+                        </div>
+                        
+                        <!-- <a href="#" class="custom-button">Join Now !</a> -->
+                        <%= link_to 'Join Now', new_user_session_path, class:'custom-button'%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
