@@ -16,6 +16,9 @@
       <div id="collapseDashboard" class="collapse" aria-labelledby="panelsStayOpen-headingOne" data-parent="#accordionExample">
         <div class="card-body">
           <ul class="links">
+             <li>
+                 <%= link_to 'Profiles', profiles_index_path %>
+              </li>
                <li>
                  <%= link_to 'Requests', dashboard_index_path %>
               </li>
@@ -42,9 +45,7 @@
       <div id="collapseOne" class="collapse show" aria-labelledby="panelsStayOpen-headingOne" data-parent="#accordionExample">
         <div class="card-body">
           <ul class="links">
-               <li>
-                 <%= link_to 'Profiles', profiles_index_path %>
-              </li>
+               
               <li>
                  <%= link_to 'My Profile', myprofile_index_path, class:'active' %>
                 

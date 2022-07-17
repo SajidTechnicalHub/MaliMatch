@@ -4828,8 +4828,8 @@ input[type=submit] {
   -webkit-transform: translateY(150px);
   -ms-transform: translateY(150px);
   transform: translateY(150px);
-  /*background: #5650ce;*/
-  background: #00BFFF;
+  background: #5650ce;
+  /*background: #00BFFF;*/
   text-align: center;
 }
 .scrollToTop:hover {
@@ -11820,7 +11820,8 @@ input[type=submit] {
 /*  Login & Registration  Section */
 .log-reg {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
   width: 100%;
 }
 .log-reg .top-menu-area .backto-home {

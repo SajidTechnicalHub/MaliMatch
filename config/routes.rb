@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'dashboard/dashboard_home'
   
   
+  
   get 'dashboard/policy'
   devise_for :users, controllers: { registrations: "registrations" }
   # get 'checkout/index'
