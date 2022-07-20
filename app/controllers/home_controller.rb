@@ -7,7 +7,9 @@ class HomeController < ApplicationController
     
   end
   def membership
-    
+      # UserMailer.with(user: @user).welcome_email.deliver_now
+        
+      # flash[:success] = "Thank you for your order! We'll get contact you soon!"
   end
   def profile
     
