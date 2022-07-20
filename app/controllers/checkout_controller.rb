@@ -33,7 +33,7 @@ class CheckoutController < ApplicationController
   def product_items 
     products = []
     
-      products << {name: 'Subscription for One Month ', amount: 5000, currency: 'usd', quantity: 1}
+      products << {name: 'Subscription for One Month ', amount: 3000, currency: 'usd', quantity: 1}
     
     return products
   end

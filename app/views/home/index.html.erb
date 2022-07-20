@@ -170,24 +170,26 @@
                     <div class="content">
                         <div class="section-header">
                             <h6 class="sub-title extra-padding wow fadeInUp">
-                                Meet New People Today!
+                                Find a Potential Today!
                             </h6>
                             <h2 class="title extra-padding wow fadeInUp">
-                                Start Finding 
+                                Start Searching
                             </h2>
                             <p>
-                                In our modern day and age dating apps have become an 
-                                integral part of our lives. They allow you to check the profile of singles living near you, to chat with them, to meet them and maybe to fall in love.
+                                My MaliMatch makes finding a potential easy just search through the many profiles on our database request the ones that interest you the most and if you get a match then you can move on to the next step of setting up communications with the Wali.
                             </p>
                             <br>
-                            <p>
-                                If you’re searching for a simple dating app with free features 
-                                allowing to meet singles, you’re in good hands with Pairko. With Pairko you get all you need from a mobile dating app, which presents you thousands of users through your smartphone in a very pleasant experience. 
-                            </p>
+                            
                         </div>
                         
-                        <!-- <a href="#" class="custom-button">Seek Your Partner</a> -->
-                        <%= link_to 'Seek Your Partner', profiles_index_path, class:'custom-button'%>
+                        <% if user_signed_in? %>
+                            <li>
+                                <%= link_to 'Find The One Today', profiles_index_path, class:'custom-button'%>  
+                            </li>
+                        <% else %>
+                             <%= link_to 'Find The One Today', new_user_registration_path, class:'custom-button'%>
+
+                        <% end %>
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-center">
@@ -232,13 +234,10 @@
                                 Upgrade Your Profile
                             </h6>
                             <h2 class="title extra-padding wow fadeInUp">
-                                MemeberShip Plan
+                                Membership Plan
                             </h2>
                             <p>
-                                Choose from one of our membership levels 
-                                and unlock features you need.Benefit from 
-                                Peyamba at its maximum capacity by choosing
-                                the plan that suits you!
+                                Our monthly membership allows you to access our entire database and gives you 3 requests!
                             </p>
                         </div>
                         

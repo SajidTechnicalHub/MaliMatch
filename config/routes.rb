@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   get 'home/login'
   get 'home/register'
   get 'home/profile'
+  get 'home/contact_us'
   post 'checkout/create', to:'checkout#create'
   post 'settings/create', to:'settings#create'
   get 'settings/create', to:'settings#create'

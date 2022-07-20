@@ -20,5 +20,8 @@ class HomeController < ApplicationController
   def register
     
   end
+  def contact_us
+    # redirect_to root_path
+  end
 
 end

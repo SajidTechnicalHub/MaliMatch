@@ -10,7 +10,19 @@
                  <!-- <img src="assets/images/frequest/1.png" alt=""> -->
                  <%= image_tag("user-demo.png") %>
                  <div class="content">
-                     <h5 class="name"><%= link_to profile.user.name, profile_path(profile) %> <i class="fas fa-certificate"></i></h5>
+                     <h5 class="name">
+                        <% if profile.user.gender == true %>
+                            <%= link_to 'M', profile_path(profile) %>
+               
+                          <% else %>
+                            <%= link_to 'F', profile_path(profile) %>
+                          
+                          <% end %>
+                        <%= link_to profile.id, profile_path(profile) %>
+
+                        
+                        <i class="fas fa-certificate"></i>
+                    </h5>
                      <span class="age"><%= profile.age %></span>
                      <span class="separator"></span>
                      <span class="location"><i class="fas fa-map-marker-alt"></i> <%= profile.country %></span>

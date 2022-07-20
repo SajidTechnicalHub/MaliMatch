@@ -9,13 +9,18 @@
                     <div class="content">
                         <div class="section-header white-color">
                             <h2 class="title wow fadeInUp">
-                                Best Ways to Find Your
-                                True Sole Mate 
+                                Simple and Easy ways to find a Potential
                             </h2>
                         </div>
                         
-                        <!-- <a href="#" class="custom-button">Join Now !</a> -->
-                        <%= link_to 'Join Now', new_user_session_path, class:'custom-button'%>
+                        <% if user_signed_in? %>
+                            <li>
+                                <%= link_to 'Join Now', profiles_index_path, class:'custom-button'%>  
+                            </li>
+                        <% else %>
+                             <%= link_to 'Join Now', new_user_registration_path, class:'custom-button'%>
+
+                        <% end %>
                     </div>
                 </div>
             </div>

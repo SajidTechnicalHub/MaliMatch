@@ -38,7 +38,7 @@
                 <%= f.date_field :dob, autofocus: true, autocomplete: "date", class:'my-form-control' %>
             </div>
             <div class="row">
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                 <div class="form-group ">
                   <%= f.label :country, "Location" %>
                     
@@ -46,12 +46,12 @@
                             ],{ prompt:'Select Contry' }, { class: 'my-form-control malimatch-select-height' }%>
                 </div>
               </div>
-              <div class="col-lg-6">
+             <!--  <div class="col-lg-6">
                 <div class="form-group mt-2">
                   <br />
-                  <%= f.select :region,  ['Australian Capital Territory','New South Wales','Northern Territory','Queenslan','South Australia','Tasmania','Victoria','Western Australia'],{ prompt:'Select Region' }, { class: 'my-form-control malimatch-select-height' }%>
+                  <%#= f.select :region,  ['Australian Capital Territory','New South Wales','Northern Territory','Queenslan','South Australia','Tasmania','Victoria','Western Australia'],{ prompt:'Select Region' }, { class: 'my-form-control malimatch-select-height' }%>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="form-group">
               <%= f.label :Marital_status%>
@@ -336,11 +336,11 @@
                     <br />
                     <%= f.text_area :education, autofocus: true, autocomplete: "education",size: '50x5', class:'my-form-control malimatch-textarea-height' %>
                 </div>
-                <div class="form-group">
-                  <%= f.label :sect %>
+               <!--  <div class="form-group">
+                  <%#= f.label :sect %>
                     <br />
-                    <%= f.select :sect,  ['Salafi','Sunni','Ahlul Hadith','Just Muslim','Shia','Barelwi','Deobandi'], { prompt:'Select your best described group / sect / methodology' }, { class: 'my-form-control malimatch-select-height' }%>
-                </div>
+                    <%#= f.select :sect,  ['Salafi','Sunni','Ahlul Hadith','Just Muslim','Shia','Barelwi','Deobandi'], { prompt:'Select your best described group / sect / methodology' }, { class: 'my-form-control malimatch-select-height' }%>
+                </div> -->
                 <div class="my-input-box">
                   <%= f.label :Scholars_taken_from_or_speakers_listened_to %>
                     <br />
@@ -375,7 +375,7 @@
                 </div>
                 <div class="row">
                   <div class="col-lg-2">
-                    <%=f.label :Devorcees %>
+                    <%=f.label :Divorcees %>
                   </div>
                   <div class="col-lg-2">
                     <%= f.check_box :devorcees, {:class => "input malimatch-gender-checkbox"}, "devorces" %>
