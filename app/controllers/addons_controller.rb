@@ -59,7 +59,7 @@ end
  def promoted_items 
       products = []
     
-      products << {name: 'Promote your profile  ', amount: 1500, currency: 'usd', quantity: 1}
+      products << {name: 'Promote your profile  ', amount: 1000, currency: 'usd', quantity: 1}
     
     return products
   end

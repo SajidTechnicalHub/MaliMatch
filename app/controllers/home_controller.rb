@@ -22,6 +22,11 @@ class HomeController < ApplicationController
   end
   def contact_us
     # redirect_to root_path
+    @firstname = params[:firstname]
+    @lastname = params[:lastname]
+    @email = params[:email]
+    @message = params[:message]
+    @subject = params[:subject]
   end
 
 end
