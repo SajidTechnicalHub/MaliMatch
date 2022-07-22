@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to mymalimatch.herokuapp.com, <%#= @user.name %></h1>
+    <p>
+      You have successfully signed up to mymalimatch.herokuapp.com,
+      your username is: <%#= @user.email %>.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: <%#= @url %>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        table, td, div, h1, p {font-family: Arial, sans-serif;}
+        table,   {border:2px solid #000000 !important;}
+        
+    </style>
+</head>
+<body style="margin:0;padding:0;">
+    <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+        <tr>
+            <td align="center" style="padding:0px;">
+
+              <table role="presentation" style="width:90%;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;">
+                  <tr>
+                      <td align="center" style="padding:0; background:#00BFFF; color: #ffffff; height: 120px; ">
+                              
+                              <img src="https://mymalimatch.herokuapp.com/assets/logo-0eed88d8600524806cdd46977e9126b40e9f9cb0d28dbe97b67d0a60349c30a2.png" width="120" style="height: 45px;display:block;" />
+                     </td>
+                  </tr>
+
+                  <tr>
+                      <td style="padding:10px; line-height:25px; mso-line-height-rule:exactly;">
+                       <h2 style="text-align:center;">Contact Us Message</h2>
+                          
+                          <p> <strong>User Name: </strong><%=@contact_params['firstname']%> <%= @contact_params['lastname']%></p>
+                          <p> <strong>Email: </strong><%= @contact_params['email']%></p>
+                          <p> <strong>Message: </strong><%= @contact_params['message']%></p>
+                          <p> <strong>Details</strong></p>
+                          <p>
+                            <%= @contact_params['subject']%>
+                          </p>
+                          
+                          
+                      </td>
+                  </tr>
+                  
+
+
+                  <tr>
+                      <td align="center" style="padding:0px;">
+
+                          <table role="presentation" style="width:100%;border-collapse:collapse; border-spacing:0;text-align:left;">
+                              <tr>
+                                  <td align="center" style="padding:0; background:#00BFFF; color: #ffffff; height: 120px; ">
+                                    
+                                  </td>
+                              </tr>
+                          </table>
+                 
+                
+            </td>
+        </tr>
+        <tr>
+              <td style="padding:10px ; background: rgb(221, 215, 215);">
+                    
+              </td>
+        </tr>
+        <!-- give space -->
+        <!-- <div style="line-height:10px;height:20px;mso-line-height-rule:exactly;">&nbsp;</div> -->
+    </table>
+</body>
+</html>

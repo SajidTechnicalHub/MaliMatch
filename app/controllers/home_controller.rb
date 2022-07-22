@@ -21,12 +21,13 @@ class HomeController < ApplicationController
     
   end
   def contact_us
-    # redirect_to root_path
-    @firstname = params[:firstname]
-    @lastname = params[:lastname]
-    @email = params[:email]
-    @message = params[:message]
-    @subject = params[:subject]
+    
+      if params[:contact].present?
+       UserMailer.with(contact: params[:contact]).contact_us.deliver_now
+
+         flash[:success] = "Thank you for contact us! We'll get contact you soon!"
+       redirect_to home_membership_path
+    end
   end
 
 end

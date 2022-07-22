@@ -44,31 +44,33 @@
                 </h1>
                 <br>
 
-                <form action="home/contact-us">
+            <%= form_tag(home_contact_us_path, method: :post) do%>
                 <div class="row">
                     <div class="col-lg-6">
                         
                       <label for="fname">First Name</label>
-                      <input type="text" id="fname" name="firstname" required placeholder="Your name..">
+                      <input type="text" id="fname" name="contact[firstname]" required placeholder="Your name..">
                     </div>
                     <div class="col-lg-6">
                       <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" required placeholder="Your last name..">
+                      <input type="text" id="lname" name="contact[lastname]" required placeholder="Your last name..">
                     </div>
                 </div>
 
 
                   <label for="lname">Email</label>
-                  <input type="email" id="lname" name="email" required placeholder="Your Email">
+                  <input type="email" id="lname" name="contact[email]" required placeholder="Your Email">
                   <label for="lname">Message</label>
-                  <input type="text" id="lname" name="message" required placeholder="Your Message">
+                  <input type="text" id="lname" name="contact[message]" required placeholder="Your Message">
 
                   <label for="subject">Additional Detail</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  <textarea id="subject" name="contact[subject]" placeholder="Write something.." style="height:200px"></textarea>
 
-                  <input type="submit" value="Send Message">
+                  <%= submit_tag 'Send Message', class: 'btn btn-primary' %>
 
-                </form>
+                <%end%>
+
+
             </div>
         </div>
       
