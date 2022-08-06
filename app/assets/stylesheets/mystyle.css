@@ -1,4 +1,4 @@
-/*!
+fsingle-feature-list/*!
  * Font Awesome Free 5.1.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -6948,7 +6948,7 @@ input[type=submit] {
   width: 46%;
   height: 100%;
   background-color: #5650ce;
-  background-image: url("left-img-change.jpg");
+  /*background-image: url("left-img-change.jpg");*/
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
