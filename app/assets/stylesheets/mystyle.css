@@ -11843,7 +11843,7 @@ input[type=submit] {
   display: inline-block;
 }
 .log-reg .image {
-  background: url(reg.jpg);
+  /*background: url(reg.jpg);*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11855,7 +11855,7 @@ input[type=submit] {
   z-index: -1;
 }
 .log-reg .image.image-log {
-  background: url(log.jpg) !important;
+  /*background: url(log.jpg) !important;*/
 }
 .log-reg .log-reg-inner {
   padding-top: 30px;
