@@ -13,6 +13,8 @@ class RegistrationsController < Devise::RegistrationsController
         UserMailer.with(user: @user).welcome_email.deliver_now
          flash[:success] = "Thank you for creating new account! We'll get contact you soon!"
 
-      home_membership_path
+         reset_session
+      # home_membership_path
+      new_user_session_path
   end
 end
