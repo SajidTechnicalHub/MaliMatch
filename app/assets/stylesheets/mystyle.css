@@ -26831,6 +26831,12 @@ input{
   height: 400px;
   background: white;
 }
+.admin-user-pagination{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 10px;
+}
 
 @media(max-width: 992px){
   .admin-user-box{
