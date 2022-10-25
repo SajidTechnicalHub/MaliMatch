@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'settings/index'
   get 'settings/setting_checkout'
   # get 'dashboard/index'
-  # root 'admin/index'
+  get 'admin/index'
   get 'admin/about'
   get 'admin/aboutus'
   get 'admin/home'

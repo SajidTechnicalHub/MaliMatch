@@ -13,15 +13,59 @@
     href="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic|Montserrat:400,700,400italic,700italic"
     rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <%= stylesheet_link_tag 'mystyle' %>
+    <%= javascript_include_tag 'myfunction' %>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <%= stylesheet_link_tag 'admin' %>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
 
   <body>
-  
-   
-    <%= yield %>
+    <%= render 'home/header' %>
+    
+    <!-- ==========Overlay========== -->
+     <div class="overlay"></div>
+     <a href="#" class="scrollToTop">
+         <i class="fas fa-angle-up"></i>
+     </a>
+     <!-- ==========Overlay========== -->
+    <section class="breadcrumb-area profile-bc-area">
+         <div class="container">
+             <div class="content">
+                 <h2 class="title extra-padding">
+                     Admin Panel
+                 </h2>
+                 <ul class="breadcrumb-list extra-padding">
+                     <li>
+                         <a href="">
+                             Dashboard
+                         </a>
+                     </li>
+
+                     <li>
+                         Users
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </section>
+    
+  <section class="user-setting-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-md-5">
+             <%= render 'admin/admin_sidebar' %>
+            </div>
+            <div class="col-xl-9 col-md-7 ">
+
+             <%= yield %>
+            </div>
+        </div>
+     </div>
+   </section>
+     <%= render 'home/footer' %>
     
   </body>
 </html>

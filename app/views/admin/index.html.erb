@@ -1,0 +1,38 @@
+
+
+<% @users.each do |user| %>
+	<div class="admin-user-box">
+		<div class="admin-user-id-container">
+			<div class="admin-user-id-block"><%= user.id%></div>
+			<div class="admin-user-name-block">
+			<span class="admin-user-name">
+				User Name: <%= user.name%>
+			</span>
+			<span class="admin-user-email">
+				Email: <%= user.email%>
+			</span>
+		</div>
+
+		</div>
+		<div class="admin-user-btn-block">
+			<div class="admin-user-name-block">
+				<% if user.gender == true%>
+					<span class="admin-user-name">
+						Gender: Male
+					</span>
+					<span class="admin-user-email">
+						Phone No: <%= user.phone%>
+					</span>
+				<% else %>
+					<span class="admin-user-name">
+						Gender: Female
+					</span>
+					<span class="admin-user-email">
+						Phone No: <%= user.wmobile%>
+					</span>
+				<% end %>
+			</div>
+			<button class="admin-user-profile-btn">Profile</button>
+		</div>
+	</div>
+<% end %>
