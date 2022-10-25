@@ -26827,3 +26827,13 @@ input{
   gap: 10px;
   width: 40%;
 }
+.admin-sidebar-card{
+  height: 400px;
+  background: white;
+}
+
+@media(max-width: 992px){
+  .admin-user-box{
+    flex-direction: column!important;
+  }
+}
