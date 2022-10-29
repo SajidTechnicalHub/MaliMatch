@@ -15,6 +15,6 @@ class RegistrationsController < Devise::RegistrationsController
 
          reset_session
       # home_membership_path
-      new_user_session_path
+      # new_user_session_path
   end
 end
