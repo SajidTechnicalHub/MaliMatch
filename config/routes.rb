@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'admin/aboutus'
   get 'admin/home'
   get 'admin/pricing'
+  get 'about/login_alert'
   # get 'registration/index'
   get 'dashboard/addon'
   get 'dashboard/dashboard_checkout'

@@ -49,13 +49,17 @@
                     <%= link_to 'Membership',  home_membership_path, class:'' %>
 
                 </li>
-                 <li>
-                        <%= link_to 'Admin Panel', admin_index_path%>  
-                 </li>
+               
+                 
+
                 <% if user_signed_in? %>
+
                     <li>
                         <%#= link_to 'Dashboard', myprofile_index_path%>  
                         <%#= link_to 'Admin Panel', admin_index_path%>  
+                    </li>
+                    <li>
+                        <%= link_to 'Admin Panel', admin_index_path%>  
                     </li>
                 <% end %>
                 <!-- <li>

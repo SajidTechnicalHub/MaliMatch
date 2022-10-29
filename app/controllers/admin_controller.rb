@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   layout 'admin'
   def index
-    @users = User.page(params[:page]).per(10)
+    @users = User.page(params[:page]).per(7)
   end
 
   def aboutus
@@ -9,4 +9,5 @@ class AdminController < ApplicationController
   def home
     
   end
+  
 end
