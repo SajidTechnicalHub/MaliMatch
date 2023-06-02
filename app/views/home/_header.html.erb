@@ -34,7 +34,7 @@
                     <%= link_to 'Membership',  home_membership_path, class:'' %>
                 </li>
                 <% if user_signed_in? %>
-                    <%if current_user.email? == 'admin@gmail.com' || current_user.email? == 'abdiaziz.warsame9@gmail.com' || current_user.email? == 'malismatch@gmail.com' || current_user.email? == 'sis@gmail.com'%>
+                    <%if current_user.email == 'admin@gmail.com' || current_user.email == 'abdiaziz.warsame9@gmail.com' || current_user.email == 'malismatch@gmail.com' || current_user.email == 'sis@gmail.com'%>
                         <li>
                             <%= link_to 'Admin Panel', admin_index_path%>  
                         </li>
