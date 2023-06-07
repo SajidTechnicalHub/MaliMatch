@@ -3,8 +3,8 @@ class UserMailer < ApplicationMailer
 
   def welcome_email
     @user = params[:user]
-    @url  = 'https://mymalimatch.herokuapp.com/'
-    mail(to: @user.email, subject: 'Welcome to mymalimatch')
+    @url  = 'https://salam-match.herokuapp.com/'
+    mail(to: @user.email, subject: 'Welcome to salam-match')
     
   end
 
