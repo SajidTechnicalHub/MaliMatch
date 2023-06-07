@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
      before_action :configure_permitted_parameters, if: :devise_controller?
 
      def after_sign_in_path_for(resource)
-          UserMailer.with(user: @user).welcome_email.deliver_now
-          root_path
+          myprofile_index_path
+          
        #    flash[:success] = "Thank you for creating new account! We'll get contact you soon!"
        # if current_user.email? == 'admin@gmail.com' || current_user.email? == 'abdiaziz.warsame9@gmail.com' || current_user.email? == 'malismatch@gmail.com'
        #    root_path 

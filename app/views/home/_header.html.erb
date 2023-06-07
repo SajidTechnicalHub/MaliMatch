@@ -39,10 +39,11 @@
                             <%= link_to 'Admin Panel', admin_index_path%>  
                         </li>
                     <%end%>
+                    <li>
+                        <%= link_to 'Dashboard',  dashboard_index_path, class:'' %>
+                    </li>s
                 <% end %>
-                <li>
-                    <%= link_to 'Dashboard',  dashboard_index_path, class:'' %>
-                </li>
+                
 
                 <li class="user-profile">
                     <%= link_to image_tag("user-demo.png"), 'javascript:void(0);' %>
